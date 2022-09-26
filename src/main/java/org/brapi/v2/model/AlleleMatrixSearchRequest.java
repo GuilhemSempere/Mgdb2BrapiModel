@@ -119,7 +119,7 @@ public class AlleleMatrixSearchRequest   {
    * `dataMatrixAbbreviations` is a comma seperated list of abbreviations (ie 'GT', 'RD' etc). This list controls which data matrices are returned in the response.
    * @return dataMatrixAbbreviations
    **/
-  @Schema(example = "[\"GT\",\"RD\"]", description = "`dataMatrixAbbreviations` is a comma seperated list of abbreviations (ie 'GT', 'RD' etc). This list controls which data matrices are returned in the response.")
+  @Schema(example = "[\"GT\",\"DP\"]", description = "`dataMatrixAbbreviations` is a comma seperated list of abbreviations (ie 'GT', 'DP' etc). This list controls which data matrices are returned in the response.")
   
     public List<String> getDataMatrixAbbreviations() {
     return dataMatrixAbbreviations;
@@ -192,7 +192,7 @@ public class AlleleMatrixSearchRequest   {
    * A list of IDs which uniquely identify `Germplasm` within the given database server
    * @return germplasmDbIds
    **/
-  @Schema(example = "[\"a03202ec\",\"274e4f63\"]", description = "A list of IDs which uniquely identify `Germplasm` within the given database server")
+  @Schema(example = "[\"module§individualId\"]", description = "A list of IDs which uniquely identify `Germplasm` within the given database server")
   
     public List<String> getGermplasmDbIds() {
     return germplasmDbIds;
@@ -319,7 +319,7 @@ public class AlleleMatrixSearchRequest   {
    * Default Value = false <br/> If 'preview' is set to true, then the server should only return the lists of 'callSetDbIds',  'variantDbIds', and 'variantSetDbIds'. The server should not return any matrix data. This is intended to be a preview and give the client a sense of how large the matrix returned will be <br/> If 'preview' is set to false or not set (default), then the server should return all the matrix data as requested.
    * @return preview
    **/
-  @Schema(example = "true", description = "Default Value = false <br/> If 'preview' is set to true, then the server should only return the lists of 'callSetDbIds',  'variantDbIds', and 'variantSetDbIds'. The server should not return any matrix data. This is intended to be a preview and give the client a sense of how large the matrix returned will be <br/> If 'preview' is set to false or not set (default), then the server should return all the matrix data as requested.")
+  @Schema(example = "false", description = "Default Value = false <br/> If 'preview' is set to true, then the server should only return the lists of 'callSetDbIds',  'variantDbIds', and 'variantSetDbIds'. The server should not return any matrix data. This is intended to be a preview and give the client a sense of how large the matrix returned will be <br/> If 'preview' is set to false or not set (default), then the server should return all the matrix data as requested.")
   
     public Boolean isPreview() {
     return preview;
@@ -346,7 +346,7 @@ public class AlleleMatrixSearchRequest   {
    * A list of IDs which uniquely identify `Samples` within the given database server
    * @return sampleDbIds
    **/
-  @Schema(example = "[\"a03202ec\",\"274e4f63\"]", description = "A list of IDs which uniquely identify `Samples` within the given database server")
+  @Schema(example = "[\"module§sampleId\"]", description = "A list of IDs which uniquely identify `Samples` within the given database server")
   
     public List<String> getSampleDbIds() {
     return sampleDbIds;
@@ -430,7 +430,7 @@ public class AlleleMatrixSearchRequest   {
    * A list of IDs which uniquely identify `Variants` within the given database server
    * @return variantDbIds
    **/
-  @Schema(example = "[\"bba0b258\",\"ff97d4f0\"]", description = "A list of IDs which uniquely identify `Variants` within the given database server")
+  @Schema(example = "[\"module§variantId\"]", description = "A list of IDs which uniquely identify `Variants` within the given database server")
   
     public List<String> getVariantDbIds() {
     return variantDbIds;
@@ -457,7 +457,7 @@ public class AlleleMatrixSearchRequest   {
    * A list of IDs which uniquely identify `VariantSets` within the given database server
    * @return variantSetDbIds
    **/
-  @Schema(example = "[\"407c0508\",\"49e24dfc\"]", description = "A list of IDs which uniquely identify `VariantSets` within the given database server")
+  @Schema(example = "[\"module§projectId§run\",\"49e24dfc\"]", description = "A list of IDs which uniquely identify `VariantSets` within the given database server")
   
     public List<String> getVariantSetDbIds() {
     return variantSetDbIds;
