@@ -40,7 +40,7 @@ public class AlleleMatrixSearchRequestPagination   {
     @JsonCreator
     public static DimensionEnum fromValue(String text) {
       for (DimensionEnum b : DimensionEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equalsIgnoreCase(text)) {
           return b;
         }
       }
