@@ -2,14 +2,9 @@ package org.brapi.v2.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.brapi.v2.model.Call;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -18,7 +13,9 @@ import javax.validation.constraints.*;
  * CallsListResponseResult
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-09-19T13:16:35.755Z[GMT]")
+
+
 public class CallsListResponseResult   {
   @JsonProperty("data")
   @Valid
@@ -49,8 +46,8 @@ public class CallsListResponseResult   {
   /**
    * Get data
    * @return data
-  **/
-  @ApiModelProperty(required = true, value = "")
+   **/
+  @Schema(required = true, description = "")
       @NotNull
     @Valid
     public List<Call> getData() {
@@ -67,10 +64,10 @@ public class CallsListResponseResult   {
   }
 
   /**
-   * Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+   * Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
    * @return expandHomozygotes
-  **/
-  @ApiModelProperty(value = "Should homozygotes be expanded (true) or collapsed into a single occurence (false)")
+   **/
+  @Schema(example = "true", description = "Should homozygotes be expanded (true) or collapsed into a single occurrence (false)")
   
     public Boolean isExpandHomozygotes() {
     return expandHomozygotes;
@@ -88,8 +85,8 @@ public class CallsListResponseResult   {
   /**
    * The string used as a separator for phased allele calls.
    * @return sepPhased
-  **/
-  @ApiModelProperty(value = "The string used as a separator for phased allele calls.")
+   **/
+  @Schema(example = "|", description = "The string used as a separator for phased allele calls.")
   
     public String getSepPhased() {
     return sepPhased;
@@ -107,8 +104,8 @@ public class CallsListResponseResult   {
   /**
    * The string used as a separator for unphased allele calls.
    * @return sepUnphased
-  **/
-  @ApiModelProperty(value = "The string used as a separator for unphased allele calls.")
+   **/
+  @Schema(example = "/", description = "The string used as a separator for unphased allele calls.")
   
     public String getSepUnphased() {
     return sepUnphased;
@@ -126,8 +123,8 @@ public class CallsListResponseResult   {
   /**
    * The string used as a representation for missing data.
    * @return unknownString
-  **/
-  @ApiModelProperty(value = "The string used as a representation for missing data.")
+   **/
+  @Schema(example = ".", description = "The string used as a representation for missing data.")
   
     public String getUnknownString() {
     return unknownString;

@@ -3,8 +3,7 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -12,18 +11,25 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * This request maps to the body of &#x60;POST /search/calls&#x60; as JSON.
+ * CallsSearchRequest
  */
-@ApiModel(description = "This request maps to the body of `POST /search/calls` as JSON.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
-public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-09-19T13:16:35.755Z[GMT]")
+//manually removed pageToken (deprecated)
+
+public class CallsSearchRequest   {
   @JsonProperty("callSetDbIds")
   @Valid
   private List<String> callSetDbIds = null;
 
   @JsonProperty("expandHomozygotes")
   private Boolean expandHomozygotes = null;
+
+  @JsonProperty("page")
+  private Integer page = 0;
+
+  @JsonProperty("pageSize")
+  private Integer pageSize = 1000;
 
   @JsonProperty("sepPhased")
   private String sepPhased = null;
@@ -56,10 +62,10 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
   }
 
   /**
-   * The CallSet to search.
+   * A list of IDs which uniquely identify `CallSets` within the given database server
    * @return callSetDbIds
-  **/
-  @ApiModelProperty(value = "The CallSet to search.")
+   **/
+  @Schema(example = "[\"a03202ec\",\"274e4f63\"]", description = "A list of IDs which uniquely identify `CallSets` within the given database server")
   
     public List<String> getCallSetDbIds() {
     return callSetDbIds;
@@ -75,10 +81,10 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
   }
 
   /**
-   * Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+   * Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
    * @return expandHomozygotes
-  **/
-  @ApiModelProperty(value = "Should homozygotes be expanded (true) or collapsed into a single occurence (false)")
+   **/
+  @Schema(example = "true", description = "Should homozygotes be expanded (true) or collapsed into a single occurrence (false)")
   
     public Boolean isExpandHomozygotes() {
     return expandHomozygotes;
@@ -86,6 +92,44 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
 
   public void setExpandHomozygotes(Boolean expandHomozygotes) {
     this.expandHomozygotes = expandHomozygotes;
+  }
+
+  public CallsSearchRequest page(Integer page) {
+    this.page = page;
+    return this;
+  }
+
+  /**
+   * Which result page is requested. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.
+   * @return page
+   **/
+  @Schema(example = "0", description = "Which result page is requested. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.")
+  
+    public Integer getPage() {
+    return page;
+  }
+
+  public void setPage(Integer page) {
+    this.page = page;
+  }
+
+  public CallsSearchRequest pageSize(Integer pageSize) {
+    this.pageSize = pageSize;
+    return this;
+  }
+
+  /**
+   * The size of the pages to be returned. Default is `1000`.
+   * @return pageSize
+   **/
+  @Schema(example = "1000", description = "The size of the pages to be returned. Default is `1000`.")
+  
+    public Integer getPageSize() {
+    return pageSize;
+  }
+
+  public void setPageSize(Integer pageSize) {
+    this.pageSize = pageSize;
   }
 
   public CallsSearchRequest sepPhased(String sepPhased) {
@@ -96,8 +140,8 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
   /**
    * The string used as a separator for phased allele calls.
    * @return sepPhased
-  **/
-  @ApiModelProperty(value = "The string used as a separator for phased allele calls.")
+   **/
+  @Schema(example = "|", description = "The string used as a separator for phased allele calls.")
   
     public String getSepPhased() {
     return sepPhased;
@@ -115,8 +159,8 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
   /**
    * The string used as a separator for unphased allele calls.
    * @return sepUnphased
-  **/
-  @ApiModelProperty(value = "The string used as a separator for unphased allele calls.")
+   **/
+  @Schema(example = "/", description = "The string used as a separator for unphased allele calls.")
   
     public String getSepUnphased() {
     return sepUnphased;
@@ -134,8 +178,8 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
   /**
    * The string used as a representation for missing data.
    * @return unknownString
-  **/
-  @ApiModelProperty(value = "The string used as a representation for missing data.")
+   **/
+  @Schema(example = ".", description = "The string used as a representation for missing data.")
   
     public String getUnknownString() {
     return unknownString;
@@ -159,10 +203,10 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
   }
 
   /**
-   * The Variant to search.
+   * A list of IDs which uniquely identify `Variant` within the given database server
    * @return variantDbIds
-  **/
-  @ApiModelProperty(value = "The Variant to search.")
+   **/
+  @Schema(example = "[\"bba0b258\",\"ff97d4f0\"]", description = "A list of IDs which uniquely identify `Variant` within the given database server")
   
     public List<String> getVariantDbIds() {
     return variantDbIds;
@@ -186,10 +230,10 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
   }
 
   /**
-   * The VariantSet to search.
+   * A list of IDs which uniquely identify `VariantSets` within the given database server
    * @return variantSetDbIds
-  **/
-  @ApiModelProperty(value = "The VariantSet to search.")
+   **/
+  @Schema(example = "[\"407c0508\",\"49e24dfc\"]", description = "A list of IDs which uniquely identify `VariantSets` within the given database server")
   
     public List<String> getVariantSetDbIds() {
     return variantSetDbIds;
@@ -211,6 +255,8 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
     CallsSearchRequest callsSearchRequest = (CallsSearchRequest) o;
     return Objects.equals(this.callSetDbIds, callsSearchRequest.callSetDbIds) &&
         Objects.equals(this.expandHomozygotes, callsSearchRequest.expandHomozygotes) &&
+        Objects.equals(this.page, callsSearchRequest.page) &&
+        Objects.equals(this.pageSize, callsSearchRequest.pageSize) &&
         Objects.equals(this.sepPhased, callsSearchRequest.sepPhased) &&
         Objects.equals(this.sepUnphased, callsSearchRequest.sepUnphased) &&
         Objects.equals(this.unknownString, callsSearchRequest.unknownString) &&
@@ -220,7 +266,7 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
 
   @Override
   public int hashCode() {
-    return Objects.hash(callSetDbIds, expandHomozygotes, sepPhased, sepUnphased, unknownString, variantDbIds, variantSetDbIds);
+    return Objects.hash(callSetDbIds, expandHomozygotes, page, pageSize, sepPhased, sepUnphased, unknownString, variantDbIds, variantSetDbIds);
   }
 
   @Override
@@ -230,6 +276,8 @@ public class CallsSearchRequest extends SearchRequestParametersTokenPaging {
     
     sb.append("    callSetDbIds: ").append(toIndentedString(callSetDbIds)).append("\n");
     sb.append("    expandHomozygotes: ").append(toIndentedString(expandHomozygotes)).append("\n");
+    sb.append("    page: ").append(toIndentedString(page)).append("\n");
+    sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    sepPhased: ").append(toIndentedString(sepPhased)).append("\n");
     sb.append("    sepUnphased: ").append(toIndentedString(sepUnphased)).append("\n");
     sb.append("    unknownString: ").append(toIndentedString(unknownString)).append("\n");
