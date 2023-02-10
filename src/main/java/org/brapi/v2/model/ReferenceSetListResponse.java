@@ -8,17 +8,17 @@ import io.swagger.annotations.ApiModelProperty;
 
 import org.brapi.v2.model.Context;
 import org.brapi.v2.model.Metadata;
-import org.brapi.v2.model.Variant;
+import org.brapi.v2.model.ReferenceSetListResponseResult;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * CallSetResponse1
+ * ReferenceListResponse1
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
-public class CallSetResponse1   {
+public class ReferenceSetListResponse   {
   @JsonProperty("@context")
   private Context _atContext = null;
 
@@ -26,9 +26,9 @@ public class CallSetResponse1   {
   private Metadata metadata = null;
 
   @JsonProperty("result")
-  private Variant result = null;
+  private ReferenceSetListResponseResult result = null;
 
-  public CallSetResponse1 _atContext(Context _atContext) {
+  public ReferenceSetListResponse _atContext(Context _atContext) {
     this._atContext = _atContext;
     return this;
   }
@@ -48,7 +48,7 @@ public class CallSetResponse1   {
     this._atContext = _atContext;
   }
 
-  public CallSetResponse1 metadata(Metadata metadata) {
+  public ReferenceSetListResponse metadata(Metadata metadata) {
     this.metadata = metadata;
     return this;
   }
@@ -69,7 +69,7 @@ public class CallSetResponse1   {
     this.metadata = metadata;
   }
 
-  public CallSetResponse1 result(Variant result) {
+  public ReferenceSetListResponse result(ReferenceSetListResponseResult result) {
     this.result = result;
     return this;
   }
@@ -82,11 +82,11 @@ public class CallSetResponse1   {
       @NotNull
 
     @Valid
-    public Variant getResult() {
+    public ReferenceSetListResponseResult getResult() {
     return result;
   }
 
-  public void setResult(Variant result) {
+  public void setResult(ReferenceSetListResponseResult result) {
     this.result = result;
   }
 
@@ -99,10 +99,10 @@ public class CallSetResponse1   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CallSetResponse1 callSetResponse1 = (CallSetResponse1) o;
-    return Objects.equals(this._atContext, callSetResponse1._atContext) &&
-        Objects.equals(this.metadata, callSetResponse1.metadata) &&
-        Objects.equals(this.result, callSetResponse1.result);
+    ReferenceSetListResponse referenceListResponse1 = (ReferenceSetListResponse) o;
+    return Objects.equals(this._atContext, referenceListResponse1._atContext) &&
+        Objects.equals(this.metadata, referenceListResponse1.metadata) &&
+        Objects.equals(this.result, referenceListResponse1.result);
   }
 
   @Override
@@ -113,7 +113,7 @@ public class CallSetResponse1   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CallSetResponse1 {\n");
+    sb.append("class ReferenceListResponse1 {\n");
     
     sb.append("    _atContext: ").append(toIndentedString(_atContext)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");

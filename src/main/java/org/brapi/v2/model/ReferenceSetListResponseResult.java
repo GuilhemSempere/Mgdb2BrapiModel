@@ -15,21 +15,21 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * ReferenceListResponseResult1
+ * referenceSetListResponseResult
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
-public class ReferenceListResponseResult1   {
+public class ReferenceSetListResponseResult   {
   @JsonProperty("data")
   @Valid
   private List<ReferenceSet> data = new ArrayList<ReferenceSet>();
 
-  public ReferenceListResponseResult1 data(List<ReferenceSet> data) {
+  public ReferenceSetListResponseResult data(List<ReferenceSet> data) {
     this.data = data;
     return this;
   }
 
-  public ReferenceListResponseResult1 addDataItem(ReferenceSet dataItem) {
+  public ReferenceSetListResponseResult addDataItem(ReferenceSet dataItem) {
     this.data.add(dataItem);
     return this;
   }
@@ -58,8 +58,8 @@ public class ReferenceListResponseResult1   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ReferenceListResponseResult1 referenceListResponseResult1 = (ReferenceListResponseResult1) o;
-    return Objects.equals(this.data, referenceListResponseResult1.data);
+    ReferenceSetListResponseResult referenceSetListResponseResult = (ReferenceSetListResponseResult) o;
+    return Objects.equals(this.data, referenceSetListResponseResult.data);
   }
 
   @Override
@@ -70,7 +70,7 @@ public class ReferenceListResponseResult1   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ReferenceListResponseResult1 {\n");
+    sb.append("class referenceSetListResponseResult {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
