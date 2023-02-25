@@ -40,6 +40,13 @@ public class VariantSet   {
 
   @JsonProperty("callSetCount")
   private Integer callSetCount = null;
+  
+  @JsonProperty("externalReferences")
+  private ExternalReferences externalReferences = null;
+
+  @JsonProperty("metadataFields")
+  @Valid
+  private List<VariantSetMetadataFields> metadataFields = null;
 
   @JsonProperty("referenceSetDbId")
   private String referenceSetDbId = null;
@@ -163,6 +170,40 @@ public class VariantSet   {
 
   public VariantSet referenceSetDbId(String referenceSetDbId) {
     this.referenceSetDbId = referenceSetDbId;
+    return this;
+  }
+  
+  /**
+   * Get externalReferences
+   * @return externalReferences
+   **/
+  @Valid
+  public ExternalReferences getExternalReferences() {
+    return externalReferences;
+  }
+
+  public void setExternalReferences(ExternalReferences externalReferences) {
+    this.externalReferences = externalReferences;
+  }
+
+  /**
+   * The 'metadataFields' array indicates which types of genotyping data and metadata are available in the VariantSet.  <br> When possible, these field names and abbreviations should follow the VCF standard 
+   * @return metadataFields
+   **/
+  @Valid
+  public List<VariantSetMetadataFields> getMetadataFields() {
+    return metadataFields;
+  }
+
+  public void setMetadataFields(List<VariantSetMetadataFields> metadataFields) {
+    this.metadataFields = metadataFields;
+  }
+  
+  public VariantSet addMetadataFieldsItem(VariantSetMetadataFields metadataFieldsItem) {
+    if (this.metadataFields == null) {
+      this.metadataFields = new ArrayList<VariantSetMetadataFields>();
+    }
+    this.metadataFields.add(metadataFieldsItem);
     return this;
   }
 
