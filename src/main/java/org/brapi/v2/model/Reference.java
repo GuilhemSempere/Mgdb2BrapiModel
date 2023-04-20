@@ -21,11 +21,17 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "A `Reference` is a canonical assembled contig, intended to act as a reference coordinate space for other genomic annotations. A single `Reference` might represent the human chromosome 1, for instance.  `Reference` s are designed to be immutable.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
-public class Reference   {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-02-08T14:59:28.380Z[GMT]")
+public class Reference {
   @JsonProperty("additionalInfo")
   @Valid
   private Map<String, String> additionalInfo = null;
+  
+  @JsonProperty("commonCropName")
+  private String commonCropName = null;
+
+  @JsonProperty("externalReferences")
+  private ExternalReferences externalReferences = null;
 
   @JsonProperty("isDerived")
   private Boolean isDerived = null;
@@ -42,12 +48,22 @@ public class Reference   {
   @JsonProperty("referenceName")
   private String referenceName = null;
 
+  @JsonProperty("referenceSetDbId")
+  private String referenceSetDbId = null;
+
+  @JsonProperty("referenceSetName")
+  private String referenceSetName = null;
+  
   @JsonProperty("sourceAccessions")
   @Valid
   private List<String> sourceAccessions = null;
 
   @JsonProperty("sourceDivergence")
   private Float sourceDivergence = null;
+
+  @JsonProperty("sourceGermplasm")
+  @Valid
+  private List<ReferenceSourceGermplasm> sourceGermplasm = null;
 
   @JsonProperty("sourceURI")
   private String sourceURI = null;
@@ -81,6 +97,46 @@ public class Reference   {
   public void setAdditionalInfo(Map<String, String> additionalInfo) {
     this.additionalInfo = additionalInfo;
   }
+  
+  public Reference commonCropName(String commonCropName) {
+	    this.commonCropName = commonCropName;
+	    return this;
+	  }
+
+  /**
+   * Common name for the crop
+   * @return commonCropName
+   **/
+  @ApiModelProperty(value = "Common name for the crop")
+  
+    public String getCommonCropName() {
+    return commonCropName;
+  }
+
+  public void setCommonCropName(String commonCropName) {
+    this.commonCropName = commonCropName;
+  }
+
+  public Reference externalReferences(ExternalReferences externalReferences) {
+    this.externalReferences = externalReferences;
+    return this;
+  }
+
+  /**
+   * Get externalReferences
+   * @return externalReferences
+   **/
+  @ApiModelProperty(value = "")
+  
+    @Valid
+    public ExternalReferences getExternalReferences() {
+    return externalReferences;
+  }
+
+  public void setExternalReferences(ExternalReferences externalReferences) {
+    this.externalReferences = externalReferences;
+  }
+
 
   public Reference isDerived(Boolean isDerived) {
     this.isDerived = isDerived;
@@ -177,6 +233,45 @@ public class Reference   {
     this.referenceName = referenceName;
   }
 
+
+  public Reference referenceSetDbId(String referenceSetDbId) {
+    this.referenceSetDbId = referenceSetDbId;
+    return this;
+  }
+
+  /**
+   * The unique identifier for a `ReferenceSet`
+   * @return referenceSetDbId
+   **/
+  @ApiModelProperty(value = "The unique identifier for a `ReferenceSet`")
+  
+    public String getReferenceSetDbId() {
+    return referenceSetDbId;
+  }
+
+  public void setReferenceSetDbId(String referenceSetDbId) {
+    this.referenceSetDbId = referenceSetDbId;
+  }
+
+  public Reference referenceSetName(String referenceSetName) {
+    this.referenceSetName = referenceSetName;
+    return this;
+  }
+
+  /**
+   * The human readable name of a `ReferenceSet`
+   * @return referenceSetName
+   **/
+  @ApiModelProperty(value = "The human readable name of a `ReferenceSet`")
+  
+    public String getReferenceSetName() {
+    return referenceSetName;
+  }
+
+  public void setReferenceSetName(String referenceSetName) {
+    this.referenceSetName = referenceSetName;
+  }
+
   public Reference sourceAccessions(List<String> sourceAccessions) {
     this.sourceAccessions = sourceAccessions;
     return this;
@@ -221,6 +316,33 @@ public class Reference   {
 
   public void setSourceDivergence(Float sourceDivergence) {
     this.sourceDivergence = sourceDivergence;
+  }
+
+  public Reference sourceGermplasm(List<ReferenceSourceGermplasm> sourceGermplasm) {
+    this.sourceGermplasm = sourceGermplasm;
+    return this;
+  }
+
+  public Reference addSourceGermplasmItem(ReferenceSourceGermplasm sourceGermplasmItem) {
+    if (this.sourceGermplasm == null) {
+      this.sourceGermplasm = new ArrayList<ReferenceSourceGermplasm>();
+    }
+    this.sourceGermplasm.add(sourceGermplasmItem);
+    return this;
+  }
+
+  /**
+   * All known corresponding Germplasm
+   * @return sourceGermplasm
+   **/
+  @ApiModelProperty(value = "All known corresponding Germplasm")
+      @Valid
+    public List<ReferenceSourceGermplasm> getSourceGermplasm() {
+    return sourceGermplasm;
+  }
+
+  public void setSourceGermplasm(List<ReferenceSourceGermplasm> sourceGermplasm) {
+    this.sourceGermplasm = sourceGermplasm;
   }
 
   public Reference sourceURI(String sourceURI) {

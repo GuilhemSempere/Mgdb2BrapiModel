@@ -13,6 +13,7 @@ import java.util.Map;
 
 import org.brapi.v2.model.Analysis;
 import org.brapi.v2.model.VariantSetAvailableFormats;
+import org.brapi.v2.model.VariantSetMetadataFields;
 import org.springframework.data.annotation.Id;
 import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
@@ -43,10 +44,6 @@ public class VariantSet   {
   @JsonProperty("externalReferences")
   private ExternalReferences externalReferences = null;
 
-  @JsonProperty("metadataFields")
-  @Valid
-  private List<VariantSetMetadataFields> metadataFields = null;
-
   @JsonProperty("referenceSetDbId")
   private String referenceSetDbId = null;
 
@@ -62,6 +59,10 @@ public class VariantSet   {
 
   @JsonProperty("variantSetName")
   private String variantSetName = null;
+  
+  @JsonProperty("metadataFields")
+  @Valid
+  private List<VariantSetMetadataFields> metadataFields = null;
 
   public VariantSet additionalInfo(Map<String, String> additionalInfo) {
     this.additionalInfo = additionalInfo;
@@ -182,27 +183,6 @@ public class VariantSet   {
   }
 
   /**
-   * The 'metadataFields' array indicates which types of genotyping data and metadata are available in the VariantSet.  <br> When possible, these field names and abbreviations should follow the VCF standard 
-   * @return metadataFields
-   **/
-  @Valid
-  public List<VariantSetMetadataFields> getMetadataFields() {
-    return metadataFields;
-  }
-
-  public void setMetadataFields(List<VariantSetMetadataFields> metadataFields) {
-    this.metadataFields = metadataFields;
-  }
-  
-  public VariantSet addMetadataFieldsItem(VariantSetMetadataFields metadataFieldsItem) {
-    if (this.metadataFields == null) {
-      this.metadataFields = new ArrayList<VariantSetMetadataFields>();
-    }
-    this.metadataFields.add(metadataFieldsItem);
-    return this;
-  }
-
-  /**
    * The ID of the reference set that describes the sequences used by the variants in this set.
    * @return referenceSetDbId
   **/
@@ -291,7 +271,33 @@ public class VariantSet   {
   public void setVariantSetName(String variantSetName) {
     this.variantSetName = variantSetName;
   }
+    
+  public VariantSet metadataFields(List<VariantSetMetadataFields> metadataFields) {
+    this.metadataFields = metadataFields;
+    return this;
+  }
 
+  public VariantSet addMetadataFieldsItem(VariantSetMetadataFields metadataFieldsItem) {
+    if (this.metadataFields == null) {
+      this.metadataFields = new ArrayList<VariantSetMetadataFields>();
+    }
+    this.metadataFields.add(metadataFieldsItem);
+    return this;
+  }
+
+  /**
+   * The 'metadataFields' array indicates which types of genotyping data and metadata are available in the VariantSet.  <br> When possible, these field names and abbreviations should follow the VCF standard 
+   * @return metadataFields
+   **/
+  @ApiModelProperty(value = "The 'metadataFields' array indicates which types of genotyping data and metadata are available in the VariantSet.  <br> When possible, these field names and abbreviations should follow the VCF standard ")
+      @Valid
+    public List<VariantSetMetadataFields> getMetadataFields() {
+    return metadataFields;
+  }
+
+  public void setMetadataFields(List<VariantSetMetadataFields> metadataFields) {
+    this.metadataFields = metadataFields;
+  }
 
   @Override
   public boolean equals(java.lang.Object o) {

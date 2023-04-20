@@ -49,6 +49,7 @@ public class VariantSetMetadataFields {
             return null;
         }
     }
+
     @JsonProperty("dataType")
     private DataTypeEnum dataType = null;
 
