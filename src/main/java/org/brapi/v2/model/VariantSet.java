@@ -64,6 +64,10 @@ public class VariantSet   {
   @Valid
   private List<VariantSetMetadataFields> metadataFields = null;
 
+  public static final String TMP_OUTPUT_FOLDER = "genofilt/brapiV2TmpOutput";
+  public static final String brapiV2ExportFilePrefix = "brapiV2export-";
+  public static final String BRAPI_CACHE_COLL_VARIANTSET = "brapiCache_VariantSet";
+	
   public VariantSet additionalInfo(Map<String, String> additionalInfo) {
     this.additionalInfo = additionalInfo;
     return this;
