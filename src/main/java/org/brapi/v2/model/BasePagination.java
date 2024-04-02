@@ -25,7 +25,7 @@ public class BasePagination {
   private Integer pageSize = 1000;
 
   @SerializedName("totalCount")
-  private Integer totalCount = null;
+  private Long totalCount = null;
 
   @SerializedName("totalPages")
   private Integer totalPages = null;
@@ -47,7 +47,7 @@ public class BasePagination {
     this.pageSize = pageSize;
   }
 
-  public BasePagination totalCount(Integer totalCount) {
+  public BasePagination totalCount(Long totalCount) {
     this.totalCount = totalCount;
     return this;
   }
@@ -56,11 +56,11 @@ public class BasePagination {
    * The total number of elements that are available on the server and match the requested query parameters.
    * @return totalCount
   **/
-  public Integer getTotalCount() {
+  public Long getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(Integer totalCount) {
+  public void setTotalCount(Long totalCount) {
     this.totalCount = totalCount;
   }
 
