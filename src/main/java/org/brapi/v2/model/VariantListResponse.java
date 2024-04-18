@@ -23,7 +23,7 @@ public class VariantListResponse   {
   private Context _atContext = null;
 
   @JsonProperty("metadata")
-  private MetadataTokenPagination metadata = null;
+  private Metadata metadata = null;
 
   @JsonProperty("result")
   private VariantListResponseResult result = null;
@@ -48,7 +48,7 @@ public class VariantListResponse   {
     this._atContext = _atContext;
   }
 
-  public VariantListResponse metadata(MetadataTokenPagination metadata) {
+  public VariantListResponse metadata(Metadata metadata) {
     this.metadata = metadata;
     return this;
   }
@@ -61,11 +61,11 @@ public class VariantListResponse   {
       @NotNull
 
     @Valid
-    public MetadataTokenPagination getMetadata() {
+    public Metadata getMetadata() {
     return metadata;
   }
 
-  public void setMetadata(MetadataTokenPagination metadata) {
+  public void setMetadata(Metadata metadata) {
     this.metadata = metadata;
   }
 
