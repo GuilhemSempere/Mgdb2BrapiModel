@@ -6,7 +6,7 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-	    <project.version>1.0.4-RELEASE</project.version>
+	    <project.version>1.0.5-RELEASE</project.version>
     </properties>
 
     <groupId>fr.cirad</groupId>
