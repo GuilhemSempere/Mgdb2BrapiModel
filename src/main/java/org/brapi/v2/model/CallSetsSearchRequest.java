@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -24,6 +26,7 @@ public class CallSetsSearchRequest   {
 
   @JsonProperty("callSetNames")
   @Valid
+  @Schema(hidden = true)
   private List<String> callSetNames = null;
 
   @JsonProperty("germplasmDbIds")
@@ -32,6 +35,7 @@ public class CallSetsSearchRequest   {
 
   @JsonProperty("germplasmNames")
   @Valid
+  @Schema(hidden = true)
   private List<String> germplasmNames = null;
 
   @JsonProperty("sampleDbIds")
