@@ -6,7 +6,7 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-	    <project.version>1.0.5-RELEASE</project.version>
+	    <project.version>1.0.6-RELEASE</project.version>
     </properties>
 
     <groupId>fr.cirad</groupId>
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
-            <version>3.1.7</version>
+            <version>3.1.12</version>
             <type>jar</type>
         </dependency>
     </dependencies>
