@@ -54,7 +54,7 @@ public class AlleleMatrixSearchRequestPagination   {
   private Integer page = 0;
 
   @JsonProperty("pageSize")
-  private Integer pageSize = 1000;
+  private Integer pageSize = 100;
 
   public AlleleMatrixSearchRequestPagination dimension(DimensionEnum dimension) {
     this.dimension = dimension;
