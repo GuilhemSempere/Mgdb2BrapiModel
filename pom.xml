@@ -6,7 +6,7 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-	    <project.version>1.0.7-RELEASE</project.version>
+	    <project.version>1.0.8-RELEASE</project.version>
     </properties>
 
     <groupId>fr.cirad</groupId>
@@ -72,6 +72,12 @@
             <artifactId>spring-data-commons</artifactId>
             <version>3.1.12</version>
             <type>jar</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>
