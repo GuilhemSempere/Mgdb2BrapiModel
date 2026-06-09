@@ -28,6 +28,9 @@ public class AlleleMatrixSearchRequest   {
   @Valid
   private List<String> dataMatrixNames = null;
 
+  @JsonProperty("dimensionColumnAggregation")
+  private String dimensionColumnAggregation = null;
+
   @JsonProperty("expandHomozygotes")
   private Boolean expandHomozygotes = null;
 
@@ -45,7 +48,7 @@ public class AlleleMatrixSearchRequest   {
 
   @JsonProperty("pagination")
   @Valid
-  private List<AlleleMatrixSearchRequestPagination> pagination = new ArrayList();
+  private List<AlleleMatrixSearchRequestPagination> pagination = new ArrayList<>();
 
   @JsonProperty("positionRanges")
   @Valid
@@ -63,6 +66,10 @@ public class AlleleMatrixSearchRequest   {
 
   @JsonProperty("sepUnphased")
   private String sepUnphased = null;
+
+  @JsonProperty("studyDbIds")
+  @Valid
+  private List<String> studyDbIds = null;
 
   @JsonProperty("unknownString")
   private String unknownString = null;
@@ -154,6 +161,30 @@ public class AlleleMatrixSearchRequest   {
 
   public void setDataMatrixNames(List<String> dataMatrixNames) {
     this.dataMatrixNames = dataMatrixNames;
+  }
+
+  public AlleleMatrixSearchRequest dimensionColumnAggregation(String dimensionColumnAggregation) {
+    this.dimensionColumnAggregation = dimensionColumnAggregation;
+    return this;
+  }
+
+  /**
+   * Override the default column aggregation granularity. When not set, the server uses the finest-grained level implied by the provided material filters.
+   * Accepted values: 'callSet' (one column per CallSet, no merging), 'sample' (one column per Sample, genotypes merged by majority vote),
+   * 'germplasm' (one column per Germplasm, genotypes merged by majority vote). In case of a tie, the column is treated as missing data.
+   * @return dimensionColumnAggregation
+   **/
+  @Schema(example = "germplasm", allowableValues = {"callSet", "sample", "germplasm"},
+          description = "Override the default column aggregation granularity. Accepted values: 'callSet' (default, one column per CallSet), "
+                  + "'sample' (one column per Sample, genotypes aggregated by majority vote), "
+                  + "'germplasm' (one column per Germplasm, genotypes aggregated by majority vote). "
+                  + "On a tie, the column is treated as missing data.")
+  public String getDimensionColumnAggregation() {
+    return dimensionColumnAggregation;
+  }
+
+  public void setDimensionColumnAggregation(String dimensionColumnAggregation) {
+    this.dimensionColumnAggregation = dimensionColumnAggregation;
   }
 
   public AlleleMatrixSearchRequest expandHomozygotes(Boolean expandHomozygotes) {
@@ -394,6 +425,40 @@ public class AlleleMatrixSearchRequest   {
     this.sepUnphased = sepUnphased;
   }
 
+  public AlleleMatrixSearchRequest studyDbIds(List<String> studyDbIds) {
+    this.studyDbIds = studyDbIds;
+    return this;
+  }
+
+  public AlleleMatrixSearchRequest addStudyDbIdsItem(String studyDbIdsItem) {
+    if (this.studyDbIds == null) {
+      this.studyDbIds = new ArrayList<String>();
+    }
+    this.studyDbIds.add(studyDbIdsItem);
+    return this;
+  }
+
+  /**
+   * A list of IDs which uniquely identify Studies within the given database server.
+   * Filters the matrix across both dimensions: the row dimension is restricted to VariantSets
+   * belonging to the specified studies (via VariantSet.studyDbId), and the column dimension
+   * is restricted to the CallSets derived from Samples associated with those VariantSets.
+   * Acts as an AND constraint alongside all other filters.
+   * @return studyDbIds
+   **/
+  @Schema(example = "[\"module§studyId\"]",
+          description = "A list of IDs which uniquely identify Studies within the given database server. "
+                  + "Filters both the row dimension (via the VariantSets associated with the Study) "
+                  + "and the column dimension (via the Samples associated with those VariantSets). "
+                  + "Acts as an AND constraint alongside all other filters.")
+  public List<String> getStudyDbIds() {
+    return studyDbIds;
+  }
+
+  public void setStudyDbIds(List<String> studyDbIds) {
+    this.studyDbIds = studyDbIds;
+  }
+
   public AlleleMatrixSearchRequest unknownString(String unknownString) {
     this.unknownString = unknownString;
     return this;
@@ -480,6 +545,7 @@ public class AlleleMatrixSearchRequest   {
     return Objects.equals(this.callSetDbIds, alleleMatrixSearchRequest.callSetDbIds) &&
         Objects.equals(this.dataMatrixAbbreviations, alleleMatrixSearchRequest.dataMatrixAbbreviations) &&
         Objects.equals(this.dataMatrixNames, alleleMatrixSearchRequest.dataMatrixNames) &&
+        Objects.equals(this.dimensionColumnAggregation, alleleMatrixSearchRequest.dimensionColumnAggregation) &&
         Objects.equals(this.expandHomozygotes, alleleMatrixSearchRequest.expandHomozygotes) &&
         Objects.equals(this.germplasmDbIds, alleleMatrixSearchRequest.germplasmDbIds) &&
         Objects.equals(this.germplasmNames, alleleMatrixSearchRequest.germplasmNames) &&
@@ -490,6 +556,7 @@ public class AlleleMatrixSearchRequest   {
         Objects.equals(this.sampleDbIds, alleleMatrixSearchRequest.sampleDbIds) &&
         Objects.equals(this.sepPhased, alleleMatrixSearchRequest.sepPhased) &&
         Objects.equals(this.sepUnphased, alleleMatrixSearchRequest.sepUnphased) &&
+        Objects.equals(this.studyDbIds, alleleMatrixSearchRequest.studyDbIds) &&
         Objects.equals(this.unknownString, alleleMatrixSearchRequest.unknownString) &&
         Objects.equals(this.variantDbIds, alleleMatrixSearchRequest.variantDbIds) &&
         Objects.equals(this.variantSetDbIds, alleleMatrixSearchRequest.variantSetDbIds);
@@ -497,7 +564,9 @@ public class AlleleMatrixSearchRequest   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(callSetDbIds, dataMatrixAbbreviations, dataMatrixNames, expandHomozygotes, germplasmDbIds, germplasmNames, germplasmPUIs, pagination, positionRanges, preview, sampleDbIds, sepPhased, sepUnphased, unknownString, variantDbIds, variantSetDbIds);
+    return Objects.hash(callSetDbIds, dataMatrixAbbreviations, dataMatrixNames, dimensionColumnAggregation,
+        expandHomozygotes, germplasmDbIds, germplasmNames, germplasmPUIs, pagination, positionRanges,
+        preview, sampleDbIds, sepPhased, sepUnphased, studyDbIds, unknownString, variantDbIds, variantSetDbIds);
   }
 
   @Override
@@ -508,6 +577,7 @@ public class AlleleMatrixSearchRequest   {
     sb.append("    callSetDbIds: ").append(toIndentedString(callSetDbIds)).append("\n");
     sb.append("    dataMatrixAbbreviations: ").append(toIndentedString(dataMatrixAbbreviations)).append("\n");
     sb.append("    dataMatrixNames: ").append(toIndentedString(dataMatrixNames)).append("\n");
+    sb.append("    dimensionColumnAggregation: ").append(toIndentedString(dimensionColumnAggregation)).append("\n");
     sb.append("    expandHomozygotes: ").append(toIndentedString(expandHomozygotes)).append("\n");
     sb.append("    germplasmDbIds: ").append(toIndentedString(germplasmDbIds)).append("\n");
     sb.append("    germplasmNames: ").append(toIndentedString(germplasmNames)).append("\n");
@@ -518,6 +588,7 @@ public class AlleleMatrixSearchRequest   {
     sb.append("    sampleDbIds: ").append(toIndentedString(sampleDbIds)).append("\n");
     sb.append("    sepPhased: ").append(toIndentedString(sepPhased)).append("\n");
     sb.append("    sepUnphased: ").append(toIndentedString(sepUnphased)).append("\n");
+    sb.append("    studyDbIds: ").append(toIndentedString(studyDbIds)).append("\n");
     sb.append("    unknownString: ").append(toIndentedString(unknownString)).append("\n");
     sb.append("    variantDbIds: ").append(toIndentedString(variantDbIds)).append("\n");
     sb.append("    variantSetDbIds: ").append(toIndentedString(variantSetDbIds)).append("\n");

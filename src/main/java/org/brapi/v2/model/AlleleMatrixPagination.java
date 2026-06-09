@@ -6,8 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
 
 /**
  * AlleleMatrixPagination
@@ -22,7 +20,11 @@ public class AlleleMatrixPagination   {
    */
   public enum DimensionEnum {
     CALLSETS("CALLSETS"),
-    
+
+    GERMPLASM("GERMPLASM"),
+
+    SAMPLES("SAMPLES"),
+
     VARIANTS("VARIANTS");
 
     private String value;

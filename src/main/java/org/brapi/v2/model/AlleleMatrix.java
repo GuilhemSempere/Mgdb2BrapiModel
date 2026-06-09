@@ -20,6 +20,14 @@ public class AlleleMatrix   {
   @Valid
   private List<String> callSetDbIds = null;
 
+  @JsonProperty("germplasmDbIds")
+  @Valid
+  private List<String> germplasmDbIds = null;
+
+  @JsonProperty("sampleDbIds")
+  @Valid
+  private List<String> sampleDbIds = null;
+
   @JsonProperty("dataMatrices")
   @Valid
   private List<AlleleMatrixDataMatrices> dataMatrices = new ArrayList<>();
@@ -73,6 +81,68 @@ public class AlleleMatrix   {
 
   public void setCallSetDbIds(List<String> callSetDbIds) {
     this.callSetDbIds = callSetDbIds;
+  }
+
+  public AlleleMatrix germplasmDbIds(List<String> germplasmDbIds) {
+    this.germplasmDbIds = germplasmDbIds;
+    return this;
+  }
+
+  public AlleleMatrix addGermplasmDbIdsItem(String germplasmDbIdsItem) {
+    if (this.germplasmDbIds == null) {
+      this.germplasmDbIds = new ArrayList<String>();
+    }
+    this.germplasmDbIds.add(germplasmDbIdsItem);
+    return this;
+  }
+
+  /**
+   * A list of unique identifiers for the Germplasm represented as columns in the matrix response.
+   * Populated instead of callSetDbIds when dimensionColumnAggregation is set to 'germplasm'.
+   * Each identifier follows the convention module§germplasmName.
+   * @return germplasmDbIds
+   **/
+  @Schema(example = "[\"myModule§germA\",\"myModule§germB\"]",
+          description = "A list of unique identifiers for the Germplasm represented as columns in the matrix response. "
+                  + "Populated instead of callSetDbIds when dimensionColumnAggregation is 'germplasm'. "
+                  + "Follows the convention module§germplasmName.")
+  public List<String> getGermplasmDbIds() {
+    return germplasmDbIds;
+  }
+
+  public void setGermplasmDbIds(List<String> germplasmDbIds) {
+    this.germplasmDbIds = germplasmDbIds;
+  }
+
+  public AlleleMatrix sampleDbIds(List<String> sampleDbIds) {
+    this.sampleDbIds = sampleDbIds;
+    return this;
+  }
+
+  public AlleleMatrix addSampleDbIdsItem(String sampleDbIdsItem) {
+    if (this.sampleDbIds == null) {
+      this.sampleDbIds = new ArrayList<String>();
+    }
+    this.sampleDbIds.add(sampleDbIdsItem);
+    return this;
+  }
+
+  /**
+   * A list of unique identifiers for the Samples represented as columns in the matrix response.
+   * Populated instead of callSetDbIds when dimensionColumnAggregation is set to 'sample'.
+   * Each identifier follows the convention module§sampleId.
+   * @return sampleDbIds
+   **/
+  @Schema(example = "[\"myModule§sampleId1\",\"myModule§sampleId2\"]",
+          description = "A list of unique identifiers for the Samples represented as columns in the matrix response. "
+                  + "Populated instead of callSetDbIds when dimensionColumnAggregation is 'sample'. "
+                  + "Follows the convention module§sampleId.")
+  public List<String> getSampleDbIds() {
+    return sampleDbIds;
+  }
+
+  public void setSampleDbIds(List<String> sampleDbIds) {
+    this.sampleDbIds = sampleDbIds;
   }
 
   public AlleleMatrix dataMatrices(List<AlleleMatrixDataMatrices> dataMatrices) {
@@ -270,6 +340,8 @@ public class AlleleMatrix   {
     }
     AlleleMatrix alleleMatrix = (AlleleMatrix) o;
     return Objects.equals(this.callSetDbIds, alleleMatrix.callSetDbIds) &&
+        Objects.equals(this.germplasmDbIds, alleleMatrix.germplasmDbIds) &&
+        Objects.equals(this.sampleDbIds, alleleMatrix.sampleDbIds) &&
         Objects.equals(this.dataMatrices, alleleMatrix.dataMatrices) &&
         Objects.equals(this.expandHomozygotes, alleleMatrix.expandHomozygotes) &&
         Objects.equals(this.pagination, alleleMatrix.pagination) &&
@@ -282,7 +354,7 @@ public class AlleleMatrix   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(callSetDbIds, dataMatrices, expandHomozygotes, pagination, sepPhased, sepUnphased, unknownString, variantDbIds, variantSetDbIds);
+    return Objects.hash(callSetDbIds, germplasmDbIds, sampleDbIds, dataMatrices, expandHomozygotes, pagination, sepPhased, sepUnphased, unknownString, variantDbIds, variantSetDbIds);
   }
 
   @Override
@@ -291,6 +363,8 @@ public class AlleleMatrix   {
     sb.append("class AlleleMatrix {\n");
     
     sb.append("    callSetDbIds: ").append(toIndentedString(callSetDbIds)).append("\n");
+    sb.append("    germplasmDbIds: ").append(toIndentedString(germplasmDbIds)).append("\n");
+    sb.append("    sampleDbIds: ").append(toIndentedString(sampleDbIds)).append("\n");
     sb.append("    dataMatrices: ").append(toIndentedString(dataMatrices)).append("\n");
     sb.append("    expandHomozygotes: ").append(toIndentedString(expandHomozygotes)).append("\n");
     sb.append("    pagination: ").append(toIndentedString(pagination)).append("\n");
