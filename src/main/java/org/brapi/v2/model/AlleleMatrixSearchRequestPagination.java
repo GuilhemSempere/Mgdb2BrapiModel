@@ -21,9 +21,7 @@ public class AlleleMatrixSearchRequestPagination   {
   public enum DimensionEnum {
     CALLSETS("CALLSETS"),
 
-    GERMPLASM("GERMPLASM"),
-
-    SAMPLES("SAMPLES"),
+    COLUMNS("COLUMNS"),
 
     VARIANTS("VARIANTS");
 

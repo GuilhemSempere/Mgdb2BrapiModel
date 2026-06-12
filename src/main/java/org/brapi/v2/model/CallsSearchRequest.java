@@ -22,6 +22,9 @@ public class CallsSearchRequest   {
   @Valid
   private List<String> callSetDbIds = null;
 
+  @JsonProperty("dimensionColumnAggregation")
+  private AlleleMatrixSearchRequest.DimensionColumnAggregationEnum dimensionColumnAggregation = AlleleMatrixSearchRequest.DimensionColumnAggregationEnum.CALLSET;
+
   @JsonProperty("expandHomozygotes")
   private Boolean expandHomozygotes = null;
 
@@ -48,6 +51,14 @@ public class CallsSearchRequest   {
   @Valid
   private List<String> variantSetDbIds = null;
 
+  @JsonProperty("germplasmDbIds")
+  @Valid
+  private List<String> germplasmDbIds = null;
+
+  @JsonProperty("sampleDbIds")
+  @Valid
+  private List<String> sampleDbIds = null;
+
   public CallsSearchRequest callSetDbIds(List<String> callSetDbIds) {
     this.callSetDbIds = callSetDbIds;
     return this;
@@ -59,6 +70,25 @@ public class CallsSearchRequest   {
     }
     this.callSetDbIds.add(callSetDbIdsItem);
     return this;
+  }
+
+  /**
+   * Override the default column aggregation granularity. When not set, the server uses the finest-grained level implied by the provided material filters.
+   * Accepted values: 'callSet' (one column per CallSet, no merging), 'sample' (one column per Sample, genotypes merged by majority vote),
+   * 'germplasm' (one column per Germplasm, genotypes merged by majority vote). In case of a tie, the column is treated as missing data.
+   * @return dimensionColumnAggregation
+   **/
+  @Schema(example = "germplasm", allowableValues = {"callSet", "sample", "germplasm"},
+          description = "Override the default column aggregation granularity. Accepted values: 'callSet' (default, one column per CallSet), "
+                  + "'sample' (one column per Sample, genotypes aggregated by majority vote), "
+                  + "'germplasm' (one column per Germplasm, genotypes aggregated by majority vote). "
+                  + "On a tie, the column is treated as missing data.")
+  public AlleleMatrixSearchRequest.DimensionColumnAggregationEnum getDimensionColumnAggregation() {
+    return dimensionColumnAggregation;
+  }
+
+  public void setDimensionColumnAggregation(AlleleMatrixSearchRequest.DimensionColumnAggregationEnum dimensionColumnAggregation) {
+    this.dimensionColumnAggregation = dimensionColumnAggregation;
   }
 
   /**
@@ -241,6 +271,34 @@ public class CallsSearchRequest   {
 
   public void setVariantSetDbIds(List<String> variantSetDbIds) {
     this.variantSetDbIds = variantSetDbIds;
+  }
+
+  /**
+   * A list of IDs which uniquely identify `Germplasm` within the given database server
+   * @return germplasmDbIds
+   **/
+  @Schema(example = "[\"module§individualId\"]", description = "A list of IDs which uniquely identify `Germplasm` within the given database server")
+
+  public List<String> getGermplasmDbIds() {
+    return germplasmDbIds;
+  }
+
+  public void setGermplasmDbIds(List<String> germplasmDbIds) {
+    this.germplasmDbIds = germplasmDbIds;
+  }
+
+  /**
+   * A list of IDs which uniquely identify `Samples` within the given database server
+   * @return sampleDbIds
+   **/
+  @Schema(example = "[\"module§sampleId\"]", description = "A list of IDs which uniquely identify `Samples` within the given database server")
+
+  public List<String> getSampleDbIds() {
+    return sampleDbIds;
+  }
+
+  public void setSampleDbIds(List<String> sampleDbIds) {
+    this.sampleDbIds = sampleDbIds;
   }
 
 

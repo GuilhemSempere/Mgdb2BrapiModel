@@ -1,7 +1,10 @@
 package org.brapi.v2.model;
 
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +19,36 @@ import javax.validation.Valid;
 
 
 public class AlleleMatrixSearchRequest   {
+
+  public enum DimensionColumnAggregationEnum {
+    CALLSET("CALLSET"),
+
+    GERMPLASM("GERMPLASM"),
+
+    SAMPLE("SAMPLE");
+
+    private String value;
+
+    DimensionColumnAggregationEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static AlleleMatrixSearchRequest.DimensionColumnAggregationEnum fromValue(String text) {
+      for (AlleleMatrixSearchRequest.DimensionColumnAggregationEnum b : AlleleMatrixSearchRequest.DimensionColumnAggregationEnum.values()) {
+        if (String.valueOf(b.value).equalsIgnoreCase(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
   @JsonProperty("callSetDbIds")
   @Valid
   private List<String> callSetDbIds = null;
@@ -29,7 +62,7 @@ public class AlleleMatrixSearchRequest   {
   private List<String> dataMatrixNames = null;
 
   @JsonProperty("dimensionColumnAggregation")
-  private String dimensionColumnAggregation = null;
+  private DimensionColumnAggregationEnum dimensionColumnAggregation = DimensionColumnAggregationEnum.CALLSET;
 
   @JsonProperty("expandHomozygotes")
   private Boolean expandHomozygotes = null;
@@ -163,7 +196,7 @@ public class AlleleMatrixSearchRequest   {
     this.dataMatrixNames = dataMatrixNames;
   }
 
-  public AlleleMatrixSearchRequest dimensionColumnAggregation(String dimensionColumnAggregation) {
+  public AlleleMatrixSearchRequest dimensionColumnAggregation(DimensionColumnAggregationEnum dimensionColumnAggregation) {
     this.dimensionColumnAggregation = dimensionColumnAggregation;
     return this;
   }
@@ -179,11 +212,11 @@ public class AlleleMatrixSearchRequest   {
                   + "'sample' (one column per Sample, genotypes aggregated by majority vote), "
                   + "'germplasm' (one column per Germplasm, genotypes aggregated by majority vote). "
                   + "On a tie, the column is treated as missing data.")
-  public String getDimensionColumnAggregation() {
+  public DimensionColumnAggregationEnum getDimensionColumnAggregation() {
     return dimensionColumnAggregation;
   }
 
-  public void setDimensionColumnAggregation(String dimensionColumnAggregation) {
+  public void setDimensionColumnAggregation(DimensionColumnAggregationEnum dimensionColumnAggregation) {
     this.dimensionColumnAggregation = dimensionColumnAggregation;
   }
 
