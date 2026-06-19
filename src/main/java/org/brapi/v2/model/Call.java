@@ -23,6 +23,11 @@ public class Call   {
   @Valid
   private Map<String, String> additionalInfo = null;
 
+  @JsonProperty("germplasmDbId")
+  private String germplasmDbId = null;
+
+  @JsonProperty("sampleDbId")
+  private String sampleDbId = null;
   @JsonProperty("callSetDbId")
   private String callSetDbId = null;
 
@@ -88,6 +93,22 @@ public class Call   {
   public Call callSetDbId(String callSetDbId) {
     this.callSetDbId = callSetDbId;
     return this;
+  }
+
+  public String getGermplasmDbId() {
+    return germplasmDbId;
+  }
+
+  public void setGermplasmDbId(String germplasmDbId) {
+    this.germplasmDbId = germplasmDbId;
+  }
+
+  public String getSampleDbId() {
+    return sampleDbId;
+  }
+
+  public void setSampleDbId(String sampleDbId) {
+    this.sampleDbId = sampleDbId;
   }
 
   /**

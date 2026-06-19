@@ -6,8 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
 
 /**
  * AlleleMatrixSearchRequestPagination
@@ -22,7 +20,9 @@ public class AlleleMatrixSearchRequestPagination   {
    */
   public enum DimensionEnum {
     CALLSETS("CALLSETS"),
-    
+
+    COLUMNS("COLUMNS"),
+
     VARIANTS("VARIANTS");
 
     private String value;
