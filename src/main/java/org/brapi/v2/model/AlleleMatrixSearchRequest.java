@@ -207,7 +207,7 @@ public class AlleleMatrixSearchRequest   {
    * 'germplasm' (one column per Germplasm, genotypes merged by majority vote). In case of a tie, the column is treated as missing data.
    * @return dimensionColumnAggregation
    **/
-  @Schema(example = "germplasm", allowableValues = {"callSet", "sample", "germplasm"},
+  @Schema(example = "germplasm", allowableValues = {"callSet", "sample", "germplasm"}, hidden = true,
           description = "Override the default column aggregation granularity. Accepted values: 'callSet' (default, one column per CallSet), "
                   + "'sample' (one column per Sample, genotypes aggregated by majority vote), "
                   + "'germplasm' (one column per Germplasm, genotypes aggregated by majority vote). "
