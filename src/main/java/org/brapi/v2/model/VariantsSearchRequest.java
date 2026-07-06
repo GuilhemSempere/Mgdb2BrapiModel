@@ -606,10 +606,10 @@ public class VariantsSearchRequest   {
   }
 
   /**
-   * A list of IDs which uniquely identify `VariantSets`
-   * @return variantSetDbIds
+   * A list of variant names
+   * @return variantNames
    **/
-  @ApiModelProperty(example = "[\"ba63d810\",\"434d1760\"]", value = "A list of IDs which uniquely identify `VariantSets`")
+  @ApiModelProperty(example = "[\"RefSNP_ID_1\",\"RefSNP_ID_2\"]", value = "A list of variantNames`")
   
   public List<String> getVariantNames() {
     return variantNames;
@@ -619,13 +619,12 @@ public class VariantsSearchRequest   {
     this.variantNames = variantNames;
   }
 
-
   /**
-   * A list of variant names
-   * @return variantNames
+   * A list of IDs which uniquely identify `VariantSets`
+   * @return variantSetDbIds
    **/
-  @ApiModelProperty(example = "[\"RefSNP_ID_1\",\"RefSNP_ID_2\"]", value = "A list of variantNames`")
-
+  @ApiModelProperty(example = "[\"ba63d810\",\"434d1760\"]", value = "A list of IDs which uniquely identify `VariantSets`")
+  
   public List<String> getVariantSetDbIds() {
     return variantSetDbIds;
   }
