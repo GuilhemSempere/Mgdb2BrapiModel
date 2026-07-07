@@ -96,6 +96,10 @@ public class VariantsSearchRequest   {
   @Valid
   private List<String> variantSetDbIds = null;
 
+  @JsonProperty("variantNames")
+  @Valid
+  private List<String> variantNames = null;
+
   public VariantsSearchRequest callSetDbIds(List<String> callSetDbIds) {
     this.callSetDbIds = callSetDbIds;
     return this;
@@ -602,12 +606,26 @@ public class VariantsSearchRequest   {
   }
 
   /**
+   * A list of variant names
+   * @return variantNames
+   **/
+  @ApiModelProperty(example = "[\"RefSNP_ID_1\",\"RefSNP_ID_2\"]", value = "A list of variantNames`")
+  
+  public List<String> getVariantNames() {
+    return variantNames;
+  }
+
+  public void setVariantNames(List<String> variantNames) {
+    this.variantNames = variantNames;
+  }
+
+  /**
    * A list of IDs which uniquely identify `VariantSets`
    * @return variantSetDbIds
    **/
   @ApiModelProperty(example = "[\"ba63d810\",\"434d1760\"]", value = "A list of IDs which uniquely identify `VariantSets`")
   
-    public List<String> getVariantSetDbIds() {
+  public List<String> getVariantSetDbIds() {
     return variantSetDbIds;
   }
 
@@ -645,12 +663,13 @@ public class VariantsSearchRequest   {
         Objects.equals(this.trialDbIds, variantsSearchRequest.trialDbIds) &&
         Objects.equals(this.trialNames, variantsSearchRequest.trialNames) &&
         Objects.equals(this.variantDbIds, variantsSearchRequest.variantDbIds) &&
-        Objects.equals(this.variantSetDbIds, variantsSearchRequest.variantSetDbIds);
+        Objects.equals(this.variantSetDbIds, variantsSearchRequest.variantSetDbIds)&&
+        Objects.equals(this.variantNames, variantsSearchRequest.variantNames);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callSetDbIds, commonCropNames, end, externalReferenceIDs, externalReferenceIds, externalReferenceSources, page, pageSize, pageToken, programDbIds, programNames, referenceDbId, referenceDbIds, referenceSetDbIds, start, studyDbIds, studyNames, trialDbIds, trialNames, variantDbIds, variantSetDbIds);
+    return Objects.hash(callSetDbIds, commonCropNames, end, externalReferenceIDs, externalReferenceIds, externalReferenceSources, page, pageSize, pageToken, programDbIds, programNames, referenceDbId, referenceDbIds, referenceSetDbIds, start, studyDbIds, studyNames, trialDbIds, trialNames, variantDbIds, variantSetDbIds, variantNames);
   }
 
   @Override
@@ -679,6 +698,7 @@ public class VariantsSearchRequest   {
     sb.append("    trialNames: ").append(toIndentedString(trialNames)).append("\n");
     sb.append("    variantDbIds: ").append(toIndentedString(variantDbIds)).append("\n");
     sb.append("    variantSetDbIds: ").append(toIndentedString(variantSetDbIds)).append("\n");
+    sb.append("    variantNames: ").append(toIndentedString(variantNames)).append("\n");
     sb.append("}");
     return sb.toString();
   }

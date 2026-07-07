@@ -89,9 +89,9 @@ public class Variant   {
   @Valid
   private List<String> variantNames = null;
 
-  @JsonProperty("variantSetDbId")
+  @JsonProperty("variantSetDbIds")
   @Valid
-  private List<String> variantSetDbId = null;
+  private List<String> variantSetDbIds = null;
 
   @JsonProperty("variantType")
   private String variantType = null;
@@ -534,31 +534,31 @@ public class Variant   {
     this.variantNames = variantNames;
   }
 
-  public Variant variantSetDbId(List<String> variantSetDbId) {
-    this.variantSetDbId = variantSetDbId;
+  public Variant variantSetDbIds(List<String> variantSetDbIds) {
+    this.variantSetDbIds = variantSetDbIds;
     return this;
   }
 
   public Variant addVariantSetDbIdItem(String variantSetDbIdItem) {
-    if (this.variantSetDbId == null) {
-      this.variantSetDbId = new ArrayList<String>();
+    if (this.variantSetDbIds == null) {
+      this.variantSetDbIds = new ArrayList<String>();
     }
-    this.variantSetDbId.add(variantSetDbIdItem);
+    this.variantSetDbIds.add(variantSetDbIdItem);
     return this;
   }
 
   /**
    * An array of `VariantSet` IDs this variant belongs to. This also defines the `ReferenceSet` against which the `Variant` is to be interpreted.
-   * @return variantSetDbId
+   * @return variantSetDbIds
    **/
   @Schema(example = "[\"c8ae400b\",\"ef2c204b\"]", description = "An array of `VariantSet` IDs this variant belongs to. This also defines the `ReferenceSet` against which the `Variant` is to be interpreted.")
   
-    public List<String> getVariantSetDbId() {
-    return variantSetDbId;
+    public List<String> getVariantSetDbIds() {
+    return variantSetDbIds;
   }
 
-  public void setVariantSetDbId(List<String> variantSetDbId) {
-    this.variantSetDbId = variantSetDbId;
+  public void setVariantSetDbIds(List<String> variantSetDbIds) {
+    this.variantSetDbIds = variantSetDbIds;
   }
 
   public Variant variantType(String variantType) {
@@ -611,13 +611,13 @@ public class Variant   {
         Objects.equals(this.updated, variant.updated) &&
         Objects.equals(this.variantDbId, variant.variantDbId) &&
         Objects.equals(this.variantNames, variant.variantNames) &&
-        Objects.equals(this.variantSetDbId, variant.variantSetDbId) &&
+        Objects.equals(this.variantSetDbIds, variant.variantSetDbIds) &&
         Objects.equals(this.variantType, variant.variantType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(additionalInfo, alternateBases, alternateBases, ciend, cipos, created, end, externalReferences, filtersApplied, filtersFailed, filtersPassed, referenceBases, referenceDbId, referenceName, referenceSetDbId, referenceSetName, start, svlen, updated, variantDbId, variantNames, variantSetDbId, variantType);
+    return Objects.hash(additionalInfo, alternateBases, alternateBases, ciend, cipos, created, end, externalReferences, filtersApplied, filtersFailed, filtersPassed, referenceBases, referenceDbId, referenceName, referenceSetDbId, referenceSetName, start, svlen, updated, variantDbId, variantNames, variantSetDbIds, variantType);
   }
 
   @Override
@@ -646,7 +646,7 @@ public class Variant   {
     sb.append("    updated: ").append(toIndentedString(updated)).append("\n");
     sb.append("    variantDbId: ").append(toIndentedString(variantDbId)).append("\n");
     sb.append("    variantNames: ").append(toIndentedString(variantNames)).append("\n");
-    sb.append("    variantSetDbId: ").append(toIndentedString(variantSetDbId)).append("\n");
+    sb.append("    variantSetDbId: ").append(toIndentedString(variantSetDbIds)).append("\n");
     sb.append("    variantType: ").append(toIndentedString(variantType)).append("\n");
     sb.append("}");
     return sb.toString();
