@@ -11,14 +11,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * GermplasmNewRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:37:29.213Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:37:29.213Z[GMT]")
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GermplasmNewRequest {
@@ -372,7 +372,7 @@ public class GermplasmNewRequest {
      * @return commonCropName
    *
      */
-    @Schema(example = "Maize", required = true, description = "Common name for the crop   MCPD (v2.1) (CROPNAME) 10. Common name of the crop. Example: \"malting barley\", \"mas\".")
+    @Schema(example = "Maize", requiredMode = Schema.RequiredMode.REQUIRED, description = "Common name for the crop   MCPD (v2.1) (CROPNAME) 10. Common name of the crop. Example: \"malting barley\", \"mas\".")
     @NotNull
 
     public String getCommonCropName() {
@@ -542,7 +542,7 @@ public class GermplasmNewRequest {
      * @return germplasmName
    *
      */
-    @Schema(example = "A0000003", required = true, description = "Name of the germplasm. It can be the preferred name and does not have to be unique.  MCPD (v2.1) (ACCENAME) 11. Either a registered or other designation given to the material received, other than the donors accession number (23) or collecting number (3). First letter uppercase. Multiple names are separated by a semicolon without space.")
+    @Schema(example = "A0000003", requiredMode = Schema.RequiredMode.REQUIRED, description = "Name of the germplasm. It can be the preferred name and does not have to be unique.  MCPD (v2.1) (ACCENAME) 11. Either a registered or other designation given to the material received, other than the donors accession number (23) or collecting number (3). First letter uppercase. Multiple names are separated by a semicolon without space.")
     @NotNull
 
     public String getGermplasmName() {
@@ -611,7 +611,7 @@ public class GermplasmNewRequest {
      * @return germplasmPUI
    *
      */
-    @Schema(example = "http://pui.per/accession/A0000003", required = true, description = "The Permanent Unique Identifier which represents a germplasm  MIAPPE V1.1 (DM-41) Biological material ID - Code used to identify the biological material in the data file. Should be unique within the Investigation. Can correspond to experimental plant ID, seed lot ID, etc This material identification is different from a BiosampleID which corresponds to Observation Unit or Samples sections below.  MCPD (v2.1) (PUID) 0. Any persistent, unique identifier assigned to the accession so it can be unambiguously referenced at the global level and the information associated with it harvested through automated means. Report one PUID for each accession. The Secretariat of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA) is facilitating the assignment of a persistent unique identifier (PUID), in the form of a DOI, to PGRFA at the accession level. Genebanks not applying a true PUID to their accessions should use, and request recipients to use, the concatenation of INSTCODE, ACCENUMB, and GENUS as a globally unique identifier similar in most respects to the PUID whenever they exchange information on accessions with third parties.")
+    @Schema(example = "http://pui.per/accession/A0000003", requiredMode = Schema.RequiredMode.REQUIRED, description = "The Permanent Unique Identifier which represents a germplasm  MIAPPE V1.1 (DM-41) Biological material ID - Code used to identify the biological material in the data file. Should be unique within the Investigation. Can correspond to experimental plant ID, seed lot ID, etc This material identification is different from a BiosampleID which corresponds to Observation Unit or Samples sections below.  MCPD (v2.1) (PUID) 0. Any persistent, unique identifier assigned to the accession so it can be unambiguously referenced at the global level and the information associated with it harvested through automated means. Report one PUID for each accession. The Secretariat of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA) is facilitating the assignment of a persistent unique identifier (PUID), in the form of a DOI, to PGRFA at the accession level. Genebanks not applying a true PUID to their accessions should use, and request recipients to use, the concatenation of INSTCODE, ACCENUMB, and GENUS as a globally unique identifier similar in most respects to the PUID whenever they exchange information on accessions with third parties.")
     @NotNull
 
     public String getGermplasmPUI() {

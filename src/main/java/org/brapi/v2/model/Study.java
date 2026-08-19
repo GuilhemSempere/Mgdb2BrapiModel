@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * Study
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class Study extends StudyNewRequest {
   @JsonProperty("studyDbId")
   private String studyDbId = null;
@@ -33,7 +33,7 @@ public class Study extends StudyNewRequest {
    * The ID which uniquely identifies a study within the given database server  MIAPPE V1.1 (DM-11) Study unique ID - Unique identifier comprising the name or identifier for the institution/database hosting the submission of the study data, and the identifier of the study in that institution.
    * @return studyDbId
   **/
- // @Schema(example = "175ac75a", required = true, description = "The ID which uniquely identifies a study within the given database server  MIAPPE V1.1 (DM-11) Study unique ID - Unique identifier comprising the name or identifier for the institution/database hosting the submission of the study data, and the identifier of the study in that institution.")
+ // @Schema(example = "175ac75a", requiredMode = Schema.RequiredMode.REQUIRED, description = "The ID which uniquely identifies a study within the given database server  MIAPPE V1.1 (DM-11) Study unique ID - Unique identifier comprising the name or identifier for the institution/database hosting the submission of the study data, and the identifier of the study in that institution.")
   public String getStudyDbId() {
     return studyDbId;
   }

@@ -19,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
  * BasePagination
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-22T15:23:22.792Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-22T15:23:22.792Z[GMT]")
 public class BasePagination {
   @SerializedName("pageSize")
   private Integer pageSize = 1000;

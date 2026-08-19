@@ -3,22 +3,20 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * ******************  /callsets  ********************* This request maps to the body of &#x60;POST /search/callsets&#x60; as JSON.
  */
-@ApiModel(description = "******************  /callsets  ********************* This request maps to the body of `POST /search/callsets` as JSON.")
+@Schema(description = "******************  /callsets  ********************* This request maps to the body of `POST /search/callsets` as JSON.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class CallSetsSearchRequest   {
   @JsonProperty("callSetDbIds")
   @Valid
@@ -73,7 +71,7 @@ public class CallSetsSearchRequest   {
    * Only return call sets with these DbIds (case-sensitive, exact match).
    * @return callSetDbIds
   **/
-  @ApiModelProperty(value = "Only return call sets with these DbIds (case-sensitive, exact match).")
+  @Schema(description = "Only return call sets with these DbIds (case-sensitive, exact match).")
   
     public List<String> getCallSetDbIds() {
     return callSetDbIds;
@@ -100,7 +98,7 @@ public class CallSetsSearchRequest   {
    * Only return call sets with these names (case-sensitive, exact match).
    * @return callSetNames
   **/
-  @ApiModelProperty(value = "Only return call sets with these names (case-sensitive, exact match).")
+  @Schema(description = "Only return call sets with these names (case-sensitive, exact match).")
   
     public List<String> getCallSetNames() {
     return callSetNames;
@@ -127,7 +125,7 @@ public class CallSetsSearchRequest   {
    * Return only call sets generated from the Sample of this germplasm
    * @return germplasmDbIds
   **/
-  @ApiModelProperty(value = "Return only call sets generated from the Sample of this germplasm")
+  @Schema(description = "Return only call sets generated from the Sample of this germplasm")
   
     public List<String> getGermplasmDbIds() {
     return germplasmDbIds;
@@ -154,7 +152,7 @@ public class CallSetsSearchRequest   {
    * Return only call sets generated from the Sample of this germplasm
    * @return germplasmNames
   **/
-  @ApiModelProperty(value = "Return only call sets generated from the Sample of this germplasm")
+  @Schema(description = "Return only call sets generated from the Sample of this germplasm")
   
     public List<String> getGermplasmNames() {
     return germplasmNames;
@@ -181,7 +179,7 @@ public class CallSetsSearchRequest   {
    * Return only call sets generated from the provided Biosample ID.
    * @return sampleDbIds
   **/
-  @ApiModelProperty(value = "Return only call sets generated from the provided Biosample ID.")
+  @Schema(description = "Return only call sets generated from the provided Biosample ID.")
   
     public List<String> getSampleDbIds() {
     return sampleDbIds;
@@ -208,7 +206,7 @@ public class CallSetsSearchRequest   {
    * Return only call sets generated from the provided Biosample ID.
    * @return sampleNames
   **/
-  @ApiModelProperty(value = "Return only call sets generated from the provided Biosample ID.")
+  @Schema(description = "Return only call sets generated from the provided Biosample ID.")
   
     public List<String> getSampleNames() {
     return sampleNames;
@@ -235,7 +233,7 @@ public class CallSetsSearchRequest   {
    * The VariantSet to search.
    * @return variantSetDbIds
   **/
-  @ApiModelProperty(value = "The VariantSet to search.")
+  @Schema(description = "The VariantSet to search.")
   
     public List<String> getVariantSetDbIds() {
     return variantSetDbIds;
@@ -254,7 +252,7 @@ public class CallSetsSearchRequest   {
    * Specifies the maximum number of results to return in a single page. If unspecified, a system default will be used.
    * @return pageSize
   **/
-  @ApiModelProperty(value = "Specifies the maximum number of results to return in a single page. If unspecified, a system default will be used.")
+  @Schema(description = "Specifies the maximum number of results to return in a single page. If unspecified, a system default will be used.")
   
   public Integer getPageSize() {
     return pageSize;
@@ -269,7 +267,7 @@ public class CallSetsSearchRequest   {
     return this;
   }
 
-  @ApiModelProperty(value = "The page number.")
+  @Schema(description = "The page number.")
   public Integer getPage() {
     return page;
   }

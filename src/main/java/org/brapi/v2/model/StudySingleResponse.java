@@ -30,7 +30,7 @@ import java.io.IOException;
  * StudySingleResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class StudySingleResponse {
   @JsonProperty("@context")
   private Context _atContext = null;
@@ -68,7 +68,7 @@ public class StudySingleResponse {
    * Get metadata
    * @return metadata
   **/
- // @Schema(required = true, description = "")
+ // @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public Metadata getMetadata() {
     return metadata;
   }
@@ -86,7 +86,7 @@ public class StudySingleResponse {
    * Get result
    * @return result
   **/
- // @Schema(required = true, description = "")
+ // @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public Study getResult() {
     return result;
   }

@@ -25,7 +25,7 @@ import java.io.IOException;
  * IndexPagination
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-22T15:23:22.792Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-22T15:23:22.792Z[GMT]")
 public class IndexPagination extends BasePagination {
   @SerializedName("currentPage")
   private Integer currentPage = 0;

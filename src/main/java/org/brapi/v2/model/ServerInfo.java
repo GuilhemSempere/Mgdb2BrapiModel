@@ -3,22 +3,20 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.brapi.v2.model.Service;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * ServerInfo
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class ServerInfo   {
   @JsonProperty("calls")
   @Valid
@@ -59,7 +57,7 @@ public class ServerInfo   {
    * Array of available calls on this server
    * @return calls
   **/
-  @ApiModelProperty(required = true, value = "Array of available calls on this server")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "Array of available calls on this server")
       @NotNull
     @Valid
     public List<Service> getCalls() {
@@ -79,7 +77,7 @@ public class ServerInfo   {
    * A contact email address for this server management
    * @return contactEmail
   **/
-  @ApiModelProperty(example = "contact@institute.org", value = "A contact email address for this server management")
+  @Schema(example = "contact@institute.org", description = "A contact email address for this server management")
   
     public String getContactEmail() {
     return contactEmail;
@@ -98,7 +96,7 @@ public class ServerInfo   {
    * A URL to the human readable documentation of this object
    * @return documentationURL
   **/
-  @ApiModelProperty(example = "institute.org/server", value = "A URL to the human readable documentation of this object")
+  @Schema(example = "institute.org/server", description = "A URL to the human readable documentation of this object")
   
     public String getDocumentationURL() {
     return documentationURL;
@@ -117,7 +115,7 @@ public class ServerInfo   {
    * Physical location of this server (ie. City, Country)
    * @return location
   **/
-  @ApiModelProperty(example = "USA", value = "Physical location of this server (ie. City, Country)")
+  @Schema(example = "USA", description = "Physical location of this server (ie. City, Country)")
   
     public String getLocation() {
     return location;
@@ -136,7 +134,7 @@ public class ServerInfo   {
    * The name of the organiation that manages this server and data
    * @return organizationName
   **/
-  @ApiModelProperty(example = "The Institute", value = "The name of the organiation that manages this server and data")
+  @Schema(example = "The Institute", description = "The name of the organiation that manages this server and data")
   
     public String getOrganizationName() {
     return organizationName;
@@ -155,7 +153,7 @@ public class ServerInfo   {
    * The URL of the organiation that manages this server and data
    * @return organizationURL
   **/
-  @ApiModelProperty(example = "institute.org/home", value = "The URL of the organiation that manages this server and data")
+  @Schema(example = "institute.org/home", description = "The URL of the organiation that manages this server and data")
   
     public String getOrganizationURL() {
     return organizationURL;
@@ -174,7 +172,7 @@ public class ServerInfo   {
    * A description of this server
    * @return serverDescription
   **/
-  @ApiModelProperty(example = "The BrAPI Test Server Web Server - Apache Tomcat 7.0.32 Database - Postgres 10 Supported BrAPI Version - V2.0", value = "A description of this server")
+  @Schema(example = "The BrAPI Test Server Web Server - Apache Tomcat 7.0.32 Database - Postgres 10 Supported BrAPI Version - V2.0", description = "A description of this server")
   
     public String getServerDescription() {
     return serverDescription;
@@ -193,7 +191,7 @@ public class ServerInfo   {
    * The name of this server
    * @return serverName
   **/
-  @ApiModelProperty(example = "The BrAPI Test Server", value = "The name of this server")
+  @Schema(example = "The BrAPI Test Server", description = "The name of this server")
   
     public String getServerName() {
     return serverName;

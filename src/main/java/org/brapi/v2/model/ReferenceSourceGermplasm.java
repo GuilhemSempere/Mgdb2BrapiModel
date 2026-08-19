@@ -12,7 +12,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * ReferenceSourceGermplasm
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-02-08T14:59:28.380Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-02-08T14:59:28.380Z[GMT]")
 
 
 public class ReferenceSourceGermplasm   {

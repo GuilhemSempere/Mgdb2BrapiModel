@@ -28,7 +28,7 @@ import java.io.IOException;
  * StudyListResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class StudyListResponse {
   @SerializedName("@context")
   private Context _atContext = null;
@@ -66,7 +66,7 @@ public class StudyListResponse {
    * Get metadata
    * @return metadata
   **/
-  //@Schema(required = true, description = "")
+  //@Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public Metadata getMetadata() {
     return metadata;
   }
@@ -84,7 +84,7 @@ public class StudyListResponse {
    * Get result
    * @return result
   **/
-  //@Schema(required = true, description = "")
+  //@Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public StudyListResponseResult getResult() {
     return result;
   }

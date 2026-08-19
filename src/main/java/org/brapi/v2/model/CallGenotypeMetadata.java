@@ -11,7 +11,7 @@ import org.springframework.validation.annotation.Validated;
  * CallGenotypeMetadata
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-09-19T13:16:35.755Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-09-19T13:16:35.755Z[GMT]")
 
 
 public class CallGenotypeMetadata   {

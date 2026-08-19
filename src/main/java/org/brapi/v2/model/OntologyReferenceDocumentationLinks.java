@@ -4,17 +4,16 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * OntologyReferenceDocumentationLinks
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
 public class OntologyReferenceDocumentationLinks   {
   @JsonProperty("URL")
   private String URL = null;
@@ -63,7 +62,7 @@ public class OntologyReferenceDocumentationLinks   {
    * Get URL
    * @return URL
   **/
-  @ApiModelProperty(example = "http://purl.obolibrary.org/obo/ro.owl", value = "")
+  @Schema(example = "http://purl.obolibrary.org/obo/ro.owl", description = "")
   
     public String getURL() {
     return URL;
@@ -82,7 +81,7 @@ public class OntologyReferenceDocumentationLinks   {
    * Get type
    * @return type
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     public TypeEnum getType() {
     return type;

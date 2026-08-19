@@ -1,24 +1,24 @@
 package org.brapi.v2.model;
 
+import java.time.OffsetDateTime;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.threeten.bp.OffsetDateTime;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * VariableBaseClass
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T11:58:54.700Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T11:58:54.700Z[GMT]")
 public class VariableBaseClass   {
   @JsonProperty("additionalInfo")
   @Valid
@@ -91,7 +91,7 @@ public class VariableBaseClass   {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   
     public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
@@ -110,7 +110,7 @@ public class VariableBaseClass   {
    * Crop name (examples: \"Maize\", \"Wheat\")
    * @return commonCropName
   **/
-  @ApiModelProperty(example = "Maize", value = "Crop name (examples: \"Maize\", \"Wheat\")")
+  @Schema(example = "Maize", description = "Crop name (examples: \"Maize\", \"Wheat\")")
   
     public String getCommonCropName() {
     return commonCropName;
@@ -137,7 +137,7 @@ public class VariableBaseClass   {
    * Indication of how trait is routinely used. (examples: [\"Trial evaluation\", \"Nursery evaluation\"])
    * @return contextOfUse
   **/
-  @ApiModelProperty(example = "[\"Trial evaluation\",\"Nursery evaluation\"]", value = "Indication of how trait is routinely used. (examples: [\"Trial evaluation\", \"Nursery evaluation\"])")
+  @Schema(example = "[\"Trial evaluation\",\"Nursery evaluation\"]", description = "Indication of how trait is routinely used. (examples: [\"Trial evaluation\", \"Nursery evaluation\"])")
   
     public List<String> getContextOfUse() {
     return contextOfUse;
@@ -156,7 +156,7 @@ public class VariableBaseClass   {
    * Variable default value. (examples: \"red\", \"2.3\", etc.)
    * @return defaultValue
   **/
-  @ApiModelProperty(example = "2", value = "Variable default value. (examples: \"red\", \"2.3\", etc.)")
+  @Schema(example = "2", description = "Variable default value. (examples: \"red\", \"2.3\", etc.)")
   
     public String getDefaultValue() {
     return defaultValue;
@@ -175,7 +175,7 @@ public class VariableBaseClass   {
    * A URL to the human readable documentation of this object
    * @return documentationURL
   **/
-  @ApiModelProperty(example = "https://wiki.brapi.org/documentation.html", value = "A URL to the human readable documentation of this object")
+  @Schema(example = "https://wiki.brapi.org/documentation.html", description = "A URL to the human readable documentation of this object")
   
     public String getDocumentationURL() {
     return documentationURL;
@@ -194,7 +194,7 @@ public class VariableBaseClass   {
    * Growth stage at which measurement is made (examples: \"flowering\")
    * @return growthStage
   **/
-  @ApiModelProperty(example = "flowering", value = "Growth stage at which measurement is made (examples: \"flowering\")")
+  @Schema(example = "flowering", description = "Growth stage at which measurement is made (examples: \"flowering\")")
   
     public String getGrowthStage() {
     return growthStage;
@@ -213,7 +213,7 @@ public class VariableBaseClass   {
    * Name of institution submitting the variable
    * @return institution
   **/
-  @ApiModelProperty(example = "The BrAPI Institute", value = "Name of institution submitting the variable")
+  @Schema(example = "The BrAPI Institute", description = "Name of institution submitting the variable")
   
     public String getInstitution() {
     return institution;
@@ -232,7 +232,7 @@ public class VariableBaseClass   {
    * 2 letter ISO 639-1 code for the language of submission of the variable.
    * @return language
   **/
-  @ApiModelProperty(example = "en", value = "2 letter ISO 639-1 code for the language of submission of the variable.")
+  @Schema(example = "en", description = "2 letter ISO 639-1 code for the language of submission of the variable.")
   
     public String getLanguage() {
     return language;
@@ -251,7 +251,7 @@ public class VariableBaseClass   {
    * Get method
    * @return method
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     public Object getMethod() {
@@ -271,7 +271,7 @@ public class VariableBaseClass   {
    * Get ontologyReference
    * @return ontologyReference
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public OntologyReference getOntologyReference() {
@@ -291,7 +291,7 @@ public class VariableBaseClass   {
    * Get scale
    * @return scale
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     public Object getScale() {
@@ -311,7 +311,7 @@ public class VariableBaseClass   {
    * Name of scientist submitting the variable.
    * @return scientist
   **/
-  @ApiModelProperty(example = "Dr. Bob Robertson", value = "Name of scientist submitting the variable.")
+  @Schema(example = "Dr. Bob Robertson", description = "Name of scientist submitting the variable.")
   
     public String getScientist() {
     return scientist;
@@ -330,7 +330,7 @@ public class VariableBaseClass   {
    * Variable status. (examples: \"recommended\", \"obsolete\", \"legacy\", etc.)
    * @return status
   **/
-  @ApiModelProperty(example = "recommended", value = "Variable status. (examples: \"recommended\", \"obsolete\", \"legacy\", etc.)")
+  @Schema(example = "recommended", description = "Variable status. (examples: \"recommended\", \"obsolete\", \"legacy\", etc.)")
   
     public String getStatus() {
     return status;
@@ -349,7 +349,7 @@ public class VariableBaseClass   {
    * Timestamp when the Variable was added (ISO 8601)
    * @return submissionTimestamp
   **/
-  @ApiModelProperty(value = "Timestamp when the Variable was added (ISO 8601)")
+  @Schema(description = "Timestamp when the Variable was added (ISO 8601)")
   
     @Valid
     public OffsetDateTime getSubmissionTimestamp() {
@@ -377,7 +377,7 @@ public class VariableBaseClass   {
    * Other variable names
    * @return synonyms
   **/
-  @ApiModelProperty(example = "[\"Maize Height\",\"Stalk Height\",\"Corn Height\"]", value = "Other variable names")
+  @Schema(example = "[\"Maize Height\",\"Stalk Height\",\"Corn Height\"]", description = "Other variable names")
   
     public List<String> getSynonyms() {
     return synonyms;
@@ -396,7 +396,7 @@ public class VariableBaseClass   {
    * Get trait
    * @return trait
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     public Object getTrait() {
@@ -416,7 +416,7 @@ public class VariableBaseClass   {
    * Cross reference of the variable term to a term from an external ontology or to a database of a major system.
    * @return xref
   **/
-  @ApiModelProperty(example = "http://purl.obolibrary.org/obo/ro.owl", value = "Cross reference of the variable term to a term from an external ontology or to a database of a major system.")
+  @Schema(example = "http://purl.obolibrary.org/obo/ro.owl", description = "Cross reference of the variable term to a term from an external ontology or to a database of a major system.")
   
     public String getXref() {
     return xref;

@@ -11,7 +11,7 @@ import org.springframework.validation.annotation.Validated;
  */
 @Schema(description = "A single position")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:36:09.576Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:36:09.576Z[GMT]")
 
 
 public class Position extends ArrayList<BigDecimal>  {

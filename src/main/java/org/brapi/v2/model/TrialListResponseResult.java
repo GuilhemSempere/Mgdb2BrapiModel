@@ -19,9 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +27,7 @@ import java.util.List;
  * TrialListResponseResult
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class TrialListResponseResult {
   @SerializedName("data")
   private List<Trial> data = new ArrayList<Trial>();
@@ -48,7 +46,7 @@ public class TrialListResponseResult {
    * Get data
    * @return data
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public List<Trial> getData() {
     return data;
   }

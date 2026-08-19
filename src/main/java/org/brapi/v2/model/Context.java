@@ -1,19 +1,20 @@
 package org.brapi.v2.model;
 
 import java.util.Objects;
-import io.swagger.annotations.ApiModel;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * The JSON-LD Context is used to provide JSON-LD definitions to each field in a JSON object. By providing an array of context file urls, a BrAPI response object becomes JSON-LD compatible.    For more information, see https://w3c.github.io/json-ld-syntax/#the-context
  */
-@ApiModel(description = "The JSON-LD Context is used to provide JSON-LD definitions to each field in a JSON object. By providing an array of context file urls, a BrAPI response object becomes JSON-LD compatible.    For more information, see https://w3c.github.io/json-ld-syntax/#the-context")
+@Schema(description = "The JSON-LD Context is used to provide JSON-LD definitions to each field in a JSON object. By providing an array of context file urls, a BrAPI response object becomes JSON-LD compatible.    For more information, see https://w3c.github.io/json-ld-syntax/#the-context")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
 public class Context extends ArrayList<String>  {
 
   @Override

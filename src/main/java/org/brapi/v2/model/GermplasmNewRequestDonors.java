@@ -3,17 +3,16 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * GermplasmNewRequestDonors
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-20T14:32:35.470Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-20T14:32:35.470Z[GMT]")
 public class GermplasmNewRequestDonors   {
   @JsonProperty("donorAccessionNumber")
   private String donorAccessionNumber = null;
@@ -33,7 +32,7 @@ public class GermplasmNewRequestDonors   {
    * Get donorAccessionNumber
    * @return donorAccessionNumber
   **/
-  @ApiModelProperty(example = "A0000123", value = "")
+  @Schema(example = "A0000123", description = "")
   
     public String getDonorAccessionNumber() {
     return donorAccessionNumber;
@@ -52,7 +51,7 @@ public class GermplasmNewRequestDonors   {
    * Get donorInstituteCode
    * @return donorInstituteCode
   **/
-  @ApiModelProperty(example = "PER001", value = "")
+  @Schema(example = "PER001", description = "")
   
     public String getDonorInstituteCode() {
     return donorInstituteCode;
@@ -71,7 +70,7 @@ public class GermplasmNewRequestDonors   {
    * Get germplasmPUI
    * @return germplasmPUI
   **/
-  @ApiModelProperty(example = "http://pui.per/accession/A0000003", value = "")
+  @Schema(example = "http://pui.per/accession/A0000003", description = "")
   
     public String getGermplasmPUI() {
     return germplasmPUI;

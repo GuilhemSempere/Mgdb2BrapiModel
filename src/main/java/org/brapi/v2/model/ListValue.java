@@ -3,20 +3,19 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * &#x60;ListValue&#x60; is a wrapper around a repeated field of values.  The JSON representation for &#x60;ListValue&#x60; is JSON array.
  */
-@ApiModel(description = "`ListValue` is a wrapper around a repeated field of values.  The JSON representation for `ListValue` is JSON array.")
+@Schema(description = "`ListValue` is a wrapper around a repeated field of values.  The JSON representation for `ListValue` is JSON array.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class ListValue   {
   @JsonProperty("values")
   @Valid
@@ -39,7 +38,7 @@ public class ListValue   {
    * Repeated field of dynamically typed values.
    * @return values
   **/
-  @ApiModelProperty(value = "Repeated field of dynamically typed values.")
+  @Schema(description = "Repeated field of dynamically typed values.")
   
     public List<Object> getValues() {
     return values;

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ import java.util.List;
  * ProgramListResponseResult
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class ProgramListResponseResult {
   @SerializedName("data")
   private List<Program> data = new ArrayList<Program>();
@@ -48,7 +48,7 @@ public class ProgramListResponseResult {
    * Get data
    * @return data
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public List<Program> getData() {
     return data;
   }

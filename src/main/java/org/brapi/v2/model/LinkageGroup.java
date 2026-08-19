@@ -3,21 +3,21 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * a Linkage Group is the BrAPI generic term for a named section of a map. A Linkage Group can represent a Chromosome, Scaffold, or Linkage Group.
  */
-@ApiModel(description = "a Linkage Group is the BrAPI generic term for a named section of a map. A Linkage Group can represent a Chromosome, Scaffold, or Linkage Group.")
+@Schema(description = "a Linkage Group is the BrAPI generic term for a named section of a map. A Linkage Group can represent a Chromosome, Scaffold, or Linkage Group.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class LinkageGroup   {
   @JsonProperty("additionalInfo")
   @Valid
@@ -49,7 +49,7 @@ public class LinkageGroup   {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   
     public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
@@ -68,7 +68,7 @@ public class LinkageGroup   {
    * The Uniquely Identifiable name of this linkage group
    * @return linkageGroupName
   **/
-  @ApiModelProperty(example = "Chromosome 3", value = "The Uniquely Identifiable name of this linkage group")
+  @Schema(example = "Chromosome 3", description = "The Uniquely Identifiable name of this linkage group")
   
     public String getLinkageGroupName() {
     return linkageGroupName;
@@ -87,7 +87,7 @@ public class LinkageGroup   {
    * The number of markers associated with this linkage group
    * @return markerCount
   **/
-  @ApiModelProperty(example = "150", value = "The number of markers associated with this linkage group")
+  @Schema(example = "150", description = "The number of markers associated with this linkage group")
   
     public Integer getMarkerCount() {
     return markerCount;
@@ -106,7 +106,7 @@ public class LinkageGroup   {
    * The maximum position of a marker within this linkage group
    * @return maxPosition
   **/
-  @ApiModelProperty(example = "2500", value = "The maximum position of a marker within this linkage group")
+  @Schema(example = "2500", description = "The maximum position of a marker within this linkage group")
   
     public Integer getMaxPosition() {
     return maxPosition;

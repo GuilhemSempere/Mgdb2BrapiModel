@@ -3,8 +3,7 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,15 +12,15 @@ import java.util.Map;
 
 import org.brapi.v2.model.OntologyTerm;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * A &#x60;Reference&#x60; is a canonical assembled contig, intended to act as a reference coordinate space for other genomic annotations. A single &#x60;Reference&#x60; might represent the human chromosome 1, for instance.  &#x60;Reference&#x60; s are designed to be immutable.
  */
-@ApiModel(description = "A `Reference` is a canonical assembled contig, intended to act as a reference coordinate space for other genomic annotations. A single `Reference` might represent the human chromosome 1, for instance.  `Reference` s are designed to be immutable.")
+@Schema(description = "A `Reference` is a canonical assembled contig, intended to act as a reference coordinate space for other genomic annotations. A single `Reference` might represent the human chromosome 1, for instance.  `Reference` s are designed to be immutable.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-02-08T14:59:28.380Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-02-08T14:59:28.380Z[GMT]")
 public class Reference {
   @JsonProperty("additionalInfo")
   @Valid
@@ -88,7 +87,7 @@ public class Reference {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   
     public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
@@ -107,7 +106,7 @@ public class Reference {
    * Common name for the crop
    * @return commonCropName
    **/
-  @ApiModelProperty(value = "Common name for the crop")
+  @Schema(description = "Common name for the crop")
   
     public String getCommonCropName() {
     return commonCropName;
@@ -126,7 +125,7 @@ public class Reference {
    * Get externalReferences
    * @return externalReferences
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public ExternalReferences getExternalReferences() {
@@ -147,7 +146,7 @@ public class Reference {
    * A sequence X is said to be derived from source sequence Y, if X and Y are of the same length and the per-base sequence divergence at A/C/G/T bases is sufficiently small. Two sequences derived from the same official sequence share the same coordinates and annotations, and can be replaced with the official sequence for certain use cases.
    * @return isDerived
   **/
-  @ApiModelProperty(value = "A sequence X is said to be derived from source sequence Y, if X and Y are of the same length and the per-base sequence divergence at A/C/G/T bases is sufficiently small. Two sequences derived from the same official sequence share the same coordinates and annotations, and can be replaced with the official sequence for certain use cases.")
+  @Schema(description = "A sequence X is said to be derived from source sequence Y, if X and Y are of the same length and the per-base sequence divergence at A/C/G/T bases is sufficiently small. Two sequences derived from the same official sequence share the same coordinates and annotations, and can be replaced with the official sequence for certain use cases.")
   
     public Boolean isIsDerived() {
     return isDerived;
@@ -166,7 +165,7 @@ public class Reference {
    * The length of this reference's sequence.
    * @return length
   **/
-  @ApiModelProperty(value = "The length of this reference's sequence.")
+  @Schema(description = "The length of this reference's sequence.")
   
     public String getLength() {
     return length;
@@ -185,7 +184,7 @@ public class Reference {
    * The MD5 checksum uniquely representing this `Reference` as a lower-case hexadecimal string, calculated as the MD5 of the upper-case sequence excluding all whitespace characters (this is equivalent to SQ:M5 in SAM).
    * @return md5checksum
   **/
-  @ApiModelProperty(value = "The MD5 checksum uniquely representing this `Reference` as a lower-case hexadecimal string, calculated as the MD5 of the upper-case sequence excluding all whitespace characters (this is equivalent to SQ:M5 in SAM).")
+  @Schema(description = "The MD5 checksum uniquely representing this `Reference` as a lower-case hexadecimal string, calculated as the MD5 of the upper-case sequence excluding all whitespace characters (this is equivalent to SQ:M5 in SAM).")
   
     public String getMd5checksum() {
     return md5checksum;
@@ -204,7 +203,7 @@ public class Reference {
    * The reference ID. Unique within the repository.
    * @return referenceDbId
   **/
-  @ApiModelProperty(value = "The reference ID. Unique within the repository.")
+  @Schema(description = "The reference ID. Unique within the repository.")
   
     public String getReferenceDbId() {
     return referenceDbId;
@@ -223,7 +222,7 @@ public class Reference {
    * The unique name of this reference within the Reference Set (e.g. '22').
    * @return referenceName
   **/
-  @ApiModelProperty(value = "The unique name of this reference within the Reference Set (e.g. '22').")
+  @Schema(description = "The unique name of this reference within the Reference Set (e.g. '22').")
   
     public String getReferenceName() {
     return referenceName;
@@ -243,7 +242,7 @@ public class Reference {
    * The unique identifier for a `ReferenceSet`
    * @return referenceSetDbId
    **/
-  @ApiModelProperty(value = "The unique identifier for a `ReferenceSet`")
+  @Schema(description = "The unique identifier for a `ReferenceSet`")
   
     public String getReferenceSetDbId() {
     return referenceSetDbId;
@@ -262,7 +261,7 @@ public class Reference {
    * The human readable name of a `ReferenceSet`
    * @return referenceSetName
    **/
-  @ApiModelProperty(value = "The human readable name of a `ReferenceSet`")
+  @Schema(description = "The human readable name of a `ReferenceSet`")
   
     public String getReferenceSetName() {
     return referenceSetName;
@@ -289,7 +288,7 @@ public class Reference {
    * All known corresponding accession IDs in INSDC (GenBank/ENA/DDBJ) which must include a version number, e.g. `GCF_000001405.26`.
    * @return sourceAccessions
   **/
-  @ApiModelProperty(value = "All known corresponding accession IDs in INSDC (GenBank/ENA/DDBJ) which must include a version number, e.g. `GCF_000001405.26`.")
+  @Schema(description = "All known corresponding accession IDs in INSDC (GenBank/ENA/DDBJ) which must include a version number, e.g. `GCF_000001405.26`.")
   
     public List<String> getSourceAccessions() {
     return sourceAccessions;
@@ -308,7 +307,7 @@ public class Reference {
    * The `sourceDivergence` is the fraction of non-indel bases that do not match the reference this message was derived from.
    * @return sourceDivergence
   **/
-  @ApiModelProperty(value = "The `sourceDivergence` is the fraction of non-indel bases that do not match the reference this message was derived from.")
+  @Schema(description = "The `sourceDivergence` is the fraction of non-indel bases that do not match the reference this message was derived from.")
   
     public Float getSourceDivergence() {
     return sourceDivergence;
@@ -335,7 +334,7 @@ public class Reference {
    * All known corresponding Germplasm
    * @return sourceGermplasm
    **/
-  @ApiModelProperty(value = "All known corresponding Germplasm")
+  @Schema(description = "All known corresponding Germplasm")
       @Valid
     public List<ReferenceSourceGermplasm> getSourceGermplasm() {
     return sourceGermplasm;
@@ -354,7 +353,7 @@ public class Reference {
    * The URI from which the sequence was obtained. Specifies a FASTA format file/string with one name, sequence pair. In most cases, clients should call the `getReferenceBases()` method to obtain sequence bases for a `Reference` instead of attempting to retrieve this URI.
    * @return sourceURI
   **/
-  @ApiModelProperty(value = "The URI from which the sequence was obtained. Specifies a FASTA format file/string with one name, sequence pair. In most cases, clients should call the `getReferenceBases()` method to obtain sequence bases for a `Reference` instead of attempting to retrieve this URI.")
+  @Schema(description = "The URI from which the sequence was obtained. Specifies a FASTA format file/string with one name, sequence pair. In most cases, clients should call the `getReferenceBases()` method to obtain sequence bases for a `Reference` instead of attempting to retrieve this URI.")
   
     public String getSourceURI() {
     return sourceURI;
@@ -373,7 +372,7 @@ public class Reference {
    * Get species
    * @return species
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public OntologyTerm getSpecies() {

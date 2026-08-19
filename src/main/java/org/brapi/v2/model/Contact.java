@@ -3,17 +3,16 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * Contact
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class Contact   {
   @JsonProperty("contactDbId")
   private String contactDbId = null;
@@ -42,7 +41,7 @@ public class Contact   {
    * The ID which uniquely identifies this contact
    * @return contactDbId
   **/
-  @ApiModelProperty(example = "5f4e5509", required = true, value = "The ID which uniquely identifies this contact")
+  @Schema(example = "5f4e5509", requiredMode = Schema.RequiredMode.REQUIRED, description = "The ID which uniquely identifies this contact")
       @NotNull
 
     public String getContactDbId() {
@@ -62,7 +61,7 @@ public class Contact   {
    * The contacts email address 
    * @return email
   **/
-  @ApiModelProperty(example = "bob@bob.com", value = "The contacts email address ")
+  @Schema(example = "bob@bob.com", description = "The contacts email address ")
   
     public String getEmail() {
     return email;
@@ -81,7 +80,7 @@ public class Contact   {
    * The name of the institution which this contact is part of
    * @return instituteName
   **/
-  @ApiModelProperty(example = "The BrAPI Institute", value = "The name of the institution which this contact is part of")
+  @Schema(example = "The BrAPI Institute", description = "The name of the institution which this contact is part of")
   
     public String getInstituteName() {
     return instituteName;
@@ -100,7 +99,7 @@ public class Contact   {
    * The full name of this contact person
    * @return name
   **/
-  @ApiModelProperty(example = "Bob Robertson", value = "The full name of this contact person")
+  @Schema(example = "Bob Robertson", description = "The full name of this contact person")
   
     public String getName() {
     return name;
@@ -119,7 +118,7 @@ public class Contact   {
    * The Open Researcher and Contributor ID for this contact person (orcid.org)
    * @return orcid
   **/
-  @ApiModelProperty(example = "http://orcid.org/0000-0001-8640-1750", value = "The Open Researcher and Contributor ID for this contact person (orcid.org)")
+  @Schema(example = "http://orcid.org/0000-0001-8640-1750", description = "The Open Researcher and Contributor ID for this contact person (orcid.org)")
   
     public String getOrcid() {
     return orcid;
@@ -138,7 +137,7 @@ public class Contact   {
    * The type of person this contact represents (ex: Coordinator, Scientist, PI, etc.)
    * @return type
   **/
-  @ApiModelProperty(example = "PI", value = "The type of person this contact represents (ex: Coordinator, Scientist, PI, etc.)")
+  @Schema(example = "PI", description = "The type of person this contact represents (ex: Coordinator, Scientist, PI, etc.)")
   
     public String getType() {
     return type;

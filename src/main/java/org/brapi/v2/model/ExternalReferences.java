@@ -22,7 +22,7 @@ import java.util.List;
  * An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
  */
 //@Schema(description = "An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class ExternalReferences extends ArrayList<ExternalReferencesInner> {
 
   @Override

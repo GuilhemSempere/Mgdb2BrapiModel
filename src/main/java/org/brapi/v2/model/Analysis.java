@@ -3,20 +3,19 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * An analysis contains an interpretation of one or several experiments. (e.g. SNVs, copy number variations, methylation status) together with information about the methodology used.
  */
-@ApiModel(description = "An analysis contains an interpretation of one or several experiments. (e.g. SNVs, copy number variations, methylation status) together with information about the methodology used.")
+@Schema(description = "An analysis contains an interpretation of one or several experiments. (e.g. SNVs, copy number variations, methylation status) together with information about the methodology used.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class Analysis   {
   @JsonProperty("analysisDbId")
   private String analysisDbId = null;
@@ -49,7 +48,7 @@ public class Analysis   {
    * Formats of id | name | description | accessions are described in the documentation on general attributes and formats.
    * @return analysisDbId
   **/
-  @ApiModelProperty(value = "Formats of id | name | description | accessions are described in the documentation on general attributes and formats.")
+  @Schema(description = "Formats of id | name | description | accessions are described in the documentation on general attributes and formats.")
   
     public String getAnalysisDbId() {
     return analysisDbId;
@@ -68,7 +67,7 @@ public class Analysis   {
    * Get analysisName
    * @return analysisName
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     public String getAnalysisName() {
     return analysisName;
@@ -87,7 +86,7 @@ public class Analysis   {
    * The time at which this record was created, in ISO 8601 format.
    * @return created
   **/
-  @ApiModelProperty(value = "The time at which this record was created, in ISO 8601 format.")
+  @Schema(description = "The time at which this record was created, in ISO 8601 format.")
   
     public String getCreated() {
     return created;
@@ -106,7 +105,7 @@ public class Analysis   {
    * Get description
    * @return description
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     public String getDescription() {
     return description;
@@ -133,7 +132,7 @@ public class Analysis   {
    * The software run to generate this analysis.
    * @return software
   **/
-  @ApiModelProperty(value = "The software run to generate this analysis.")
+  @Schema(description = "The software run to generate this analysis.")
   
     public List<String> getSoftware() {
     return software;
@@ -152,7 +151,7 @@ public class Analysis   {
    * The type of analysis.
    * @return type
   **/
-  @ApiModelProperty(value = "The type of analysis.")
+  @Schema(description = "The type of analysis.")
   
     public String getType() {
     return type;
@@ -171,7 +170,7 @@ public class Analysis   {
    * The time at which this record was last updated, in ISO 8601 format.
    * @return updated
   **/
-  @ApiModelProperty(value = "The time at which this record was last updated, in ISO 8601 format.")
+  @Schema(description = "The time at which this record was last updated, in ISO 8601 format.")
   
     public String getUpdated() {
     return updated;

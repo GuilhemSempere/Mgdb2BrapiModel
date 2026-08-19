@@ -3,17 +3,16 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * GermplasmAttribute
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T11:58:54.700Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T11:58:54.700Z[GMT]")
 public class GermplasmAttribute extends GermplasmAttributeNewRequest  {
   @JsonProperty("attributeDbId")
   private String attributeDbId = null;
@@ -27,7 +26,7 @@ public class GermplasmAttribute extends GermplasmAttributeNewRequest  {
    * The ID which uniquely identifies this attribute within the given database server
    * @return attributeDbId
   **/
-  @ApiModelProperty(example = "2f08b902", required = true, value = "The ID which uniquely identifies this attribute within the given database server")
+  @Schema(example = "2f08b902", requiredMode = Schema.RequiredMode.REQUIRED, description = "The ID which uniquely identifies this attribute within the given database server")
       @NotNull
 
     public String getAttributeDbId() {

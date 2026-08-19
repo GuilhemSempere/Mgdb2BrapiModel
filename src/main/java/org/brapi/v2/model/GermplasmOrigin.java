@@ -5,15 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * MIAPPE V1.1 (DM-52)   MIAPPE V1.1 (DM-53)   MIAPPE V1.1 (DM-54)   MIAPPE V1.1 (DM-55)  MCPD (v2.1) (COORDUNCERT) 15.5   MCPD (v2.1) (ELEVATION) 16.   MCPD (v2.1) (GEOREFMETH) 15.7   MCPD (v2.1) (DECLATITUDE) 15.1   MCPD (v2.1) (DECLONGITUDE) 15.3 
  */
 @Schema(description = "MIAPPE V1.1 (DM-52)   MIAPPE V1.1 (DM-53)   MIAPPE V1.1 (DM-54)   MIAPPE V1.1 (DM-55)  MCPD (v2.1) (COORDUNCERT) 15.5   MCPD (v2.1) (ELEVATION) 16.   MCPD (v2.1) (GEOREFMETH) 15.7   MCPD (v2.1) (DECLATITUDE) 15.1   MCPD (v2.1) (DECLONGITUDE) 15.3 ")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:37:29.213Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:37:29.213Z[GMT]")
 
 
 public class GermplasmOrigin   {

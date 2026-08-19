@@ -1,23 +1,20 @@
 package org.brapi.v2.model;
 
+import java.time.OffsetDateTime;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.threetenbp.ser.OffsetDateTimeSerializer;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.HashMap;
 import java.util.Map;
-import org.threeten.bp.OffsetDateTime;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * GermplasmAttributeValueNewRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:37:29.213Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:37:29.213Z[GMT]")
 
 
 public class GermplasmAttributeValueNewRequest   {
@@ -31,8 +28,6 @@ public class GermplasmAttributeValueNewRequest   {
   @JsonProperty("attributeName")
   private String attributeName = null;
 
-  @JsonDeserialize(using = OffsetDateTimeDeserializer.class)
-  @JsonSerialize(using = OffsetDateTimeSerializer.class)
   @JsonProperty("determinedDate")
   private OffsetDateTime determinedDate = null;
 
@@ -103,7 +98,7 @@ public class GermplasmAttributeValueNewRequest   {
    * A human readable name for this attribute
    * @return attributeName
    **/
-  @Schema(example = "Weevil Resistance", required = true, description = "A human readable name for this attribute")
+  @Schema(example = "Weevil Resistance", requiredMode = Schema.RequiredMode.REQUIRED, description = "A human readable name for this attribute")
       @NotNull
 
     public String getAttributeName() {

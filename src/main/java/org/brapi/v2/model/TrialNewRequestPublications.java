@@ -3,17 +3,16 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * TrialNewRequestPublications
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class TrialNewRequestPublications   {
   @JsonProperty("publicationPUI")
   private String publicationPUI = null;
@@ -30,7 +29,7 @@ public class TrialNewRequestPublications   {
    * Get publicationPUI
    * @return publicationPUI
   **/
-  @ApiModelProperty(example = "doi:10.15454/312953986E3", value = "")
+  @Schema(example = "doi:10.15454/312953986E3", description = "")
   
     public String getPublicationPUI() {
     return publicationPUI;
@@ -49,7 +48,7 @@ public class TrialNewRequestPublications   {
    * Get publicationReference
    * @return publicationReference
   **/
-  @ApiModelProperty(example = "Selby, BrAPI - An application programming interface for plant breeding applications, Bioinformatics, https://doi.org/10.1093/bioinformatics/190", value = "")
+  @Schema(example = "Selby, BrAPI - An application programming interface for plant breeding applications, Bioinformatics, https://doi.org/10.1093/bioinformatics/190", description = "")
   
     public String getPublicationReference() {
     return publicationReference;

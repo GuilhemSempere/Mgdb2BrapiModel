@@ -3,19 +3,18 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * A value with units
  */
-@ApiModel(description = "A value with units")
+@Schema(description = "A value with units")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class Measurement   {
   @JsonProperty("units")
   private String units = null;
@@ -32,7 +31,7 @@ public class Measurement   {
    * Units (example: \"ng/ul\")
    * @return units
   **/
-  @ApiModelProperty(example = "ng/ul", value = "Units (example: \"ng/ul\")")
+  @Schema(example = "ng/ul", description = "Units (example: \"ng/ul\")")
   
     public String getUnits() {
     return units;
@@ -51,7 +50,7 @@ public class Measurement   {
    * Value (example: \"2.3\")
    * @return value
   **/
-  @ApiModelProperty(example = "2.3", value = "Value (example: \"2.3\")")
+  @Schema(example = "2.3", description = "Value (example: \"2.3\")")
   
     @Valid
     public BigDecimal getValue() {

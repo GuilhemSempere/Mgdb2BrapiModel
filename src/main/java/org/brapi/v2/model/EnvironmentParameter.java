@@ -27,7 +27,7 @@ import java.io.IOException;
  * EnvironmentParameter
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class EnvironmentParameter {
   @JsonProperty("description")
   private String description = null;
@@ -59,7 +59,7 @@ public class EnvironmentParameter {
    * Human-readable value of the environment parameter (defined above) constant within the experiment
    * @return description
   **/
- // @Schema(example = "the soil type was clay", required = true, description = "Human-readable value of the environment parameter (defined above) constant within the experiment")
+ // @Schema(example = "the soil type was clay", requiredMode = Schema.RequiredMode.REQUIRED, description = "Human-readable value of the environment parameter (defined above) constant within the experiment")
   public String getDescription() {
     return description;
   }
@@ -77,7 +77,7 @@ public class EnvironmentParameter {
    * Name of the environment parameter constant within the experiment  MIAPPE V1.1 (DM-58) Environment parameter - Name of the environment parameter constant within the experiment. 
    * @return parameterName
   **/
- // @Schema(example = "soil type", required = true, description = "Name of the environment parameter constant within the experiment  MIAPPE V1.1 (DM-58) Environment parameter - Name of the environment parameter constant within the experiment. ")
+ // @Schema(example = "soil type", requiredMode = Schema.RequiredMode.REQUIRED, description = "Name of the environment parameter constant within the experiment  MIAPPE V1.1 (DM-58) Environment parameter - Name of the environment parameter constant within the experiment. ")
   public String getParameterName() {
     return parameterName;
   }

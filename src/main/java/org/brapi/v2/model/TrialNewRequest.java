@@ -1,28 +1,27 @@
 package org.brapi.v2.model;
 
+import java.time.LocalDate;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.threeten.bp.LocalDate;
 import org.brapi.v2.model.Contact;
 import org.brapi.v2.model.TrialNewRequestDatasetAuthorships;
 import org.brapi.v2.model.TrialNewRequestPublications;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * TrialNewRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class TrialNewRequest   {
   @JsonProperty("active")
   private Boolean active = null;
@@ -76,7 +75,7 @@ public class TrialNewRequest   {
    * Is this trail currently active
    * @return active
   **/
-  @ApiModelProperty(example = "true", value = "Is this trail currently active")
+  @Schema(example = "true", description = "Is this trail currently active")
   
     public Boolean isActive() {
     return active;
@@ -103,7 +102,7 @@ public class TrialNewRequest   {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   
     public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
@@ -122,7 +121,7 @@ public class TrialNewRequest   {
    * Common name for the crop associated with this trial
    * @return commonCropName
   **/
-  @ApiModelProperty(example = "Wheat", value = "Common name for the crop associated with this trial")
+  @Schema(example = "Wheat", description = "Common name for the crop associated with this trial")
   
     public String getCommonCropName() {
     return commonCropName;
@@ -149,7 +148,7 @@ public class TrialNewRequest   {
    * List of contact entities associated with this trial
    * @return contacts
   **/
-  @ApiModelProperty(value = "List of contact entities associated with this trial")
+  @Schema(description = "List of contact entities associated with this trial")
       @Valid
     public List<Contact> getContacts() {
     return contacts;
@@ -176,7 +175,7 @@ public class TrialNewRequest   {
    * License and citation information for the data in this trial
    * @return datasetAuthorships
   **/
-  @ApiModelProperty(value = "License and citation information for the data in this trial")
+  @Schema(description = "License and citation information for the data in this trial")
       @Valid
     public List<TrialNewRequestDatasetAuthorships> getDatasetAuthorships() {
     return datasetAuthorships;
@@ -195,7 +194,7 @@ public class TrialNewRequest   {
    * A URL to the human readable documentation of this object
    * @return documentationURL
   **/
-  @ApiModelProperty(example = "https://wiki.brapi.org", value = "A URL to the human readable documentation of this object")
+  @Schema(example = "https://wiki.brapi.org", description = "A URL to the human readable documentation of this object")
   
     public String getDocumentationURL() {
     return documentationURL;
@@ -214,7 +213,7 @@ public class TrialNewRequest   {
    * The date this trial ends
    * @return endDate
   **/
-  @ApiModelProperty(value = "The date this trial ends")
+  @Schema(description = "The date this trial ends")
   
     @Valid
     public LocalDate getEndDate() {
@@ -234,7 +233,7 @@ public class TrialNewRequest   {
    * A program identifier to search for
    * @return programDbId
   **/
-  @ApiModelProperty(example = "673f378a", value = "A program identifier to search for")
+  @Schema(example = "673f378a", description = "A program identifier to search for")
   
     public String getProgramDbId() {
     return programDbId;
@@ -253,7 +252,7 @@ public class TrialNewRequest   {
    * Human readable name of the program
    * @return programName
   **/
-  @ApiModelProperty(example = "Tomatillo_Breeding_Program", value = "Human readable name of the program")
+  @Schema(example = "Tomatillo_Breeding_Program", description = "Human readable name of the program")
   
     public String getProgramName() {
     return programName;
@@ -280,7 +279,7 @@ public class TrialNewRequest   {
    * Get publications
    * @return publications
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
       @Valid
     public List<TrialNewRequestPublications> getPublications() {
     return publications;
@@ -299,7 +298,7 @@ public class TrialNewRequest   {
    * The date this trial started
    * @return startDate
   **/
-  @ApiModelProperty(value = "The date this trial started")
+  @Schema(description = "The date this trial started")
   
     @Valid
     public LocalDate getStartDate() {
@@ -319,7 +318,7 @@ public class TrialNewRequest   {
    * The human readable description of a trial
    * @return trialDescription
   **/
-  @ApiModelProperty(example = "General drought resistance trial initiated in Peru before duplication in Africa", value = "The human readable description of a trial")
+  @Schema(example = "General drought resistance trial initiated in Peru before duplication in Africa", description = "The human readable description of a trial")
   
     public String getTrialDescription() {
     return trialDescription;
@@ -338,7 +337,7 @@ public class TrialNewRequest   {
    * The human readable name of a trial
    * @return trialName
   **/
-  @ApiModelProperty(example = "Peru Yield Trial 1", value = "The human readable name of a trial")
+  @Schema(example = "Peru Yield Trial 1", description = "The human readable name of a trial")
   
     public String getTrialName() {
     return trialName;

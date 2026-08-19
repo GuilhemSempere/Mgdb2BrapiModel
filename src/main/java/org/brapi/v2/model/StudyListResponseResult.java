@@ -27,7 +27,7 @@ import java.util.List;
  * StudyListResponseResult
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class StudyListResponseResult {
   @SerializedName("data")
   private List<Study> data = new ArrayList<Study>();
@@ -46,7 +46,7 @@ public class StudyListResponseResult {
    * Get data
    * @return data
   **/
-  //@Schema(required = true, description = "")
+  //@Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public List<Study> getData() {
     return data;
   }

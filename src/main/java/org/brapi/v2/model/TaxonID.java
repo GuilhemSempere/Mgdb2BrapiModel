@@ -3,17 +3,16 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * TaxonID
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-20T14:32:35.470Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-20T14:32:35.470Z[GMT]")
 public class TaxonID   {
   @JsonProperty("sourceName")
   private String sourceName = null;
@@ -30,7 +29,7 @@ public class TaxonID   {
    * The human readable name of the taxonomy provider
    * @return sourceName
   **/
-  @ApiModelProperty(example = "NCBI", required = true, value = "The human readable name of the taxonomy provider")
+  @Schema(example = "NCBI", requiredMode = Schema.RequiredMode.REQUIRED, description = "The human readable name of the taxonomy provider")
       @NotNull
 
     public String getSourceName() {
@@ -50,7 +49,7 @@ public class TaxonID   {
    * The identifier (name, ID, URI) of a particular taxonomy within the source provider
    * @return taxonId
   **/
-  @ApiModelProperty(example = "2026747", required = true, value = "The identifier (name, ID, URI) of a particular taxonomy within the source provider")
+  @Schema(example = "2026747", requiredMode = Schema.RequiredMode.REQUIRED, description = "The identifier (name, ID, URI) of a particular taxonomy within the source provider")
       @NotNull
 
     public String getTaxonId() {

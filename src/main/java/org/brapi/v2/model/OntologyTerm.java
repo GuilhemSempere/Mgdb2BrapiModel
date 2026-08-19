@@ -3,17 +3,16 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * OntologyTerm
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class OntologyTerm   {
   @JsonProperty("term")
   private String term = null;
@@ -30,7 +29,7 @@ public class OntologyTerm   {
    * Ontology term - the label of the ontology term the termId is pointing to.
    * @return term
   **/
-  @ApiModelProperty(value = "Ontology term - the label of the ontology term the termId is pointing to.")
+  @Schema(description = "Ontology term - the label of the ontology term the termId is pointing to.")
   
     public String getTerm() {
     return term;
@@ -49,7 +48,7 @@ public class OntologyTerm   {
    * Ontology term identifier - the CURIE for an ontology term. It differs from the standard GA4GH schema's :ref:`id ` in that it is a CURIE pointing to an information resource outside of the scope of the schema or its resource implementation.
    * @return termURI
   **/
-  @ApiModelProperty(value = "Ontology term identifier - the CURIE for an ontology term. It differs from the standard GA4GH schema's :ref:`id ` in that it is a CURIE pointing to an information resource outside of the scope of the schema or its resource implementation.")
+  @Schema(description = "Ontology term identifier - the CURIE for an ontology term. It differs from the standard GA4GH schema's :ref:`id ` in that it is a CURIE pointing to an information resource outside of the scope of the schema or its resource implementation.")
   
     public String getTermURI() {
     return termURI;

@@ -4,16 +4,15 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
 
 /**
  * Each &#x27;availableFormat&#x27; object is a pairing of dataFormat and fileFormat. These must be comunicated in pairs because they are not independant parametres and sometimes one influences the other.
  */
-@ApiModel(description = "Each 'availableFormat' object is a pairing of dataFormat and fileFormat. These must be comunicated in pairs because they are not independant parametres and sometimes one influences the other.")
+@Schema(description = "Each 'availableFormat' object is a pairing of dataFormat and fileFormat. These must be comunicated in pairs because they are not independant parametres and sometimes one influences the other.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class VariantSetAvailableFormats   {
   /**
    * dataFormat defines the structure of the data within a file (ie DartSeq, VCF, Hapmap, tabular, etc)
@@ -103,7 +102,7 @@ public class VariantSetAvailableFormats   {
    * dataFormat defines the structure of the data within a file (ie DartSeq, VCF, Hapmap, tabular, etc)
    * @return dataFormat
   **/
-  @ApiModelProperty(value = "dataFormat defines the structure of the data within a file (ie DartSeq, VCF, Hapmap, tabular, etc)")
+  @Schema(description = "dataFormat defines the structure of the data within a file (ie DartSeq, VCF, Hapmap, tabular, etc)")
   
     public DataFormatEnum getDataFormat() {
     return dataFormat;
@@ -122,7 +121,7 @@ public class VariantSetAvailableFormats   {
    * fileFormat defines the MIME type of the file (ie text/csv, application/excel, application/zip). This should also be reflected in the Accept and ContentType HTTP headers for every relevent request and response.
    * @return fileFormat
   **/
-  @ApiModelProperty(value = "fileFormat defines the MIME type of the file (ie text/csv, application/excel, application/zip). This should also be reflected in the Accept and ContentType HTTP headers for every relevent request and response.")
+  @Schema(description = "fileFormat defines the MIME type of the file (ie text/csv, application/excel, application/zip). This should also be reflected in the Accept and ContentType HTTP headers for every relevent request and response.")
   
     public FileFormatEnum getFileFormat() {
     return fileFormat;
@@ -141,7 +140,7 @@ public class VariantSetAvailableFormats   {
    * A URL which indicates the location of the file version of this VariantSet. Could be a static file URL or an API endpoint which generates the file.
    * @return fileURL
   **/
-  @ApiModelProperty(value = "A URL which indicates the location of the file version of this VariantSet. Could be a static file URL or an API endpoint which generates the file.")
+  @Schema(description = "A URL which indicates the location of the file version of this VariantSet. Could be a static file URL or an API endpoint which generates the file.")
   
     public String getFileURL() {
     return fileURL;

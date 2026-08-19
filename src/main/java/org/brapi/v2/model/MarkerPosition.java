@@ -3,20 +3,20 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * MarkerPosition
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class MarkerPosition   {
   @JsonProperty("additionalInfo")
   @Valid
@@ -57,7 +57,7 @@ public class MarkerPosition   {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   
     public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
@@ -76,7 +76,7 @@ public class MarkerPosition   {
    * The Uniquely Identifiable name of this linkage group
    * @return linkageGroupName
   **/
-  @ApiModelProperty(example = "Chromosome 3", value = "The Uniquely Identifiable name of this linkage group")
+  @Schema(example = "Chromosome 3", description = "The Uniquely Identifiable name of this linkage group")
   
     public String getLinkageGroupName() {
     return linkageGroupName;
@@ -95,7 +95,7 @@ public class MarkerPosition   {
    * The unique ID of the map
    * @return mapDbId
   **/
-  @ApiModelProperty(example = "3d52bdf3", value = "The unique ID of the map")
+  @Schema(example = "3d52bdf3", description = "The unique ID of the map")
   
     public String getMapDbId() {
     return mapDbId;
@@ -114,7 +114,7 @@ public class MarkerPosition   {
    * The human readbale name of the map
    * @return mapName
   **/
-  @ApiModelProperty(example = "Genome Map 1", value = "The human readbale name of the map")
+  @Schema(example = "Genome Map 1", description = "The human readbale name of the map")
   
     public String getMapName() {
     return mapName;
@@ -133,7 +133,7 @@ public class MarkerPosition   {
    * Internal db identifier
    * @return markerDbId
   **/
-  @ApiModelProperty(example = "a1eb250a", value = "Internal db identifier")
+  @Schema(example = "a1eb250a", description = "Internal db identifier")
   
     public String getMarkerDbId() {
     return markerDbId;
@@ -152,7 +152,7 @@ public class MarkerPosition   {
    * The human readable name for a marker
    * @return markerName
   **/
-  @ApiModelProperty(example = "Marker_2390", value = "The human readable name for a marker")
+  @Schema(example = "Marker_2390", description = "The human readable name for a marker")
   
     public String getMarkerName() {
     return markerName;
@@ -171,7 +171,7 @@ public class MarkerPosition   {
    * The position of a marker within a linkage group
    * @return position
   **/
-  @ApiModelProperty(example = "2390", value = "The position of a marker within a linkage group")
+  @Schema(example = "2390", description = "The position of a marker within a linkage group")
   
     public Integer getPosition() {
     return position;

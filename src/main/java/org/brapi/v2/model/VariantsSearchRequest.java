@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import javax.validation.Valid;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
 
 import org.springframework.validation.annotation.Validated;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import io.swagger.annotations.ApiModelProperty;
 
 /**
  * VariantsSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-02-09T10:36:40.154Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-02-09T10:36:40.154Z[GMT]")
 public class VariantsSearchRequest   {
   @JsonProperty("callSetDbIds")
   @Valid
@@ -117,8 +117,7 @@ public class VariantsSearchRequest   {
    * **Deprecated in v2.1** Parameter unnecessary. Github issue number #474  <br/>Only return variant calls which belong to call sets with these IDs. If unspecified, return all variants and no variant call objects.
    * @return callSetDbIds
    **/
-  @ApiModelProperty(example = "[\"4639fe3e\",\"b60d900b\"]", value = "**Deprecated in v2.1** Parameter unnecessary. Github issue number #474  <br/>Only return variant calls which belong to call sets with these IDs. If unspecified, return all variants and no variant call objects.")
-  
+  @Schema(example = "[\"4639fe3e\",\"b60d900b\"]", description = "**Deprecated in v2.1** Parameter unnecessary. Github issue number #474  <br/>Only return variant calls which belong to call sets with these IDs. If unspecified, return all variants and no variant call objects.")
     public List<String> getCallSetDbIds() {
     return callSetDbIds;
   }
@@ -144,8 +143,7 @@ public class VariantsSearchRequest   {
    * The BrAPI Common Crop Name is the simple, generalized, widely accepted name of the organism being researched. It is most often used in multi-crop systems where digital resources need to be divided at a high level. Things like 'Maize', 'Wheat', and 'Rice' are examples of common crop names.  Use this parameter to only return results associated with the given crops.   Use `GET /commoncropnames` to find the list of available crops on a server.
    * @return commonCropNames
    **/
-  @ApiModelProperty(example = "[\"Tomatillo\",\"Paw Paw\"]", value = "The BrAPI Common Crop Name is the simple, generalized, widely accepted name of the organism being researched. It is most often used in multi-crop systems where digital resources need to be divided at a high level. Things like 'Maize', 'Wheat', and 'Rice' are examples of common crop names.  Use this parameter to only return results associated with the given crops.   Use `GET /commoncropnames` to find the list of available crops on a server.")
-  
+  @Schema(example = "[\"Tomatillo\",\"Paw Paw\"]", description = "The BrAPI Common Crop Name is the simple, generalized, widely accepted name of the organism being researched. It is most often used in multi-crop systems where digital resources need to be divided at a high level. Things like 'Maize', 'Wheat', and 'Rice' are examples of common crop names.  Use this parameter to only return results associated with the given crops.   Use `GET /commoncropnames` to find the list of available crops on a server.")
     public List<String> getCommonCropNames() {
     return commonCropNames;
   }
@@ -163,8 +161,8 @@ public class VariantsSearchRequest   {
    * The end of the window (0-based, exclusive) for which overlapping variants should be returned.
    * @return end
    **/
-  @ApiModelProperty(example = "1500", value = "The end of the window (0-based, exclusive) for which overlapping variants should be returned.")
-  
+  @Schema(example = "1500", description = "The end of the window (0-based, exclusive) for which overlapping variants should be returned.")
+
     public Integer getEnd() {
     return end;
   }
@@ -190,8 +188,8 @@ public class VariantsSearchRequest   {
    * **Deprecated in v2.1** Please use `externalReferenceIds`. Github issue number #460  <br>List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)
    * @return externalReferenceIDs
    **/
-  @ApiModelProperty(example = "[\"doi:10.155454/12341234\",\"14a19841\"]", value = "**Deprecated in v2.1** Please use `externalReferenceIds`. Github issue number #460  <br>List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)")
-  
+  @Schema(example = "[\"doi:10.155454/12341234\",\"14a19841\"]", description = "**Deprecated in v2.1** Please use `externalReferenceIds`. Github issue number #460  <br>List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)")
+
     public List<String> getExternalReferenceIDs() {
     return externalReferenceIDs;
   }
@@ -217,8 +215,8 @@ public class VariantsSearchRequest   {
    * List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)
    * @return externalReferenceIds
    **/
-  @ApiModelProperty(example = "[\"doi:10.155454/12341234\",\"14a19841\"]", value = "List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)")
-  
+  @Schema(example = "[\"doi:10.155454/12341234\",\"14a19841\"]", description = "List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)")
+
     public List<String> getExternalReferenceIds() {
     return externalReferenceIds;
   }
@@ -244,8 +242,7 @@ public class VariantsSearchRequest   {
    * List of identifiers for the source system or database of an external reference (use with `externalReferenceIDs` parameter)
    * @return externalReferenceSources
    **/
-  @ApiModelProperty(example = "[\"DOI\",\"Field App Name\"]", value = "List of identifiers for the source system or database of an external reference (use with `externalReferenceIDs` parameter)")
-  
+  @Schema(example = "[\"DOI\",\"Field App Name\"]", description = "List of identifiers for the source system or database of an external reference (use with `externalReferenceIDs` parameter)")
     public List<String> getExternalReferenceSources() {
     return externalReferenceSources;
   }
@@ -263,8 +260,7 @@ public class VariantsSearchRequest   {
    * Which result page is requested. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.
    * @return page
    **/
-  @ApiModelProperty(example = "0", value = "Which result page is requested. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.")
-  
+  @Schema(example = "0", description = "Which result page is requested. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.")
     public Integer getPage() {
     return page;
   }
@@ -282,7 +278,7 @@ public class VariantsSearchRequest   {
    * The size of the pages to be returned. Default is `1000`.
    * @return pageSize
    **/
-  @ApiModelProperty(example = "1000", value = "The size of the pages to be returned. Default is `1000`.")
+  @Schema(example = "1000", description = "The size of the pages to be returned. Default is `1000`.")
   
     public Integer getPageSize() {
     return pageSize;
@@ -301,8 +297,8 @@ public class VariantsSearchRequest   {
    * **Deprecated in v2.1** Please use `page`. Github issue number #451  <br>Used to request a specific page of data to be returned. <br>Tokenized pages are for large data sets which can not be efficiently broken into indexed pages. Use the nextPageToken and prevPageToken from a prior response to construct a query and move to the next or previous page respectively. 
    * @return pageToken
    **/
-  @ApiModelProperty(example = "33c27874", value = "**Deprecated in v2.1** Please use `page`. Github issue number #451  <br>Used to request a specific page of data to be returned. <br>Tokenized pages are for large data sets which can not be efficiently broken into indexed pages. Use the nextPageToken and prevPageToken from a prior response to construct a query and move to the next or previous page respectively. ")
-  
+  @Schema(example = "33c27874", description = "**Deprecated in v2.1** Please use `page`. Github issue number #451  <br>Used to request a specific page of data to be returned. <br>Tokenized pages are for large data sets which can not be efficiently broken into indexed pages. Use the nextPageToken and prevPageToken from a prior response to construct a query and move to the next or previous page respectively. ")
+
     public String getPageToken() {
     return pageToken;
   }
@@ -328,8 +324,8 @@ public class VariantsSearchRequest   {
    * A BrAPI Program represents the high level organization or group who is responsible for conducting trials and studies. Things like Breeding Programs and Funded Projects are considered BrAPI Programs.   Use this parameter to only return results associated with the given programs.   Use `GET /programs` to find the list of available programs on a server.
    * @return programDbIds
    **/
-  @ApiModelProperty(example = "[\"8f5de35b\",\"0e2d4a13\"]", value = "A BrAPI Program represents the high level organization or group who is responsible for conducting trials and studies. Things like Breeding Programs and Funded Projects are considered BrAPI Programs.   Use this parameter to only return results associated with the given programs.   Use `GET /programs` to find the list of available programs on a server.")
-  
+  @Schema(example = "[\"8f5de35b\",\"0e2d4a13\"]", description = "A BrAPI Program represents the high level organization or group who is responsible for conducting trials and studies. Things like Breeding Programs and Funded Projects are considered BrAPI Programs.   Use this parameter to only return results associated with the given programs.   Use `GET /programs` to find the list of available programs on a server.")
+
     public List<String> getProgramDbIds() {
     return programDbIds;
   }
@@ -355,8 +351,8 @@ public class VariantsSearchRequest   {
    * Use this parameter to only return results associated with the given program names. Program names are not required to be unique.  Use `GET /programs` to find the list of available programs on a server.
    * @return programNames
    **/
-  @ApiModelProperty(example = "[\"Better Breeding Program\",\"Best Breeding Program\"]", value = "Use this parameter to only return results associated with the given program names. Program names are not required to be unique.  Use `GET /programs` to find the list of available programs on a server.")
-  
+  @Schema(example = "[\"Better Breeding Program\",\"Best Breeding Program\"]", description = "Use this parameter to only return results associated with the given program names. Program names are not required to be unique.  Use `GET /programs` to find the list of available programs on a server.")
+
     public List<String> getProgramNames() {
     return programNames;
   }
@@ -374,8 +370,8 @@ public class VariantsSearchRequest   {
    * **Deprecated in v2.1** Please use `referenceDbIds`. Github issue number #472 <br/>Only return variants on this reference.
    * @return referenceDbId
    **/
-  @ApiModelProperty(example = "120a2d5c", value = "**Deprecated in v2.1** Please use `referenceDbIds`. Github issue number #472 <br/>Only return variants on this reference.")
-  
+  @Schema(example = "120a2d5c", description = "**Deprecated in v2.1** Please use `referenceDbIds`. Github issue number #472 <br/>Only return variants on this reference.")
+
     public String getReferenceDbId() {
     return referenceDbId;
   }
@@ -401,8 +397,8 @@ public class VariantsSearchRequest   {
    * The unique identifier representing a genotype `Reference`
    * @return referenceDbIds
    **/
-  @ApiModelProperty(example = "[\"89ab4d17\",\"74d3b63d\"]", value = "The unique identifier representing a genotype `Reference`")
-  
+  @Schema(example = "[\"89ab4d17\",\"74d3b63d\"]", description = "The unique identifier representing a genotype `Reference`")
+
     public List<String> getReferenceDbIds() {
     return referenceDbIds;
   }
@@ -428,8 +424,8 @@ public class VariantsSearchRequest   {
    * The unique identifier representing a genotype `ReferenceSet`
    * @return referenceSetDbIds
    **/
-  @ApiModelProperty(example = "[\"d3b63d4d\",\"3b63d74b\"]", value = "The unique identifier representing a genotype `ReferenceSet`")
-  
+  @Schema(example = "[\"d3b63d4d\",\"3b63d74b\"]", description = "The unique identifier representing a genotype `ReferenceSet`")
+
     public List<String> getReferenceSetDbIds() {
     return referenceSetDbIds;
   }
@@ -447,8 +443,8 @@ public class VariantsSearchRequest   {
    * The beginning of the window (0-based, inclusive) for which overlapping variants should be returned. Genomic positions are non-negative integers less than reference length. Requests spanning the join of circular genomes are represented as two requests one on each side of the join (position 0).
    * @return start
    **/
-  @ApiModelProperty(example = "100", value = "The beginning of the window (0-based, inclusive) for which overlapping variants should be returned. Genomic positions are non-negative integers less than reference length. Requests spanning the join of circular genomes are represented as two requests one on each side of the join (position 0).")
-  
+  @Schema(example = "100", description = "The beginning of the window (0-based, inclusive) for which overlapping variants should be returned. Genomic positions are non-negative integers less than reference length. Requests spanning the join of circular genomes are represented as two requests one on each side of the join (position 0).")
+
     public Integer getStart() {
     return start;
   }
@@ -474,8 +470,8 @@ public class VariantsSearchRequest   {
    * List of study identifiers to search for
    * @return studyDbIds
    **/
-  @ApiModelProperty(example = "[\"cf6c4bd4\",\"691e69d6\"]", value = "List of study identifiers to search for")
-  
+  @Schema(example = "[\"cf6c4bd4\",\"691e69d6\"]", description = "List of study identifiers to search for")
+
     public List<String> getStudyDbIds() {
     return studyDbIds;
   }
@@ -501,8 +497,8 @@ public class VariantsSearchRequest   {
    * List of study names to filter search results
    * @return studyNames
    **/
-  @ApiModelProperty(example = "[\"The First Bob Study 2017\",\"Wheat Yield Trial 246\"]", value = "List of study names to filter search results")
-  
+  @Schema(example = "[\"The First Bob Study 2017\",\"Wheat Yield Trial 246\"]", description = "List of study names to filter search results")
+
     public List<String> getStudyNames() {
     return studyNames;
   }
@@ -528,8 +524,8 @@ public class VariantsSearchRequest   {
    * The ID which uniquely identifies a trial to search for
    * @return trialDbIds
    **/
-  @ApiModelProperty(example = "[\"d2593dc2\",\"9431a731\"]", value = "The ID which uniquely identifies a trial to search for")
-  
+  @Schema(example = "[\"d2593dc2\",\"9431a731\"]", description = "The ID which uniquely identifies a trial to search for")
+
     public List<String> getTrialDbIds() {
     return trialDbIds;
   }
@@ -555,8 +551,8 @@ public class VariantsSearchRequest   {
    * The human readable name of a trial to search for
    * @return trialNames
    **/
-  @ApiModelProperty(example = "[\"All Yield Trials 2016\",\"Disease Resistance Study Comparison Group\"]", value = "The human readable name of a trial to search for")
-  
+  @Schema(example = "[\"All Yield Trials 2016\",\"Disease Resistance Study Comparison Group\"]", description = "The human readable name of a trial to search for")
+
     public List<String> getTrialNames() {
     return trialNames;
   }
@@ -582,8 +578,8 @@ public class VariantsSearchRequest   {
    * A list of IDs which uniquely identify `Variants`
    * @return variantDbIds
    **/
-  @ApiModelProperty(example = "[\"3b63d889\",\"ab4d174d\"]", value = "A list of IDs which uniquely identify `Variants`")
-  
+  @Schema(example = "[\"3b63d889\",\"ab4d174d\"]", description = "A list of IDs which uniquely identify `Variants`")
+
     public List<String> getVariantDbIds() {
     return variantDbIds;
   }
@@ -609,7 +605,7 @@ public class VariantsSearchRequest   {
    * A list of variant names
    * @return variantNames
    **/
-  @ApiModelProperty(example = "[\"RefSNP_ID_1\",\"RefSNP_ID_2\"]", value = "A list of variantNames`")
+  @Schema(example = "[\"RefSNP_ID_1\",\"RefSNP_ID_2\"]", description = "A list of variantNames`")
   
   public List<String> getVariantNames() {
     return variantNames;
@@ -623,8 +619,7 @@ public class VariantsSearchRequest   {
    * A list of IDs which uniquely identify `VariantSets`
    * @return variantSetDbIds
    **/
-  @ApiModelProperty(example = "[\"ba63d810\",\"434d1760\"]", value = "A list of IDs which uniquely identify `VariantSets`")
-  
+  @Schema(example = "[\"ba63d810\",\"434d1760\"]", description = "A list of IDs which uniquely identify `VariantSets`")
   public List<String> getVariantSetDbIds() {
     return variantSetDbIds;
   }

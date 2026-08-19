@@ -19,14 +19,14 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
 
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 /**
  * ProgramSingleResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class ProgramSingleResponse {
   @SerializedName("@context")
   private Context _atContext = null;
@@ -46,7 +46,7 @@ public class ProgramSingleResponse {
    * Get _atContext
    * @return _atContext
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Context getAtContext() {
     return _atContext;
   }
@@ -64,7 +64,7 @@ public class ProgramSingleResponse {
    * Get metadata
    * @return metadata
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public Metadata getMetadata() {
     return metadata;
   }
@@ -82,7 +82,7 @@ public class ProgramSingleResponse {
    * Get result
    * @return result
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public Program getResult() {
     return result;
   }

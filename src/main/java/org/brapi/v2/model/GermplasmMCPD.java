@@ -1,27 +1,26 @@
 package org.brapi.v2.model;
 
+import java.time.LocalDate;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 //import io.swagger.model.GermplasmMCPDBreedingInstitutes;
 //import io.swagger.model.GermplasmMCPDCollectingInfo;
 //import io.swagger.model.GermplasmMCPDDonorInfo;
 //import io.swagger.model.GermplasmMCPDSafetyDuplicateInstitutes;
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.LocalDate;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * GermplasmMCPD
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-20T14:32:35.470Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-20T14:32:35.470Z[GMT]")
 public class GermplasmMCPD   {
   @JsonProperty("accessionNames")
   @Valid
@@ -34,51 +33,51 @@ public class GermplasmMCPD   {
   private LocalDate acquisitionDate = null;
 
   /**
-   * MCPD (v2.1) (COLLSRC) 21. The coding scheme proposed can be used at 2 different levels of detail: either by using the general codes (in bold-face) such as 10, 20, 30, 40, etc., or by using the more specific codes, such as 11, 12, etc. 10) Wild habitat 11) Forest or woodland 12) Shrubland 13) Grassland 14) Desert or tundra 15) Aquatic habitat 20) Farm or cultivated habitat 21) Field 22) Orchard 23) Backyard, kitchen or home garden (urban, peri-urban or rural) 24) Fallow land 25) Pasture 26) Farm store 27) Threshing floor 28) Park 30) Market or shop 40) Institute, Experimental station, Research organization, Genebank 50) Seed company 60) Weedy, disturbed or ruderal habitat 61) Roadside 62) Field margin 99) Other (Elaborate in REMARKS field) 
+   * MCPD (v2.1) (COLLSRC) 21. The coding scheme proposed can be used at 2 different levels of detail: either by using the general codes (in bold-face) such as 10, 20, 30, 40, etc., or by using the more specific codes, such as 11, 12, etc. 10) Wild habitat 11) Forest or woodland 12) Shrubland 13) Grassland 14) Desert or tundra 15) Aquatic habitat 20) Farm or cultivated habitat 21) Field 22) Orchard 23) Backyard, kitchen or home garden (urban, peri-urban or rural) 24) Fallow land 25) Pasture 26) Farm store 27) Threshing floor 28) Park 30) Market or shop 40) Institute, Experimental station, Research organization, Genebank 50) Seed company 60) Weedy, disturbed or ruderal habitat 61) Roadside 62) Field margin 99) Other (Elaborate in REMARKS field)
    */
   public enum AcquisitionSourceCodeEnum {
     _10("10"),
-    
+
     _11("11"),
-    
+
     _12("12"),
-    
+
     _13("13"),
-    
+
     _14("14"),
-    
+
     _15("15"),
-    
+
     _20("20"),
-    
+
     _21("21"),
-    
+
     _22("22"),
-    
+
     _23("23"),
-    
+
     _24("24"),
-    
+
     _25("25"),
-    
+
     _26("26"),
-    
+
     _27("27"),
-    
+
     _28("28"),
-    
+
     _30("30"),
-    
+
     _40("40"),
-    
+
     _50("50"),
-    
+
     _60("60"),
-    
+
     _61("61"),
-    
+
     _62("62"),
-    
+
     _99("99");
 
     private String value;
@@ -118,45 +117,45 @@ public class GermplasmMCPD   {
    */
   public enum BiologicalStatusOfAccessionCodeEnum {
     _100("100"),
-    
+
     _110("110"),
-    
+
     _120("120"),
-    
+
     _130("130"),
-    
+
     _200("200"),
-    
+
     _300("300"),
-    
+
     _400("400"),
-    
+
     _410("410"),
-    
+
     _411("411"),
-    
+
     _412("412"),
-    
+
     _413("413"),
-    
+
     _414("414"),
-    
+
     _415("415"),
-    
+
     _416("416"),
-    
+
     _420("420"),
-    
+
     _421("421"),
-    
+
     _422("422"),
-    
+
     _423("423"),
-    
+
     _500("500"),
-    
+
     _600("600"),
-    
+
     _999("999");
 
     private String value;
@@ -217,11 +216,11 @@ public class GermplasmMCPD   {
    */
   public enum MlsStatusEnum {
     EMPTY(""),
-    
+
     _0("0"),
-    
+
     _1("1"),
-    
+
     _99("99");
 
     private String value;
@@ -267,21 +266,21 @@ public class GermplasmMCPD   {
    */
   public enum StorageTypeCodesEnum {
     _10("10"),
-    
+
     _11("11"),
-    
+
     _12("12"),
-    
+
     _13("13"),
-    
+
     _20("20"),
-    
+
     _30("30"),
-    
+
     _40("40"),
-    
+
     _50("50"),
-    
+
     _99("99");
 
     private String value;
@@ -333,8 +332,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (ACCENAME) 11. Either a registered or other designation given to the material received, other than the donors accession number (23) or collecting number (3). First letter uppercase. Multiple names are separated by a semicolon without space. Example: Accession name: Bogatyr;Symphony;Emma.
    * @return accessionNames
   **/
-  @ApiModelProperty(example = "[\"Bogatyr\",\"Symphony\",\"Emma\"]", value = "MCPD (v2.1) (ACCENAME) 11. Either a registered or other designation given to the material received, other than the donors accession number (23) or collecting number (3). First letter uppercase. Multiple names are separated by a semicolon without space. Example: Accession name: Bogatyr;Symphony;Emma.")
-  
+  @Schema(example = "[\"Bogatyr\",\"Symphony\",\"Emma\"]", description = "MCPD (v2.1) (ACCENAME) 11. Either a registered or other designation given to the material received, other than the donors accession number (23) or collecting number (3). First letter uppercase. Multiple names are separated by a semicolon without space. Example: Accession name: Bogatyr;Symphony;Emma.")
+
     public List<String> getAccessionNames() {
     return accessionNames;
   }
@@ -352,8 +351,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (ACCENUMB) 2. This is the unique identifier for accessions within a genebank, and is assigned when a sample is entered into the genebank collection (e.g. \"PI 113869\").
    * @return accessionNumber
   **/
-  @ApiModelProperty(example = "A0000003", value = "MCPD (v2.1) (ACCENUMB) 2. This is the unique identifier for accessions within a genebank, and is assigned when a sample is entered into the genebank collection (e.g. \"PI 113869\").")
-  
+  @Schema(example = "A0000003", description = "MCPD (v2.1) (ACCENUMB) 2. This is the unique identifier for accessions within a genebank, and is assigned when a sample is entered into the genebank collection (e.g. \"PI 113869\").")
+
     public String getAccessionNumber() {
     return accessionNumber;
   }
@@ -371,8 +370,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (ACQDATE) 12. Date on which the accession entered the collection [YYYYMMDD] where YYYY is the year, MM is the month and DD is the day. Missing data (MM or DD) should be indicated with hyphens or \"00\" [double zero].
    * @return acquisitionDate
   **/
-  @ApiModelProperty(value = "MCPD (v2.1) (ACQDATE) 12. Date on which the accession entered the collection [YYYYMMDD] where YYYY is the year, MM is the month and DD is the day. Missing data (MM or DD) should be indicated with hyphens or \"00\" [double zero].")
-  
+  @Schema(description = "MCPD (v2.1) (ACQDATE) 12. Date on which the accession entered the collection [YYYYMMDD] where YYYY is the year, MM is the month and DD is the day. Missing data (MM or DD) should be indicated with hyphens or \"00\" [double zero].")
+
     @Valid
     public LocalDate getAcquisitionDate() {
     return acquisitionDate;
@@ -388,11 +387,11 @@ public class GermplasmMCPD   {
   }
 
   /**
-   * MCPD (v2.1) (COLLSRC) 21. The coding scheme proposed can be used at 2 different levels of detail: either by using the general codes (in bold-face) such as 10, 20, 30, 40, etc., or by using the more specific codes, such as 11, 12, etc. 10) Wild habitat 11) Forest or woodland 12) Shrubland 13) Grassland 14) Desert or tundra 15) Aquatic habitat 20) Farm or cultivated habitat 21) Field 22) Orchard 23) Backyard, kitchen or home garden (urban, peri-urban or rural) 24) Fallow land 25) Pasture 26) Farm store 27) Threshing floor 28) Park 30) Market or shop 40) Institute, Experimental station, Research organization, Genebank 50) Seed company 60) Weedy, disturbed or ruderal habitat 61) Roadside 62) Field margin 99) Other (Elaborate in REMARKS field) 
+   * MCPD (v2.1) (COLLSRC) 21. The coding scheme proposed can be used at 2 different levels of detail: either by using the general codes (in bold-face) such as 10, 20, 30, 40, etc., or by using the more specific codes, such as 11, 12, etc. 10) Wild habitat 11) Forest or woodland 12) Shrubland 13) Grassland 14) Desert or tundra 15) Aquatic habitat 20) Farm or cultivated habitat 21) Field 22) Orchard 23) Backyard, kitchen or home garden (urban, peri-urban or rural) 24) Fallow land 25) Pasture 26) Farm store 27) Threshing floor 28) Park 30) Market or shop 40) Institute, Experimental station, Research organization, Genebank 50) Seed company 60) Weedy, disturbed or ruderal habitat 61) Roadside 62) Field margin 99) Other (Elaborate in REMARKS field)
    * @return acquisitionSourceCode
   **/
-  @ApiModelProperty(example = "26", value = "MCPD (v2.1) (COLLSRC) 21. The coding scheme proposed can be used at 2 different levels of detail: either by using the general codes (in bold-face) such as 10, 20, 30, 40, etc., or by using the more specific codes, such as 11, 12, etc. 10) Wild habitat 11) Forest or woodland 12) Shrubland 13) Grassland 14) Desert or tundra 15) Aquatic habitat 20) Farm or cultivated habitat 21) Field 22) Orchard 23) Backyard, kitchen or home garden (urban, peri-urban or rural) 24) Fallow land 25) Pasture 26) Farm store 27) Threshing floor 28) Park 30) Market or shop 40) Institute, Experimental station, Research organization, Genebank 50) Seed company 60) Weedy, disturbed or ruderal habitat 61) Roadside 62) Field margin 99) Other (Elaborate in REMARKS field) ")
-  
+  @Schema(example = "26", description = "MCPD (v2.1) (COLLSRC) 21. The coding scheme proposed can be used at 2 different levels of detail: either by using the general codes (in bold-face) such as 10, 20, 30, 40, etc., or by using the more specific codes, such as 11, 12, etc. 10) Wild habitat 11) Forest or woodland 12) Shrubland 13) Grassland 14) Desert or tundra 15) Aquatic habitat 20) Farm or cultivated habitat 21) Field 22) Orchard 23) Backyard, kitchen or home garden (urban, peri-urban or rural) 24) Fallow land 25) Pasture 26) Farm store 27) Threshing floor 28) Park 30) Market or shop 40) Institute, Experimental station, Research organization, Genebank 50) Seed company 60) Weedy, disturbed or ruderal habitat 61) Roadside 62) Field margin 99) Other (Elaborate in REMARKS field) ")
+
     public AcquisitionSourceCodeEnum getAcquisitionSourceCode() {
     return acquisitionSourceCode;
   }
@@ -415,11 +414,11 @@ public class GermplasmMCPD   {
   }
 
   /**
-   * MCPD (v2.1) (OTHERNUMB) 24. Any other identifiers known to exist in other collections for this accession. Use the following format: INSTCODE:ACCENUMB;INSTCODE:identifier;INSTCODE and identifier are separated by a colon without space. Pairs of INSTCODE and identifier are separated by a semicolon without space. When the institute is not known, the identifier should be preceded by a colon. 
+   * MCPD (v2.1) (OTHERNUMB) 24. Any other identifiers known to exist in other collections for this accession. Use the following format: INSTCODE:ACCENUMB;INSTCODE:identifier;INSTCODE and identifier are separated by a colon without space. Pairs of INSTCODE and identifier are separated by a semicolon without space. When the institute is not known, the identifier should be preceded by a colon.
    * @return alternateIDs
   **/
-  @ApiModelProperty(example = "[\"3\",\"http://pui.per/accession/A0000003\",\"A0000003\"]", value = "MCPD (v2.1) (OTHERNUMB) 24. Any other identifiers known to exist in other collections for this accession. Use the following format: INSTCODE:ACCENUMB;INSTCODE:identifier;INSTCODE and identifier are separated by a colon without space. Pairs of INSTCODE and identifier are separated by a semicolon without space. When the institute is not known, the identifier should be preceded by a colon. ")
-  
+  @Schema(example = "[\"3\",\"http://pui.per/accession/A0000003\",\"A0000003\"]", description = "MCPD (v2.1) (OTHERNUMB) 24. Any other identifiers known to exist in other collections for this accession. Use the following format: INSTCODE:ACCENUMB;INSTCODE:identifier;INSTCODE and identifier are separated by a colon without space. Pairs of INSTCODE and identifier are separated by a semicolon without space. When the institute is not known, the identifier should be preceded by a colon. ")
+
     public List<String> getAlternateIDs() {
     return alternateIDs;
   }
@@ -437,8 +436,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (ANCEST) 20. Information about either pedigree or other description of ancestral information (e.g. parent variety in case of mutant or selection). For example a pedigree 'Hanna/7*Atlas//Turk/8*Atlas' or a description 'mutation found in Hanna', 'selection from Irene' or 'cross involving amongst others Hanna and Irene'.
    * @return ancestralData
   **/
-  @ApiModelProperty(example = "A0000001/A0000002", value = "MCPD (v2.1) (ANCEST) 20. Information about either pedigree or other description of ancestral information (e.g. parent variety in case of mutant or selection). For example a pedigree 'Hanna/7*Atlas//Turk/8*Atlas' or a description 'mutation found in Hanna', 'selection from Irene' or 'cross involving amongst others Hanna and Irene'.")
-  
+  @Schema(example = "A0000001/A0000002", description = "MCPD (v2.1) (ANCEST) 20. Information about either pedigree or other description of ancestral information (e.g. parent variety in case of mutant or selection). For example a pedigree 'Hanna/7*Atlas//Turk/8*Atlas' or a description 'mutation found in Hanna', 'selection from Irene' or 'cross involving amongst others Hanna and Irene'.")
+
     public String getAncestralData() {
     return ancestralData;
   }
@@ -456,8 +455,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (SAMPSTAT) 19. The coding scheme proposed can be used at 3 different levels of detail: either by using the general codes (in boldface) such as 100, 200, 300, 400, or by using the more specific codes such as 110, 120, etc. 100) Wild 110) Natural 120) Semi-natural/wild 130) Semi-natural/sown 200) Weedy 300) Traditional cultivar/landrace 400) Breeding/research material 410) Breeders line 411) Synthetic population 412) Hybrid 413) Founder stock/base population 414) Inbred line (parent of hybrid cultivar) 415) Segregating population 416) Clonal selection 420) Genetic stock 421) Mutant (e.g. induced/insertion mutants, tilling populations) 422) Cytogenetic stocks (e.g. chromosome addition/substitution, aneuploids,  amphiploids) 423) Other genetic stocks (e.g. mapping populations) 500) Advanced or improved cultivar (conventional breeding methods) 600) GMO (by genetic engineering) 999) Other (Elaborate in REMARKS field)
    * @return biologicalStatusOfAccessionCode
   **/
-  @ApiModelProperty(example = "421", value = "MCPD (v2.1) (SAMPSTAT) 19. The coding scheme proposed can be used at 3 different levels of detail: either by using the general codes (in boldface) such as 100, 200, 300, 400, or by using the more specific codes such as 110, 120, etc. 100) Wild 110) Natural 120) Semi-natural/wild 130) Semi-natural/sown 200) Weedy 300) Traditional cultivar/landrace 400) Breeding/research material 410) Breeders line 411) Synthetic population 412) Hybrid 413) Founder stock/base population 414) Inbred line (parent of hybrid cultivar) 415) Segregating population 416) Clonal selection 420) Genetic stock 421) Mutant (e.g. induced/insertion mutants, tilling populations) 422) Cytogenetic stocks (e.g. chromosome addition/substitution, aneuploids,  amphiploids) 423) Other genetic stocks (e.g. mapping populations) 500) Advanced or improved cultivar (conventional breeding methods) 600) GMO (by genetic engineering) 999) Other (Elaborate in REMARKS field)")
-  
+  @Schema(example = "421", description = "MCPD (v2.1) (SAMPSTAT) 19. The coding scheme proposed can be used at 3 different levels of detail: either by using the general codes (in boldface) such as 100, 200, 300, 400, or by using the more specific codes such as 110, 120, etc. 100) Wild 110) Natural 120) Semi-natural/wild 130) Semi-natural/sown 200) Weedy 300) Traditional cultivar/landrace 400) Breeding/research material 410) Breeders line 411) Synthetic population 412) Hybrid 413) Founder stock/base population 414) Inbred line (parent of hybrid cultivar) 415) Segregating population 416) Clonal selection 420) Genetic stock 421) Mutant (e.g. induced/insertion mutants, tilling populations) 422) Cytogenetic stocks (e.g. chromosome addition/substitution, aneuploids,  amphiploids) 423) Other genetic stocks (e.g. mapping populations) 500) Advanced or improved cultivar (conventional breeding methods) 600) GMO (by genetic engineering) 999) Other (Elaborate in REMARKS field)")
+
     public BiologicalStatusOfAccessionCodeEnum getBiologicalStatusOfAccessionCode() {
     return biologicalStatusOfAccessionCode;
   }
@@ -483,7 +482,7 @@ public class GermplasmMCPD   {
 //   * Get breedingInstitutes
 //   * @return breedingInstitutes
 //  **/
-//  @ApiModelProperty(value = "")
+//  @Schema(description = "")
 //      @Valid
 //    public List<GermplasmMCPDBreedingInstitutes> getBreedingInstitutes() {
 //    return breedingInstitutes;
@@ -502,8 +501,8 @@ public class GermplasmMCPD   {
 //   * Get collectingInfo
 //   * @return collectingInfo
 //  **/
-//  @ApiModelProperty(value = "")
-//  
+//  @Schema(description = "")
+//
 //    @Valid
 //    public GermplasmMCPDCollectingInfo getCollectingInfo() {
 //    return collectingInfo;
@@ -519,11 +518,11 @@ public class GermplasmMCPD   {
   }
 
   /**
-   * MCPD (v2.1) (CROPNAME) 10. Common name of the crop. Example: \"malting barley\", \"macadamia\", \"mas\". 
+   * MCPD (v2.1) (CROPNAME) 10. Common name of the crop. Example: \"malting barley\", \"macadamia\", \"mas\".
    * @return commonCropName
   **/
-  @ApiModelProperty(example = "malting barley", value = "MCPD (v2.1) (CROPNAME) 10. Common name of the crop. Example: \"malting barley\", \"macadamia\", \"mas\". ")
-  
+  @Schema(example = "malting barley", description = "MCPD (v2.1) (CROPNAME) 10. Common name of the crop. Example: \"malting barley\", \"macadamia\", \"mas\". ")
+
     public String getCommonCropName() {
     return commonCropName;
   }
@@ -541,8 +540,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (ORIGCTY) 13. 3-letter ISO 3166-1 code of the country in which the sample was originally collected (e.g. landrace, crop wild relative, farmers\" variety), bred or selected (breeding lines, GMOs, segregating populations, hybrids, modern cultivars, etc.). Note: Descriptors 14 to 16 below should be completed accordingly only if it was \"collected\".
    * @return countryOfOrigin
   **/
-  @ApiModelProperty(example = "Peru", value = "MCPD (v2.1) (ORIGCTY) 13. 3-letter ISO 3166-1 code of the country in which the sample was originally collected (e.g. landrace, crop wild relative, farmers\" variety), bred or selected (breeding lines, GMOs, segregating populations, hybrids, modern cultivars, etc.). Note: Descriptors 14 to 16 below should be completed accordingly only if it was \"collected\".")
-  
+  @Schema(example = "Peru", description = "MCPD (v2.1) (ORIGCTY) 13. 3-letter ISO 3166-1 code of the country in which the sample was originally collected (e.g. landrace, crop wild relative, farmers\" variety), bred or selected (breeding lines, GMOs, segregating populations, hybrids, modern cultivars, etc.). Note: Descriptors 14 to 16 below should be completed accordingly only if it was \"collected\".")
+
     public String getCountryOfOrigin() {
     return countryOfOrigin;
   }
@@ -560,8 +559,8 @@ public class GermplasmMCPD   {
 //   * Get donorInfo
 //   * @return donorInfo
 //  **/
-//  @ApiModelProperty(value = "")
-//  
+//  @Schema(description = "")
+//
 //    @Valid
 //    public GermplasmMCPDDonorInfo getDonorInfo() {
 //    return donorInfo;
@@ -580,8 +579,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (GENUS) 5. Genus name for taxon. Initial uppercase letter required.
    * @return genus
   **/
-  @ApiModelProperty(example = "Aspergillus", value = "MCPD (v2.1) (GENUS) 5. Genus name for taxon. Initial uppercase letter required.")
-  
+  @Schema(example = "Aspergillus", description = "MCPD (v2.1) (GENUS) 5. Genus name for taxon. Initial uppercase letter required.")
+
     public String getGenus() {
     return genus;
   }
@@ -599,8 +598,8 @@ public class GermplasmMCPD   {
    * A unique identifier which identifies a germplasm in this database
    * @return germplasmDbId
   **/
-  @ApiModelProperty(example = "31c4efbc", value = "A unique identifier which identifies a germplasm in this database")
-  
+  @Schema(example = "31c4efbc", description = "A unique identifier which identifies a germplasm in this database")
+
     public String getGermplasmDbId() {
     return germplasmDbId;
   }
@@ -618,8 +617,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (PUID) 0. Any persistent, unique identifier assigned to the accession so it can be unambiguously referenced at the global level and the information associated with it harvested through automated means. Report one PUID for each accession. The Secretariat of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA) is facilitating the assignment of a persistent unique identifier (PUID), in the form of a DOI, to PGRFA at the accession level (http://www.planttreaty.org/doi). Genebanks not applying a true PUID to their accessions should use, and request recipients to use, the concatenation of INSTCODE, ACCENUMB, and GENUS as a globally unique identifier similar in most respects to the PUID whenever they exchange information on accessions with third parties (e.g. NOR017:NGB17773:ALLIUM).
    * @return germplasmPUI
   **/
-  @ApiModelProperty(example = "http://pui.per/accession/A040365", value = "MCPD (v2.1) (PUID) 0. Any persistent, unique identifier assigned to the accession so it can be unambiguously referenced at the global level and the information associated with it harvested through automated means. Report one PUID for each accession. The Secretariat of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA) is facilitating the assignment of a persistent unique identifier (PUID), in the form of a DOI, to PGRFA at the accession level (http://www.planttreaty.org/doi). Genebanks not applying a true PUID to their accessions should use, and request recipients to use, the concatenation of INSTCODE, ACCENUMB, and GENUS as a globally unique identifier similar in most respects to the PUID whenever they exchange information on accessions with third parties (e.g. NOR017:NGB17773:ALLIUM).")
-  
+  @Schema(example = "http://pui.per/accession/A040365", description = "MCPD (v2.1) (PUID) 0. Any persistent, unique identifier assigned to the accession so it can be unambiguously referenced at the global level and the information associated with it harvested through automated means. Report one PUID for each accession. The Secretariat of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA) is facilitating the assignment of a persistent unique identifier (PUID), in the form of a DOI, to PGRFA at the accession level (http://www.planttreaty.org/doi). Genebanks not applying a true PUID to their accessions should use, and request recipients to use, the concatenation of INSTCODE, ACCENUMB, and GENUS as a globally unique identifier similar in most respects to the PUID whenever they exchange information on accessions with third parties (e.g. NOR017:NGB17773:ALLIUM).")
+
     public String getGermplasmPUI() {
     return germplasmPUI;
   }
@@ -637,8 +636,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (INSTCODE) 1. FAO WIEWS code of the institute where the accession is maintained. The codes consist of the 3-letter ISO 3166 country code of the country where the institute is located plus a number (e.g. COL001). The current set of institute codes is available from http://www.fao.org/wiews. For those institutes not yet having an FAO Code, or for those with \"obsolete\" codes, see \"Common formatting rules (v)\".
    * @return instituteCode
   **/
-  @ApiModelProperty(example = "PER001", value = "MCPD (v2.1) (INSTCODE) 1. FAO WIEWS code of the institute where the accession is maintained. The codes consist of the 3-letter ISO 3166 country code of the country where the institute is located plus a number (e.g. COL001). The current set of institute codes is available from http://www.fao.org/wiews. For those institutes not yet having an FAO Code, or for those with \"obsolete\" codes, see \"Common formatting rules (v)\".")
-  
+  @Schema(example = "PER001", description = "MCPD (v2.1) (INSTCODE) 1. FAO WIEWS code of the institute where the accession is maintained. The codes consist of the 3-letter ISO 3166 country code of the country where the institute is located plus a number (e.g. COL001). The current set of institute codes is available from http://www.fao.org/wiews. For those institutes not yet having an FAO Code, or for those with \"obsolete\" codes, see \"Common formatting rules (v)\".")
+
     public String getInstituteCode() {
     return instituteCode;
   }
@@ -656,8 +655,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (MLSSTAT) 27. The status of an accession with regards to the Multilateral System (MLS) of the International Treaty on Plant Genetic Resources for Food and Agriculture. Leave the value empty if the status is not known 0 No (not included) 1 Yes (included) 99 Other (elaborate in REMARKS field, e.g. \"under development\")
    * @return mlsStatus
   **/
-  @ApiModelProperty(example = "0", value = "MCPD (v2.1) (MLSSTAT) 27. The status of an accession with regards to the Multilateral System (MLS) of the International Treaty on Plant Genetic Resources for Food and Agriculture. Leave the value empty if the status is not known 0 No (not included) 1 Yes (included) 99 Other (elaborate in REMARKS field, e.g. \"under development\")")
-  
+  @Schema(example = "0", description = "MCPD (v2.1) (MLSSTAT) 27. The status of an accession with regards to the Multilateral System (MLS) of the International Treaty on Plant Genetic Resources for Food and Agriculture. Leave the value empty if the status is not known 0 No (not included) 1 Yes (included) 99 Other (elaborate in REMARKS field, e.g. \"under development\")")
+
     public MlsStatusEnum getMlsStatus() {
     return mlsStatus;
   }
@@ -675,8 +674,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (REMARKS) 28. The remarks field is used to add notes or to elaborate on descriptors with value 99 or 999 (= Other). Prefix remarks with the field name they refer to and a colon (:) without space (e.g. COLLSRC:riverside). Distinct remarks referring to different fields are separated by semi-colons without space.
    * @return remarks
   **/
-  @ApiModelProperty(example = "This is an example remark to demonstrate that any notable information can be put here", value = "MCPD (v2.1) (REMARKS) 28. The remarks field is used to add notes or to elaborate on descriptors with value 99 or 999 (= Other). Prefix remarks with the field name they refer to and a colon (:) without space (e.g. COLLSRC:riverside). Distinct remarks referring to different fields are separated by semi-colons without space.")
-  
+  @Schema(example = "This is an example remark to demonstrate that any notable information can be put here", description = "MCPD (v2.1) (REMARKS) 28. The remarks field is used to add notes or to elaborate on descriptors with value 99 or 999 (= Other). Prefix remarks with the field name they refer to and a colon (:) without space (e.g. COLLSRC:riverside). Distinct remarks referring to different fields are separated by semi-colons without space.")
+
     public String getRemarks() {
     return remarks;
   }
@@ -702,7 +701,7 @@ public class GermplasmMCPD   {
 //   * Get safetyDuplicateInstitutes
 //   * @return safetyDuplicateInstitutes
 //  **/
-//  @ApiModelProperty(value = "")
+//  @Schema(description = "")
 //      @Valid
 //    public List<GermplasmMCPDSafetyDuplicateInstitutes> getSafetyDuplicateInstitutes() {
 //    return safetyDuplicateInstitutes;
@@ -718,11 +717,11 @@ public class GermplasmMCPD   {
   }
 
   /**
-   * MCPD (v2.1) (SPECIES) 6. Specific epithet portion of the scientific name in lowercase letters. Only the following abbreviation is allowed: \"sp.\" 
+   * MCPD (v2.1) (SPECIES) 6. Specific epithet portion of the scientific name in lowercase letters. Only the following abbreviation is allowed: \"sp.\"
    * @return species
   **/
-  @ApiModelProperty(example = "fructus", value = "MCPD (v2.1) (SPECIES) 6. Specific epithet portion of the scientific name in lowercase letters. Only the following abbreviation is allowed: \"sp.\" ")
-  
+  @Schema(example = "fructus", description = "MCPD (v2.1) (SPECIES) 6. Specific epithet portion of the scientific name in lowercase letters. Only the following abbreviation is allowed: \"sp.\" ")
+
     public String getSpecies() {
     return species;
   }
@@ -740,8 +739,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (SPAUTHOR) 7. Provide the authority for the species name.
    * @return speciesAuthority
   **/
-  @ApiModelProperty(example = "Smith, 1822", value = "MCPD (v2.1) (SPAUTHOR) 7. Provide the authority for the species name.")
-  
+  @Schema(example = "Smith, 1822", description = "MCPD (v2.1) (SPAUTHOR) 7. Provide the authority for the species name.")
+
     public String getSpeciesAuthority() {
     return speciesAuthority;
   }
@@ -767,8 +766,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (STORAGE) 26. If germplasm is maintained under different types of storage, multiple choices are allowed, separated by a semicolon (e.g. 20;30). (Refer to FAO/IPGRI Genebank Standards 1994 for details on storage type.) 10) Seed collection 11) Short term 12) Medium term 13) Long term 20) Field collection 30) In vitro collection 40) Cryopreserved collection 50) DNA collection 99) Other (elaborate in REMARKS field)
    * @return storageTypeCodes
   **/
-  @ApiModelProperty(example = "[\"11\",\"13'\"]", value = "MCPD (v2.1) (STORAGE) 26. If germplasm is maintained under different types of storage, multiple choices are allowed, separated by a semicolon (e.g. 20;30). (Refer to FAO/IPGRI Genebank Standards 1994 for details on storage type.) 10) Seed collection 11) Short term 12) Medium term 13) Long term 20) Field collection 30) In vitro collection 40) Cryopreserved collection 50) DNA collection 99) Other (elaborate in REMARKS field)")
-  
+  @Schema(example = "[\"11\",\"13'\"]", description = "MCPD (v2.1) (STORAGE) 26. If germplasm is maintained under different types of storage, multiple choices are allowed, separated by a semicolon (e.g. 20;30). (Refer to FAO/IPGRI Genebank Standards 1994 for details on storage type.) 10) Seed collection 11) Short term 12) Medium term 13) Long term 20) Field collection 30) In vitro collection 40) Cryopreserved collection 50) DNA collection 99) Other (elaborate in REMARKS field)")
+
     public List<StorageTypeCodesEnum> getStorageTypeCodes() {
     return storageTypeCodes;
   }
@@ -786,8 +785,8 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (SUBTAXA) 8. Subtaxon can be used to store any additional taxonomic identifier. The following abbreviations are allowed: \"subsp.\" (for subspecies); \"convar.\" (for convariety); \"var.\" (for variety); \"f.\" (for form); \"Group\" (for \"cultivar group\").
    * @return subtaxon
   **/
-  @ApiModelProperty(example = "Aspergillus fructus A", value = "MCPD (v2.1) (SUBTAXA) 8. Subtaxon can be used to store any additional taxonomic identifier. The following abbreviations are allowed: \"subsp.\" (for subspecies); \"convar.\" (for convariety); \"var.\" (for variety); \"f.\" (for form); \"Group\" (for \"cultivar group\").")
-  
+  @Schema(example = "Aspergillus fructus A", description = "MCPD (v2.1) (SUBTAXA) 8. Subtaxon can be used to store any additional taxonomic identifier. The following abbreviations are allowed: \"subsp.\" (for subspecies); \"convar.\" (for convariety); \"var.\" (for variety); \"f.\" (for form); \"Group\" (for \"cultivar group\").")
+
     public String getSubtaxon() {
     return subtaxon;
   }
@@ -805,7 +804,7 @@ public class GermplasmMCPD   {
    * MCPD (v2.1) (SUBTAUTHOR) 9. Provide the subtaxon authority at the most detailed taxonomic level.
    * @return subtaxonAuthority
   **/
-  @ApiModelProperty(example = "Smith, 1822", value = "MCPD (v2.1) (SUBTAUTHOR) 9. Provide the subtaxon authority at the most detailed taxonomic level.")
+  @Schema(example = "Smith, 1822", description = "MCPD (v2.1) (SUBTAUTHOR) 9. Provide the subtaxon authority at the most detailed taxonomic level.")
   
     public String getSubtaxonAuthority() {
     return subtaxonAuthority;

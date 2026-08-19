@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * SearchRequestParametersPaging
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-16T09:51:33.671Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-03-16T09:51:33.671Z[GMT]")
 
 public class SearchRequestParametersTokenPaging {
 	@JsonProperty("pageSize")

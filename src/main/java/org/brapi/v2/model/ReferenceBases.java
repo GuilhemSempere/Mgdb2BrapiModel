@@ -3,18 +3,17 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * The response from &#x60;POST /listreferencebases&#x60; expressed as JSON.
  */
-@ApiModel(description = "The response from `POST /listreferencebases` expressed as JSON.")
+@Schema(description = "The response from `POST /listreferencebases` expressed as JSON.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class ReferenceBases   {
 
   @JsonProperty("offset")
@@ -31,7 +30,7 @@ public class ReferenceBases   {
    * The offset position (0-based) of the given sequence from the start of this `Reference`. This value will differ for each page in a paginated request.
    * @return offset
   **/
-  @ApiModelProperty(value = "The offset position (0-based) of the given sequence from the start of this `Reference`. This value will differ for each page in a paginated request.")
+  @Schema(description = "The offset position (0-based) of the given sequence from the start of this `Reference`. This value will differ for each page in a paginated request.")
   
     public String getOffset() {
     return offset;
@@ -50,7 +49,7 @@ public class ReferenceBases   {
    * A substring of the bases that make up this reference. Bases are represented as IUPAC-IUB codes; this string matches the regexp `[ACGTMRWSYKVHDBN]*`.
    * @return sequence
   **/
-  @ApiModelProperty(value = "A substring of the bases that make up this reference. Bases are represented as IUPAC-IUB codes; this string matches the regexp `[ACGTMRWSYKVHDBN]*`.")
+  @Schema(description = "A substring of the bases that make up this reference. Bases are represented as IUPAC-IUB codes; this string matches the regexp `[ACGTMRWSYKVHDBN]*`.")
   
     public String getSequence() {
     return sequence;

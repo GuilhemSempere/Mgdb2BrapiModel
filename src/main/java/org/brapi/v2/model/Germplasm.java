@@ -2,20 +2,17 @@ package org.brapi.v2.model;
 
 import java.util.Objects;
 
-import javax.validation.constraints.NotNull;
-
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import io.swagger.annotations.ApiModelProperty;
 import java.util.HashMap;
 
 /**
  * Germplasm
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-20T14:32:35.470Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-20T14:32:35.470Z[GMT]")
 public class Germplasm extends GermplasmNewRequest {
 
     @JsonProperty("germplasmDbId")
@@ -33,7 +30,7 @@ public class Germplasm extends GermplasmNewRequest {
      * @return germplasmDbId
   *
      */
-    @ApiModelProperty(example = "d4076594", required = true, value = "The ID which uniquely identifies a germplasm within the given database server")
+    @Schema(example = "d4076594", requiredMode = Schema.RequiredMode.REQUIRED, description = "The ID which uniquely identifies a germplasm within the given database server")
     @NotNull
 
     public String getGermplasmDbId() {

@@ -3,18 +3,17 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * The experimental and statistical design full description plus a category PUI taken from crop research ontology or agronomy ontology
  */
-@ApiModel(description = "The experimental and statistical design full description plus a category PUI taken from crop research ontology or agronomy ontology")
+@Schema(description = "The experimental and statistical design full description plus a category PUI taken from crop research ontology or agronomy ontology")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class StudyNewRequestExperimentalDesign   {
   @JsonProperty("PUI")
   private String PUI = null;
@@ -31,7 +30,7 @@ public class StudyNewRequestExperimentalDesign   {
    * Get PUI
    * @return PUI
   **/
-  @ApiModelProperty(example = "CO_715:0000145", value = "")
+  @Schema(example = "CO_715:0000145", description = "")
   
     public String getPUI() {
     return PUI;
@@ -50,7 +49,7 @@ public class StudyNewRequestExperimentalDesign   {
    * Get description
    * @return description
   **/
-  @ApiModelProperty(example = "Lines were repeated twice at each location using a complete block design. In order to limit competition effects, each block was organized into four sub-blocks corresponding to earliest groups based on a prior information.", value = "")
+  @Schema(example = "Lines were repeated twice at each location using a complete block design. In order to limit competition effects, each block was organized into four sub-blocks corresponding to earliest groups based on a prior information.", description = "")
   
     public String getDescription() {
     return description;

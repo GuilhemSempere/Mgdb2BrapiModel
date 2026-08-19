@@ -4,22 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
-
-import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Service
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class Service   {
 	  @JsonProperty("contentTypes")
 	  @Valid
@@ -123,7 +120,7 @@ public class Service   {
 	   * The possible content types returned by the service endpoint
 	   * @return contentTypes
 	   **/
-	  @ApiModelProperty(example = "[\"application/json\"]", value = "The possible content types returned by the service endpoint")
+	  @Schema(example = "[\"application/json\"]", description = "The possible content types returned by the service endpoint")
 	      @Valid
 	    public List<ContentTypes> getContentTypes() {
 	    return contentTypes;
@@ -150,7 +147,7 @@ public class Service   {
 	   * **Deprecated in v2.1** Please use `contentTypes`. Github issue number #443  <br/>The possible data formats returned by the available call 
 	   * @return dataTypes
 	   **/
-	  @ApiModelProperty(example = "[\"application/json\"]", value = "**Deprecated in v2.1** Please use `contentTypes`. Github issue number #443  <br/>The possible data formats returned by the available call")
+	  @Schema(example = "[\"application/json\"]", description = "**Deprecated in v2.1** Please use `contentTypes`. Github issue number #443  <br/>The possible data formats returned by the available call")
       @Valid
 	    public List<ContentTypes> getDataTypes() {
 	    return dataTypes;
@@ -174,7 +171,7 @@ public class Service   {
 	   * The possible HTTP Methods to be used with the available call
 	   * @return methods
 	   **/
-	  @ApiModelProperty(example = "[\"GET\",\"POST\"]", required = true, value = "The possible HTTP Methods to be used with the available call")
+	  @Schema(example = "[\"GET\",\"POST\"]", requiredMode =  Schema.RequiredMode.REQUIRED, description = "The possible HTTP Methods to be used with the available call")
 	      @NotNull
 
 	    public List<MethodsEnum> getMethods() {
@@ -194,7 +191,7 @@ public class Service   {
 	   * The name of the available call as recorded in the documentation
 	   * @return service
 	   **/
-	  @ApiModelProperty(example = "germplasm/{germplasmDbId}/pedigree", required = true, value = "The name of the available call as recorded in the documentation")
+	  @Schema(example = "germplasm/{germplasmDbId}/pedigree", requiredMode = Schema.RequiredMode.REQUIRED, description = "The name of the available call as recorded in the documentation")
 	      @NotNull
 
 	    public String getService() {
@@ -219,7 +216,7 @@ public class Service   {
 	   * The supported versions of a particular call
 	   * @return versions
 	   **/
-	  @ApiModelProperty(example = "[\"2.0\",\"2.1\"]", required = true, value = "The supported versions of a particular call")
+	  @Schema(example = "[\"2.0\",\"2.1\"]", requiredMode = Schema.RequiredMode.REQUIRED, description = "The supported versions of a particular call")
 	      @NotNull
 
 	    public List<VersionsEnum> getVersions() {

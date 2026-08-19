@@ -12,6 +12,7 @@
 
 package org.brapi.v2.model;
 
+import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Arrays;
 import com.google.gson.TypeAdapter;
@@ -19,18 +20,16 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-
-import io.swagger.annotations.ApiModelProperty;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.LocalDate;
+import io.swagger.v3.oas.annotations.media.Schema;
+
 /**
  * TrialSearchRequest
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class TrialSearchRequest extends SearchRequestParametersPaging {
   @SerializedName("commonCropNames")
   private List<String> commonCropNames = null;
@@ -97,7 +96,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * Common name for the crop which this program is for
    * @return commonCropNames
   **/
-  @ApiModelProperty(example = "[\"Tomatillo\",\"Paw Paw\"]", value = "Common name for the crop which this program is for")
+  @Schema(example = "[\"Tomatillo\",\"Paw Paw\"]", description = "Common name for the crop which this program is for")
   public List<String> getCommonCropNames() {
     return commonCropNames;
   }
@@ -123,7 +122,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * A program identifier to search for
    * @return programDbIds
   **/
-  @ApiModelProperty(example = "[\"8f5de35b\",\"0e2d4a13\"]", value = "A program identifier to search for")
+  @Schema(example = "[\"8f5de35b\",\"0e2d4a13\"]", description = "A program identifier to search for")
   public List<String> getProgramDbIds() {
     return programDbIds;
   }
@@ -149,7 +148,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * A name of a program to search for
    * @return programNames
   **/
-  @ApiModelProperty(example = "[\"Better Breeding Program\",\"Best Breeding Program\"]", value = "A name of a program to search for")
+  @Schema(example = "[\"Better Breeding Program\",\"Best Breeding Program\"]", description = "A name of a program to search for")
   public List<String> getProgramNames() {
     return programNames;
   }
@@ -175,7 +174,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * The ID which uniquely identifies a trial to search for
    * @return trialDbIds
   **/
-  @ApiModelProperty(example = "[\"d2593dc2\",\"9431a731\"]", value = "The ID which uniquely identifies a trial to search for")
+  @Schema(example = "[\"d2593dc2\",\"9431a731\"]", description = "The ID which uniquely identifies a trial to search for")
   public List<String> getTrialDbIds() {
     return trialDbIds;
   }
@@ -201,7 +200,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * The human readable name of a trial to search for
    * @return trialNames
   **/
-  @ApiModelProperty(example = "[\"All Yield Trials 2016\",\"Disease Resistance Study Comparison Group\"]", value = "The human readable name of a trial to search for")
+  @Schema(example = "[\"All Yield Trials 2016\",\"Disease Resistance Study Comparison Group\"]", description = "The human readable name of a trial to search for")
   public List<String> getTrialNames() {
     return trialNames;
   }
@@ -227,7 +226,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * List of study identifiers to search for
    * @return studyDbIds
   **/
-  @ApiModelProperty(example = "[\"cf6c4bd4\",\"691e69d6\"]", value = "List of study identifiers to search for")
+  @Schema(example = "[\"cf6c4bd4\",\"691e69d6\"]", description = "List of study identifiers to search for")
   public List<String> getStudyDbIds() {
     return studyDbIds;
   }
@@ -253,7 +252,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * List of study names to filter search results
    * @return studyNames
   **/
-  @ApiModelProperty(example = "[\"The First Bob Study 2017\",\"Wheat Yield Trial 246\"]", value = "List of study names to filter search results")
+  @Schema(example = "[\"The First Bob Study 2017\",\"Wheat Yield Trial 246\"]", description = "List of study names to filter search results")
   public List<String> getStudyNames() {
     return studyNames;
   }
@@ -279,7 +278,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * The location ids to search for
    * @return locationDbIds
   **/
-  @ApiModelProperty(example = "[\"b28911cf\",\"5071d1e4\"]", value = "The location ids to search for")
+  @Schema(example = "[\"b28911cf\",\"5071d1e4\"]", description = "The location ids to search for")
   public List<String> getLocationDbIds() {
     return locationDbIds;
   }
@@ -305,7 +304,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * A human readable names to search for
    * @return locationNames
   **/
-  @ApiModelProperty(example = "[\"Location Alpha\",\"The Large Hadron Collider\"]", value = "A human readable names to search for")
+  @Schema(example = "[\"Location Alpha\",\"The Large Hadron Collider\"]", description = "A human readable names to search for")
   public List<String> getLocationNames() {
     return locationNames;
   }
@@ -331,7 +330,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * List of external reference IDs. Could be a simple strings or a URIs. (use with &#x60;externalReferenceSources&#x60; parameter)
    * @return externalReferenceIDs
   **/
-  @ApiModelProperty(example = "[\"http://purl.obolibrary.org/obo/ro.owl\",\"14a19841\"]", value = "List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)")
+  @Schema(example = "[\"http://purl.obolibrary.org/obo/ro.owl\",\"14a19841\"]", description = "List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)")
   public List<String> getExternalReferenceIDs() {
     return externalReferenceIDs;
   }
@@ -357,7 +356,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * List of identifiers for the source system or database of an external reference (use with &#x60;externalReferenceIDs&#x60; parameter)
    * @return externalReferenceSources
   **/
-  @ApiModelProperty(example = "[\"OBO Library\",\"Field App Name\"]", value = "List of identifiers for the source system or database of an external reference (use with `externalReferenceIDs` parameter)")
+  @Schema(example = "[\"OBO Library\",\"Field App Name\"]", description = "List of identifiers for the source system or database of an external reference (use with `externalReferenceIDs` parameter)")
   public List<String> getExternalReferenceSources() {
     return externalReferenceSources;
   }
@@ -375,7 +374,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * Is this trail currently active
    * @return active
   **/
-  @ApiModelProperty(example = "true", value = "Is this trail currently active")
+  @Schema(example = "true", description = "Is this trail currently active")
   public Boolean isActive() {
     return active;
   }
@@ -401,7 +400,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * List of contact entities associated with this trial
    * @return contactDbIds
   **/
-  @ApiModelProperty(example = "[\"e0f70c2a\",\"b82f0967\"]", value = "List of contact entities associated with this trial")
+  @Schema(example = "[\"e0f70c2a\",\"b82f0967\"]", description = "List of contact entities associated with this trial")
   public List<String> getContactDbIds() {
     return contactDbIds;
   }
@@ -419,7 +418,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * The end of the overlapping search date range. &#x60;searchDateRangeStart&#x60; must be before &#x60;searchDateRangeEnd&#x60;.  Return a Trial entity if any of the following cases are true  - &#x60;searchDateRangeStart&#x60; is before &#x60;trial.endDate&#x60; AND &#x60;searchDateRangeEnd&#x60; is null   - &#x60;searchDateRangeStart&#x60; is before &#x60;trial.endDate&#x60; AND &#x60;searchDateRangeEnd&#x60; is after &#x60;trial.startDate&#x60;  - &#x60;searchDateRangeEnd&#x60; is after &#x60;trial.startDate&#x60; AND &#x60;searchDateRangeStart&#x60; is null  - &#x60;searchDateRangeEnd&#x60; is after &#x60;trial.startDate&#x60; AND &#x60;searchDateRangeStart&#x60; is before &#x60;trial.endDate&#x60;
    * @return searchDateRangeEnd
   **/
-  @ApiModelProperty(value = "The end of the overlapping search date range. `searchDateRangeStart` must be before `searchDateRangeEnd`.  Return a Trial entity if any of the following cases are true  - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd` is null   - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd` is after `trial.startDate`  - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart` is null  - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart` is before `trial.endDate`")
+  @Schema(description = "The end of the overlapping search date range. `searchDateRangeStart` must be before `searchDateRangeEnd`.  Return a Trial entity if any of the following cases are true  - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd` is null   - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd` is after `trial.startDate`  - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart` is null  - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart` is before `trial.endDate`")
   public LocalDate getSearchDateRangeEnd() {
     return searchDateRangeEnd;
   }
@@ -437,7 +436,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * The start of the overlapping search date range. &#x60;searchDateRangeStart&#x60; must be before &#x60;searchDateRangeEnd&#x60;.  Return a Trial entity if any of the following cases are true  - &#x60;searchDateRangeStart&#x60; is before &#x60;trial.endDate&#x60; AND &#x60;searchDateRangeEnd&#x60; is null   - &#x60;searchDateRangeStart&#x60; is before &#x60;trial.endDate&#x60; AND &#x60;searchDateRangeEnd&#x60; is after &#x60;trial.startDate&#x60;  - &#x60;searchDateRangeEnd&#x60; is after &#x60;trial.startDate&#x60; AND &#x60;searchDateRangeStart&#x60; is null  - &#x60;searchDateRangeEnd&#x60; is after &#x60;trial.startDate&#x60; AND &#x60;searchDateRangeStart&#x60; is before &#x60;trial.endDate&#x60;
    * @return searchDateRangeStart
   **/
-  @ApiModelProperty(value = "The start of the overlapping search date range. `searchDateRangeStart` must be before `searchDateRangeEnd`.  Return a Trial entity if any of the following cases are true  - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd` is null   - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd` is after `trial.startDate`  - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart` is null  - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart` is before `trial.endDate`")
+  @Schema(description = "The start of the overlapping search date range. `searchDateRangeStart` must be before `searchDateRangeEnd`.  Return a Trial entity if any of the following cases are true  - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd` is null   - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd` is after `trial.startDate`  - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart` is null  - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart` is before `trial.endDate`")
   public LocalDate getSearchDateRangeStart() {
     return searchDateRangeStart;
   }
@@ -463,7 +462,7 @@ public class TrialSearchRequest extends SearchRequestParametersPaging {
    * A permanent identifier for a trial. Could be DOI or other URI formatted identifier.
    * @return trialPUIs
   **/
-  @ApiModelProperty(example = "[\"https://doi.org/01093190\",\"https://doi.org/11192409\"]", value = "A permanent identifier for a trial. Could be DOI or other URI formatted identifier.")
+  @Schema(example = "[\"https://doi.org/01093190\",\"https://doi.org/11192409\"]", description = "A permanent identifier for a trial. Could be DOI or other URI formatted identifier.")
   public List<String> getTrialPUIs() {
     return trialPUIs;
   }

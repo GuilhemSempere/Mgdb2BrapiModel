@@ -3,19 +3,19 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * MarkerPositionSearchRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class MarkerPositionSearchRequest   {
   @JsonProperty("linkageGroupNames")
   @Valid
@@ -52,7 +52,7 @@ public class MarkerPositionSearchRequest   {
    * The Uniquely Identifiable name of this linkage group
    * @return linkageGroupNames
   **/
-  @ApiModelProperty(example = "[\"Chromosome 2\",\"Chromosome 3\"]", value = "The Uniquely Identifiable name of this linkage group")
+  @Schema(example = "[\"Chromosome 2\",\"Chromosome 3\"]", description = "The Uniquely Identifiable name of this linkage group")
   
     public List<String> getLinkageGroupNames() {
     return linkageGroupNames;
@@ -79,7 +79,7 @@ public class MarkerPositionSearchRequest   {
    * The unique ID of the map
    * @return mapDbIds
   **/
-  @ApiModelProperty(example = "[\"7e6fa8aa\",\"bedc418c\"]", value = "The unique ID of the map")
+  @Schema(example = "[\"7e6fa8aa\",\"bedc418c\"]", description = "The unique ID of the map")
   
     public List<String> getMapDbIds() {
     return mapDbIds;
@@ -106,7 +106,7 @@ public class MarkerPositionSearchRequest   {
    * Internal db identifier
    * @return markerDbIds
   **/
-  @ApiModelProperty(example = "[\"a0caa928\",\"f8894a26\"]", value = "Internal db identifier")
+  @Schema(example = "[\"a0caa928\",\"f8894a26\"]", description = "Internal db identifier")
   
     public List<String> getMarkerDbIds() {
     return markerDbIds;
@@ -125,7 +125,7 @@ public class MarkerPositionSearchRequest   {
    * The maximum position
    * @return maxPosition
   **/
-  @ApiModelProperty(example = "4000", value = "The maximum position")
+  @Schema(example = "4000", description = "The maximum position")
   
     public Integer getMaxPosition() {
     return maxPosition;
@@ -144,7 +144,7 @@ public class MarkerPositionSearchRequest   {
    * The minimum position
    * @return minPosition
   **/
-  @ApiModelProperty(example = "250", value = "The minimum position")
+  @Schema(example = "250", description = "The minimum position")
   
     public Integer getMinPosition() {
     return minPosition;

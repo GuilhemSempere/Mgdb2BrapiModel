@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ import java.util.List;
  * ProgramSearchRequest
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class ProgramSearchRequest extends SearchRequestParametersPaging {
   @SerializedName("commonCropNames")
   private List<String> commonCropNames = null;
@@ -75,7 +75,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * Common name for the crop which this program is for
    * @return commonCropNames
   **/
-  @ApiModelProperty(example = "[\"Tomatillo\",\"Paw Paw\"]", value = "Common name for the crop which this program is for")
+  @Schema(example = "[\"Tomatillo\",\"Paw Paw\"]", description = "Common name for the crop which this program is for")
   public List<String> getCommonCropNames() {
     return commonCropNames;
   }
@@ -101,7 +101,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * A program identifier to search for
    * @return programDbIds
   **/
-  @ApiModelProperty(example = "[\"8f5de35b\",\"0e2d4a13\"]", value = "A program identifier to search for")
+  @Schema(example = "[\"8f5de35b\",\"0e2d4a13\"]", description = "A program identifier to search for")
   public List<String> getProgramDbIds() {
     return programDbIds;
   }
@@ -127,7 +127,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * A name of a program to search for
    * @return programNames
   **/
-  @ApiModelProperty(example = "[\"Better Breeding Program\",\"Best Breeding Program\"]", value = "A name of a program to search for")
+  @Schema(example = "[\"Better Breeding Program\",\"Best Breeding Program\"]", description = "A name of a program to search for")
   public List<String> getProgramNames() {
     return programNames;
   }
@@ -153,7 +153,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * List of external reference IDs. Could be a simple strings or a URIs. (use with &#x60;externalReferenceSources&#x60; parameter)
    * @return externalReferenceIDs
   **/
-  @ApiModelProperty(example = "[\"http://purl.obolibrary.org/obo/ro.owl\",\"14a19841\"]", value = "List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)")
+  @Schema(example = "[\"http://purl.obolibrary.org/obo/ro.owl\",\"14a19841\"]", description = "List of external reference IDs. Could be a simple strings or a URIs. (use with `externalReferenceSources` parameter)")
   public List<String> getExternalReferenceIDs() {
     return externalReferenceIDs;
   }
@@ -179,7 +179,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * List of identifiers for the source system or database of an external reference (use with &#x60;externalReferenceIDs&#x60; parameter)
    * @return externalReferenceSources
   **/
-  @ApiModelProperty(example = "[\"OBO Library\",\"Field App Name\"]", value = "List of identifiers for the source system or database of an external reference (use with `externalReferenceIDs` parameter)")
+  @Schema(example = "[\"OBO Library\",\"Field App Name\"]", description = "List of identifiers for the source system or database of an external reference (use with `externalReferenceIDs` parameter)")
   public List<String> getExternalReferenceSources() {
     return externalReferenceSources;
   }
@@ -205,7 +205,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * An abbreviation of a program to search for
    * @return abbreviations
   **/
-  @ApiModelProperty(example = "[\"P1\",\"P2\"]", value = "An abbreviation of a program to search for")
+  @Schema(example = "[\"P1\",\"P2\"]", description = "An abbreviation of a program to search for")
   public List<String> getAbbreviations() {
     return abbreviations;
   }
@@ -231,7 +231,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * The person DbIds of the program leader to search for
    * @return leadPersonDbIds
   **/
-  @ApiModelProperty(example = "[\"d8bd96c7\",\"a2b9c8e7\"]", value = "The person DbIds of the program leader to search for")
+  @Schema(example = "[\"d8bd96c7\",\"a2b9c8e7\"]", description = "The person DbIds of the program leader to search for")
   public List<String> getLeadPersonDbIds() {
     return leadPersonDbIds;
   }
@@ -257,7 +257,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * The names of the program leader to search for
    * @return leadPersonNames
   **/
-  @ApiModelProperty(example = "[\"Bob Robertson\",\"Rob Robertson\"]", value = "The names of the program leader to search for")
+  @Schema(example = "[\"Bob Robertson\",\"Rob Robertson\"]", description = "The names of the program leader to search for")
   public List<String> getLeadPersonNames() {
     return leadPersonNames;
   }
@@ -283,7 +283,7 @@ public class ProgramSearchRequest extends SearchRequestParametersPaging {
    * A program objective to search for
    * @return objectives
   **/
-  @ApiModelProperty(example = "[\"Objective Code One\",\"This is a longer objective search query\"]", value = "A program objective to search for")
+  @Schema(example = "[\"Objective Code One\",\"This is a longer objective search query\"]", description = "A program objective to search for")
   public List<String> getObjectives() {
     return objectives;
   }

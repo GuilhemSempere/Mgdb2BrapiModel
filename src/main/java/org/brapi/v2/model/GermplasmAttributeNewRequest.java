@@ -2,19 +2,16 @@ package org.brapi.v2.model;
 
 import java.util.Objects;
 
-import javax.validation.constraints.NotNull;
-
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import io.swagger.annotations.ApiModelProperty;
 
 /**
  * GermplasmAttributeNewRequest
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T11:58:54.700Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T11:58:54.700Z[GMT]")
 public class GermplasmAttributeNewRequest extends VariableBaseClass  {
   @JsonProperty("attributeCategory")
   private String attributeCategory = null;
@@ -34,7 +31,7 @@ public class GermplasmAttributeNewRequest extends VariableBaseClass  {
    * General category for the attribute. very similar to Trait class.
    * @return attributeCategory
   **/
-  @ApiModelProperty(example = "Morphological", value = "General category for the attribute. very similar to Trait class.")
+  @Schema(example = "Morphological", description = "General category for the attribute. very similar to Trait class.")
   
     public String getAttributeCategory() {
     return attributeCategory;
@@ -53,7 +50,7 @@ public class GermplasmAttributeNewRequest extends VariableBaseClass  {
    * A human readable description of this attribute
    * @return attributeDescription
   **/
-  @ApiModelProperty(example = "Height of the plant measured in meters by a tape", value = "A human readable description of this attribute")
+  @Schema(example = "Height of the plant measured in meters by a tape", description = "A human readable description of this attribute")
   
     public String getAttributeDescription() {
     return attributeDescription;
@@ -72,7 +69,7 @@ public class GermplasmAttributeNewRequest extends VariableBaseClass  {
    * A human readable name for this attribute
    * @return attributeName
   **/
-  @ApiModelProperty(example = "Plant Height 1", required = true, value = "A human readable name for this attribute")
+  @Schema(example = "Plant Height 1", requiredMode = Schema.RequiredMode.REQUIRED, description = "A human readable name for this attribute")
       @NotNull
 
     public String getAttributeName() {

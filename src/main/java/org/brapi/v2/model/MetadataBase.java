@@ -28,7 +28,7 @@ import java.util.List;
  * MetadataBase
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-22T15:23:22.792Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-22T15:23:22.792Z[GMT]")
 public class MetadataBase {
   @SerializedName("datafiles")
   private List<DataFile> datafiles = null;

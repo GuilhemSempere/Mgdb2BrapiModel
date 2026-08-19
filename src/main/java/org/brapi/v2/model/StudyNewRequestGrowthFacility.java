@@ -3,18 +3,17 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * Short description of the facility in which the study was carried out.
  */
-@ApiModel(description = "Short description of the facility in which the study was carried out.")
+@Schema(description = "Short description of the facility in which the study was carried out.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class StudyNewRequestGrowthFacility   {
   @JsonProperty("PUI")
   private String PUI = null;
@@ -31,7 +30,7 @@ public class StudyNewRequestGrowthFacility   {
    * Get PUI
    * @return PUI
   **/
-  @ApiModelProperty(example = "CO_715:0000162", value = "")
+  @Schema(example = "CO_715:0000162", description = "")
   
     public String getPUI() {
     return PUI;
@@ -50,7 +49,7 @@ public class StudyNewRequestGrowthFacility   {
    * Get description
    * @return description
   **/
-  @ApiModelProperty(example = "field environment condition, greenhouse", value = "")
+  @Schema(example = "field environment condition, greenhouse", description = "")
   
     public String getDescription() {
     return description;

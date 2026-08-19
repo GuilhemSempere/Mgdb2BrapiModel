@@ -3,18 +3,17 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * A dataFile contains a URL and the relevant file metadata to represent a file
  */
-@ApiModel(description = "A dataFile contains a URL and the relevant file metadata to represent a file")
+@Schema(description = "A dataFile contains a URL and the relevant file metadata to represent a file")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
 public class DataFile   {
   @JsonProperty("fileDescription")
   private String fileDescription = null;
@@ -43,7 +42,7 @@ public class DataFile   {
    * A human readable description of the file contents
    * @return fileDescription
   **/
-  @ApiModelProperty(example = "This is an Excel data file", value = "A human readable description of the file contents")
+  @Schema(example = "This is an Excel data file", description = "A human readable description of the file contents")
   
     public String getFileDescription() {
     return fileDescription;
@@ -62,7 +61,7 @@ public class DataFile   {
    * The MD5 Hash of the file contents to be used as a check sum
    * @return fileMD5Hash
   **/
-  @ApiModelProperty(example = "c2365e900c81a89cf74d83dab60df146", value = "The MD5 Hash of the file contents to be used as a check sum")
+  @Schema(example = "c2365e900c81a89cf74d83dab60df146", description = "The MD5 Hash of the file contents to be used as a check sum")
   
     public String getFileMD5Hash() {
     return fileMD5Hash;
@@ -81,7 +80,7 @@ public class DataFile   {
    * The name of the file
    * @return fileName
   **/
-  @ApiModelProperty(example = "datafile.xslx", value = "The name of the file")
+  @Schema(example = "datafile.xslx", description = "The name of the file")
   
     public String getFileName() {
     return fileName;
@@ -100,7 +99,7 @@ public class DataFile   {
    * The size of the file in bytes
    * @return fileSize
   **/
-  @ApiModelProperty(example = "4398", value = "The size of the file in bytes")
+  @Schema(example = "4398", description = "The size of the file in bytes")
   
     public Integer getFileSize() {
     return fileSize;
@@ -119,7 +118,7 @@ public class DataFile   {
    * The type or format of the file. Preferably MIME Type.
    * @return fileType
   **/
-  @ApiModelProperty(example = "application/vnd.ms-excel", value = "The type or format of the file. Preferably MIME Type.")
+  @Schema(example = "application/vnd.ms-excel", description = "The type or format of the file. Preferably MIME Type.")
   
     public String getFileType() {
     return fileType;
@@ -138,7 +137,7 @@ public class DataFile   {
    * The absolute URL where the file is located
    * @return fileURL
   **/
-  @ApiModelProperty(example = "https://wiki.brapi.org/examples/datafile.xslx", required = true, value = "The absolute URL where the file is located")
+  @Schema(example = "https://wiki.brapi.org/examples/datafile.xslx", requiredMode = Schema.RequiredMode.REQUIRED, description = "The absolute URL where the file is located")
       @NotNull
 
     public String getFileURL() {

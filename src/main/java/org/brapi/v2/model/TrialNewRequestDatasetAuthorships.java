@@ -1,20 +1,19 @@
 package org.brapi.v2.model;
 
+import java.time.LocalDate;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.LocalDate;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * TrialNewRequestDatasetAuthorships
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class TrialNewRequestDatasetAuthorships   {
   @JsonProperty("datasetPUI")
   private String datasetPUI = null;
@@ -37,7 +36,7 @@ public class TrialNewRequestDatasetAuthorships   {
    * Get datasetPUI
    * @return datasetPUI
   **/
-  @ApiModelProperty(example = "doi:10.15454/312953986E3", value = "")
+  @Schema(example = "doi:10.15454/312953986E3", description = "")
   
     public String getDatasetPUI() {
     return datasetPUI;
@@ -56,7 +55,7 @@ public class TrialNewRequestDatasetAuthorships   {
    * Get license
    * @return license
   **/
-  @ApiModelProperty(example = "https://CreativeCommons.org/licenses/by/4.0", value = "")
+  @Schema(example = "https://CreativeCommons.org/licenses/by/4.0", description = "")
   
     public String getLicense() {
     return license;
@@ -75,7 +74,7 @@ public class TrialNewRequestDatasetAuthorships   {
    * Get publicReleaseDate
    * @return publicReleaseDate
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public LocalDate getPublicReleaseDate() {
@@ -95,7 +94,7 @@ public class TrialNewRequestDatasetAuthorships   {
    * Get submissionDate
    * @return submissionDate
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public LocalDate getSubmissionDate() {

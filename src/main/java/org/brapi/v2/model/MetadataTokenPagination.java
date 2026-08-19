@@ -29,7 +29,7 @@ import java.util.List;
  * MetadataTokenPagination
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-22T15:23:22.792Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-22T15:23:22.792Z[GMT]")
 public class MetadataTokenPagination extends MetadataBase {
   @SerializedName("pagination")
   private TokenPagination pagination = null;

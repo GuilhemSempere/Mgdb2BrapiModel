@@ -11,18 +11,15 @@
  */
 
 package org.brapi.v2.model;
-
 import java.util.Objects;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ExternalReferencesInner
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class ExternalReferencesInner   {
 	  @JsonProperty("referenceID")
 	  private String referenceID = null;
@@ -42,7 +39,7 @@ public class ExternalReferencesInner   {
 	   * **Deprecated in v2.1** Please use `referenceId`. Github issue number #460  <br>The external reference ID. Could be a simple string or a URI.
 	   * @return referenceID
 	   **/
-	  @ApiModelProperty(value = "**Deprecated in v2.1** Please use `referenceId`. Github issue number #460  <br>The external reference ID. Could be a simple string or a URI.")
+	  @Schema(description = "**Deprecated in v2.1** Please use `referenceId`. Github issue number #460  <br>The external reference ID. Could be a simple string or a URI.")
 	  
 	    public String getReferenceID() {
 	    return referenceID;
@@ -61,7 +58,7 @@ public class ExternalReferencesInner   {
 	   * The external reference ID. Could be a simple string or a URI.
 	   * @return referenceId
 	   **/
-	  @ApiModelProperty(value = "The external reference ID. Could be a simple string or a URI.")
+	  @Schema(description = "The external reference ID. Could be a simple string or a URI.")
 	  
 	    public String getReferenceId() {
 	    return referenceId;
@@ -80,7 +77,7 @@ public class ExternalReferencesInner   {
 	   * An identifier for the source system or database of this reference
 	   * @return referenceSource
 	   **/
-	  @ApiModelProperty(value = "An identifier for the source system or database of this reference")
+	  @Schema(description = "An identifier for the source system or database of this reference")
 	  
 	    public String getReferenceSource() {
 	    return referenceSource;

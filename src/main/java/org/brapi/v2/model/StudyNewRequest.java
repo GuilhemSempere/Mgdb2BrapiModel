@@ -12,8 +12,7 @@
 
 package org.brapi.v2.model;
 
-import io.swagger.annotations.*;
-
+import java.time.OffsetDateTime;
 import java.util.Objects;
 import java.util.Arrays;
 //import com.google.gson.TypeAdapter;
@@ -35,14 +34,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.threeten.bp.OffsetDateTime;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * StudyNewRequest
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class StudyNewRequest {
   @JsonProperty("active")
   private Boolean active = null;

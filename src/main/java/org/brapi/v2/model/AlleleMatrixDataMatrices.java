@@ -8,15 +8,15 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * This is a single data matrix. It could be the allele matrix or an additional layer of metadata associated with each genotype value.
  */
 @Schema(description = "This is a single data matrix. It could be the allele matrix or an additional layer of metadata associated with each genotype value.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-09-19T13:16:35.755Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-09-19T13:16:35.755Z[GMT]")
 
 
 public class AlleleMatrixDataMatrices   {

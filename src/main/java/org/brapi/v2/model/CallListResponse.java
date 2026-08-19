@@ -2,16 +2,16 @@ package org.brapi.v2.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * CallListResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class CallListResponse   {
   @JsonProperty("@context")
   private Context _atContext = null;
@@ -31,7 +31,7 @@ public class CallListResponse   {
    * Get _atContext
    * @return _atContext
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public Context getAtContext() {
@@ -51,7 +51,7 @@ public class CallListResponse   {
    * Get metadata
    * @return metadata
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     @Valid
@@ -72,7 +72,7 @@ public class CallListResponse   {
    * Get result
    * @return result
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     @Valid

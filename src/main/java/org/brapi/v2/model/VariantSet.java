@@ -3,8 +3,7 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,15 +15,15 @@ import org.brapi.v2.model.VariantSetAvailableFormats;
 import org.brapi.v2.model.VariantSetMetadataFields;
 import org.springframework.data.annotation.Id;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * A VariantSet is a collection of variants and variant calls intended to be analyzed together.
  */
-@ApiModel(description = "A VariantSet is a collection of variants and variant calls intended to be analyzed together.")
+@Schema(description = "A VariantSet is a collection of variants and variant calls intended to be analyzed together.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class VariantSet   {
   @JsonProperty("additionalInfo")
   @Valid
@@ -85,7 +84,7 @@ public class VariantSet   {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   
     public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
@@ -112,7 +111,7 @@ public class VariantSet   {
    * Set of Analysis descriptors for this VariantSet
    * @return analysis
   **/
-  @ApiModelProperty(value = "Set of Analysis descriptors for this VariantSet")
+  @Schema(description = "Set of Analysis descriptors for this VariantSet")
       @Valid
     public List<Analysis> getAnalysis() {
     return analysis;
@@ -139,7 +138,7 @@ public class VariantSet   {
    * When the data for a VariantSet is retrieved, it can be retrieved in a variety of data formats and file formats.   dataFormat defines the structure of the data within a file (ie DartSeq, VCF, Hapmap, tabular, etc)  fileFormat defines the MIME type of the file (ie text/csv, application/excel, application/zip). This should also be reflected in the Accept and ContentType HTTP headers for every relevent request and response.
    * @return availableFormats
   **/
-  @ApiModelProperty(value = "When the data for a VariantSet is retrieved, it can be retrieved in a variety of data formats and file formats.   dataFormat defines the structure of the data within a file (ie DartSeq, VCF, Hapmap, tabular, etc)  fileFormat defines the MIME type of the file (ie text/csv, application/excel, application/zip). This should also be reflected in the Accept and ContentType HTTP headers for every relevent request and response.")
+  @Schema(description = "When the data for a VariantSet is retrieved, it can be retrieved in a variety of data formats and file formats.   dataFormat defines the structure of the data within a file (ie DartSeq, VCF, Hapmap, tabular, etc)  fileFormat defines the MIME type of the file (ie text/csv, application/excel, application/zip). This should also be reflected in the Accept and ContentType HTTP headers for every relevent request and response.")
       @Valid
     public List<VariantSetAvailableFormats> getAvailableFormats() {
     return availableFormats;
@@ -158,7 +157,7 @@ public class VariantSet   {
    * The number of CallSets included in this VariantSet
    * @return callSetCount
   **/
-  @ApiModelProperty(value = "The number of CallSets included in this VariantSet")
+  @Schema(description = "The number of CallSets included in this VariantSet")
   
     public Integer getCallSetCount() {
     return callSetCount;
@@ -190,7 +189,7 @@ public class VariantSet   {
    * The ID of the reference set that describes the sequences used by the variants in this set.
    * @return referenceSetDbId
   **/
-  @ApiModelProperty(value = "The ID of the reference set that describes the sequences used by the variants in this set.")
+  @Schema(description = "The ID of the reference set that describes the sequences used by the variants in this set.")
   
     public String getReferenceSetDbId() {
     return referenceSetDbId;
@@ -209,7 +208,7 @@ public class VariantSet   {
    * The ID of the dataset this variant set belongs to.
    * @return studyDbId
   **/
-  @ApiModelProperty(value = "The ID of the dataset this variant set belongs to.")
+  @Schema(description = "The ID of the dataset this variant set belongs to.")
   
     public String getStudyDbId() {
     return studyDbId;
@@ -228,7 +227,7 @@ public class VariantSet   {
    * The number of Variants included in this VariantSet
    * @return variantCount
   **/
-  @ApiModelProperty(value = "The number of Variants included in this VariantSet")
+  @Schema(description = "The number of Variants included in this VariantSet")
   
     public Integer getVariantCount() {
     return variantCount;
@@ -247,7 +246,7 @@ public class VariantSet   {
    * The variant set ID.
    * @return variantSetDbId
   **/
-  @ApiModelProperty(value = "The variant set ID.")
+  @Schema(description = "The variant set ID.")
   
     public String getVariantSetDbId() {
     return variantSetDbId;
@@ -266,7 +265,7 @@ public class VariantSet   {
    * The variant set name.
    * @return variantSetName
   **/
-  @ApiModelProperty(value = "The variant set name.")
+  @Schema(description = "The variant set name.")
   
     public String getVariantSetName() {
     return variantSetName;
@@ -293,7 +292,7 @@ public class VariantSet   {
    * The 'metadataFields' array indicates which types of genotyping data and metadata are available in the VariantSet.  <br> When possible, these field names and abbreviations should follow the VCF standard 
    * @return metadataFields
    **/
-  @ApiModelProperty(value = "The 'metadataFields' array indicates which types of genotyping data and metadata are available in the VariantSet.  <br> When possible, these field names and abbreviations should follow the VCF standard ")
+  @Schema(description = "The 'metadataFields' array indicates which types of genotyping data and metadata are available in the VariantSet.  <br> When possible, these field names and abbreviations should follow the VCF standard ")
       @Valid
     public List<VariantSetMetadataFields> getMetadataFields() {
     return metadataFields;

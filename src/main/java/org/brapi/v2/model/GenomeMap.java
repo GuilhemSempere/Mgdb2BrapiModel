@@ -1,23 +1,23 @@
 package org.brapi.v2.model;
 
+import java.time.OffsetDateTime;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.threeten.bp.OffsetDateTime;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * GenomeMap
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class GenomeMap   {
   @JsonProperty("additionalInfo")
   @Valid
@@ -76,7 +76,7 @@ public class GenomeMap   {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   
     public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
@@ -95,7 +95,7 @@ public class GenomeMap   {
    * Additional comments
    * @return comments
   **/
-  @ApiModelProperty(example = "Comments about this map", value = "Additional comments")
+  @Schema(example = "Comments about this map", description = "Additional comments")
   
     public String getComments() {
     return comments;
@@ -114,7 +114,7 @@ public class GenomeMap   {
    * The common name of the crop, found from \"GET /commoncropnames\"
    * @return commonCropName
   **/
-  @ApiModelProperty(example = "Paw Paw", required = true, value = "The common name of the crop, found from \"GET /commoncropnames\"")
+  @Schema(example = "Paw Paw", requiredMode = Schema.RequiredMode.REQUIRED, description = "The common name of the crop, found from \"GET /commoncropnames\"")
       @NotNull
 
     public String getCommonCropName() {
@@ -134,7 +134,7 @@ public class GenomeMap   {
    * A URL to the human readable documentation of this object
    * @return documentationURL
   **/
-  @ApiModelProperty(example = "https://brapi.org", value = "A URL to the human readable documentation of this object")
+  @Schema(example = "https://brapi.org", description = "A URL to the human readable documentation of this object")
   
     public String getDocumentationURL() {
     return documentationURL;
@@ -153,7 +153,7 @@ public class GenomeMap   {
    * The number of linkage groups present in this genomic map
    * @return linkageGroupCount
   **/
-  @ApiModelProperty(example = "5", value = "The number of linkage groups present in this genomic map")
+  @Schema(example = "5", description = "The number of linkage groups present in this genomic map")
   
     public Integer getLinkageGroupCount() {
     return linkageGroupCount;
@@ -172,7 +172,7 @@ public class GenomeMap   {
    * The ID which uniquely identifies this genomic map
    * @return mapDbId
   **/
-  @ApiModelProperty(example = "142cffd5", required = true, value = "The ID which uniquely identifies this genomic map")
+  @Schema(example = "142cffd5", requiredMode = Schema.RequiredMode.REQUIRED, description = "The ID which uniquely identifies this genomic map")
       @NotNull
 
     public String getMapDbId() {
@@ -192,7 +192,7 @@ public class GenomeMap   {
    * A human readable name for this genomic map
    * @return mapName
   **/
-  @ApiModelProperty(example = "Genome Map 1", value = "A human readable name for this genomic map")
+  @Schema(example = "Genome Map 1", description = "A human readable name for this genomic map")
   
     public String getMapName() {
     return mapName;
@@ -211,7 +211,7 @@ public class GenomeMap   {
    * The DOI or other permanent identifier for this genomic map
    * @return mapPUI
   **/
-  @ApiModelProperty(example = "doi:10.3207/2959859860", value = "The DOI or other permanent identifier for this genomic map")
+  @Schema(example = "doi:10.3207/2959859860", description = "The DOI or other permanent identifier for this genomic map")
   
     public String getMapPUI() {
     return mapPUI;
@@ -230,7 +230,7 @@ public class GenomeMap   {
    * The number of markers present in this genomic map
    * @return markerCount
   **/
-  @ApiModelProperty(example = "1100", value = "The number of markers present in this genomic map")
+  @Schema(example = "1100", description = "The number of markers present in this genomic map")
   
     public Integer getMarkerCount() {
     return markerCount;
@@ -249,7 +249,7 @@ public class GenomeMap   {
    * The date this genome was published
    * @return publishedDate
   **/
-  @ApiModelProperty(value = "The date this genome was published")
+  @Schema(description = "The date this genome was published")
   
     @Valid
     public OffsetDateTime getPublishedDate() {
@@ -269,7 +269,7 @@ public class GenomeMap   {
    * Full scientific binomial format name. This includes Genus, Species, and Sub-species
    * @return scientificName
   **/
-  @ApiModelProperty(example = "Asimina triloba", value = "Full scientific binomial format name. This includes Genus, Species, and Sub-species")
+  @Schema(example = "Asimina triloba", description = "Full scientific binomial format name. This includes Genus, Species, and Sub-species")
   
     public String getScientificName() {
     return scientificName;
@@ -288,7 +288,7 @@ public class GenomeMap   {
    * The type of map this represents, ussually \"Genetic\"
    * @return type
   **/
-  @ApiModelProperty(example = "Genetic", required = true, value = "The type of map this represents, ussually \"Genetic\"")
+  @Schema(example = "Genetic", requiredMode = Schema.RequiredMode.REQUIRED, description = "The type of map this represents, ussually \"Genetic\"")
       @NotNull
 
     public String getType() {
@@ -308,7 +308,7 @@ public class GenomeMap   {
    * The units used to describe the data in this map
    * @return unit
   **/
-  @ApiModelProperty(example = "cM", value = "The units used to describe the data in this map")
+  @Schema(example = "cM", description = "The units used to describe the data in this map")
   
     public String getUnit() {
     return unit;

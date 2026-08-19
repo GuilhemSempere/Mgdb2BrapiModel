@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ import java.util.Map;
  * ProgramNewRequest
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class ProgramNewRequest {
   @SerializedName("abbreviation")
   private String abbreviation = null;
@@ -56,7 +56,7 @@ public class ProgramNewRequest {
    * An abbreviation which represents this program
    * @return abbreviation
   **/
-  @ApiModelProperty(example = "P1", value = "An abbreviation which represents this program")
+  @Schema(example = "P1", description = "An abbreviation which represents this program")
   public String getAbbreviation() {
     return abbreviation;
   }
@@ -82,7 +82,7 @@ public class ProgramNewRequest {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
   }
@@ -100,7 +100,7 @@ public class ProgramNewRequest {
    * Common name for the crop which this program is for
    * @return commonCropName
   **/
-  @ApiModelProperty(example = "Tomatillo", value = "Common name for the crop which this program is for")
+  @Schema(example = "Tomatillo", description = "Common name for the crop which this program is for")
   public String getCommonCropName() {
     return commonCropName;
   }
@@ -118,7 +118,7 @@ public class ProgramNewRequest {
    * A URL to the human readable documentation of this object
    * @return documentationURL
   **/
-  @ApiModelProperty(example = "https://wiki.brapi.org", value = "A URL to the human readable documentation of this object")
+  @Schema(example = "https://wiki.brapi.org", description = "A URL to the human readable documentation of this object")
   public String getDocumentationURL() {
     return documentationURL;
   }
@@ -136,7 +136,7 @@ public class ProgramNewRequest {
    * Get externalReferences
    * @return externalReferences
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ExternalReferences getExternalReferences() {
     return externalReferences;
   }
@@ -154,7 +154,7 @@ public class ProgramNewRequest {
    * The unique identifier of the program leader
    * @return leadPersonDbId
   **/
-  @ApiModelProperty(example = "fe6f5c50", value = "The unique identifier of the program leader")
+  @Schema(example = "fe6f5c50", description = "The unique identifier of the program leader")
   public String getLeadPersonDbId() {
     return leadPersonDbId;
   }
@@ -172,7 +172,7 @@ public class ProgramNewRequest {
    * The name of the program leader
    * @return leadPersonName
   **/
-  @ApiModelProperty(example = "Bob Robertson", value = "The name of the program leader")
+  @Schema(example = "Bob Robertson", description = "The name of the program leader")
   public String getLeadPersonName() {
     return leadPersonName;
   }
@@ -190,7 +190,7 @@ public class ProgramNewRequest {
    * The primary objective of the program
    * @return objective
   **/
-  @ApiModelProperty(example = "Make a better tomatillo", value = "The primary objective of the program")
+  @Schema(example = "Make a better tomatillo", description = "The primary objective of the program")
   public String getObjective() {
     return objective;
   }
@@ -208,7 +208,7 @@ public class ProgramNewRequest {
    * Human readable name of the program
    * @return programName
   **/
-  @ApiModelProperty(example = "Tomatillo_Breeding_Program", value = "Human readable name of the program")
+  @Schema(example = "Tomatillo_Breeding_Program", description = "Human readable name of the program")
   public String getProgramName() {
     return programName;
   }

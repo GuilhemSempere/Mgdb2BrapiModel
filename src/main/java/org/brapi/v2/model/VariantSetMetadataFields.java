@@ -13,7 +13,7 @@ import org.springframework.validation.annotation.Validated;
  */
 @Schema(description = "This represents a type of genotyping data or metadata available in this VariantSet")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-09-19T13:16:35.755Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-09-19T13:16:35.755Z[GMT]")
 
 public class VariantSetMetadataFields {
 

@@ -4,20 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CommonCropNamesResponseResult
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class CommonCropNamesResponseResult   {
   @JsonProperty("data")
   @Valid
@@ -37,7 +34,7 @@ public class CommonCropNamesResponseResult   {
    * array of crop names available on the server
    * @return data
   **/
-  @ApiModelProperty(example = "[\"Tomatillo\", \"Paw Paw\"]", required = true, value = "array of crop names available on the server")
+  @Schema(example = "[\"Tomatillo\", \"Paw Paw\"]", requiredMode = Schema.RequiredMode.REQUIRED, description = "array of crop names available on the server")
       @NotNull
 
     public List<String> getData() {

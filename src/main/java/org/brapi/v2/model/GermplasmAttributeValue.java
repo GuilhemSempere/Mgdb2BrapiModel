@@ -4,13 +4,13 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.constraints.*;
+import jakarta.validation.constraints.*;
 
 /**
  * GermplasmAttributeValue
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:37:29.213Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:37:29.213Z[GMT]")
 
 
 public class GermplasmAttributeValue extends GermplasmAttributeValueNewRequest  {
@@ -26,7 +26,7 @@ public class GermplasmAttributeValue extends GermplasmAttributeValueNewRequest  
    * The ID which uniquely identifies this attribute value within the given database server
    * @return attributeValueDbId
    **/
-  @Schema(example = "33edbab7", required = true, description = "The ID which uniquely identifies this attribute value within the given database server")
+  @Schema(example = "33edbab7", requiredMode = Schema.RequiredMode.REQUIRED, description = "The ID which uniquely identifies this attribute value within the given database server")
       @NotNull
 
     public String getAttributeValueDbId() {

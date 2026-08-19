@@ -17,12 +17,12 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * TrialSingleResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class TrialSingleResponse {
   @SerializedName("@context")
   private Context _atContext = null;
@@ -42,7 +42,7 @@ public class TrialSingleResponse {
    * Get _atContext
    * @return _atContext
   **/
-  @ApiModelProperty()
+  @Schema()
   public Context getAtContext() {
     return _atContext;
   }

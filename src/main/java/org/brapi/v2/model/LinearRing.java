@@ -10,7 +10,7 @@ import org.springframework.validation.annotation.Validated;
  */
 @Schema(description = "An array of at least four positions where the first equals the last")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:36:09.576Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2021-09-14T15:36:09.576Z[GMT]")
 
 
 public class LinearRing extends ArrayList<Position>  {

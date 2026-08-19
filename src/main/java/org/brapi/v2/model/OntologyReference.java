@@ -3,22 +3,20 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.brapi.v2.model.OntologyReferenceDocumentationLinks;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * OntologyReference
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
 public class OntologyReference   {
   @JsonProperty("documentationLinks")
   @Valid
@@ -50,7 +48,7 @@ public class OntologyReference   {
    * links to various ontology documentation
    * @return documentationLinks
   **/
-  @ApiModelProperty(value = "links to various ontology documentation")
+  @Schema(description = "links to various ontology documentation")
       @Valid
     public List<OntologyReferenceDocumentationLinks> getDocumentationLinks() {
     return documentationLinks;
@@ -69,7 +67,7 @@ public class OntologyReference   {
    * Ontology database unique identifier
    * @return ontologyDbId
   **/
-  @ApiModelProperty(example = "6b071868", required = true, value = "Ontology database unique identifier")
+  @Schema(example = "6b071868", requiredMode = Schema.RequiredMode.REQUIRED, description = "Ontology database unique identifier")
       @NotNull
 
     public String getOntologyDbId() {
@@ -89,7 +87,7 @@ public class OntologyReference   {
    * Ontology name
    * @return ontologyName
   **/
-  @ApiModelProperty(example = "The Crop Ontology", required = true, value = "Ontology name")
+  @Schema(example = "The Crop Ontology", requiredMode = Schema.RequiredMode.REQUIRED, description = "Ontology name")
       @NotNull
 
     public String getOntologyName() {
@@ -109,7 +107,7 @@ public class OntologyReference   {
    * Ontology version (no specific format)
    * @return version
   **/
-  @ApiModelProperty(example = "7.2.3", value = "Ontology version (no specific format)")
+  @Schema(example = "7.2.3", description = "Ontology version (no specific format)")
   
     public String getVersion() {
     return version;

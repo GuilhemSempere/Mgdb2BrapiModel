@@ -2,20 +2,21 @@ package org.brapi.v2.model;
 
 import java.util.Objects;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 import org.springframework.validation.annotation.Validated;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * GermplasmAttributeSingleResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T11:58:54.700Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-01-22T11:58:54.700Z[GMT]")
 public class GermplasmAttributeSingleResponse   {
   @JsonProperty("@context")
   private Context _atContext = null;
@@ -35,7 +36,7 @@ public class GermplasmAttributeSingleResponse   {
    * Get _atContext
    * @return _atContext
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public Context getAtContext() {
@@ -55,7 +56,7 @@ public class GermplasmAttributeSingleResponse   {
    * Get metadata
    * @return metadata
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     @Valid
@@ -76,7 +77,7 @@ public class GermplasmAttributeSingleResponse   {
    * Get result
    * @return result
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     @Valid

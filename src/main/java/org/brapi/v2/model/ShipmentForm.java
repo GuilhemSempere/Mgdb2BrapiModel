@@ -3,17 +3,16 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * ShipmentForm
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class ShipmentForm   {
   @JsonProperty("fileDescription")
   private String fileDescription = null;
@@ -33,7 +32,7 @@ public class ShipmentForm   {
    * The human readable long description for this form
    * @return fileDescription
   **/
-  @ApiModelProperty(example = "This is a shipment manifest form", value = "The human readable long description for this form")
+  @Schema(example = "This is a shipment manifest form", description = "The human readable long description for this form")
   
     public String getFileDescription() {
     return fileDescription;
@@ -52,7 +51,7 @@ public class ShipmentForm   {
    * The human readable name for this form
    * @return fileName
   **/
-  @ApiModelProperty(example = "Shipment Manifest", value = "The human readable name for this form")
+  @Schema(example = "Shipment Manifest", description = "The human readable name for this form")
   
     public String getFileName() {
     return fileName;
@@ -71,7 +70,7 @@ public class ShipmentForm   {
    * The URL to download this form
    * @return fileURL
   **/
-  @ApiModelProperty(example = "https://vendor.org/forms/manifest.pdf", required = true, value = "The URL to download this form")
+  @Schema(example = "https://vendor.org/forms/manifest.pdf", requiredMode = Schema.RequiredMode.REQUIRED, description = "The URL to download this form")
       @NotNull
 
     public String getFileURL() {

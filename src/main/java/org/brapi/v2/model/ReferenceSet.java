@@ -3,8 +3,7 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,15 +12,15 @@ import java.util.Map;
 
 import org.brapi.v2.model.OntologyTerm;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * A &#x60;ReferenceSet&#x60; is a set of &#x60;Reference&#x60; s which typically comprise a reference assembly, such as &#x60;GRCh38&#x60;. A &#x60;ReferenceSet&#x60; defines a common coordinate space for comparing reference-aligned experimental data.
  */
-@ApiModel(description = "A `ReferenceSet` is a set of `Reference` s which typically comprise a reference assembly, such as `GRCh38`. A `ReferenceSet` defines a common coordinate space for comparing reference-aligned experimental data.")
+@Schema(description = "A `ReferenceSet` is a set of `Reference` s which typically comprise a reference assembly, such as `GRCh38`. A `ReferenceSet` defines a common coordinate space for comparing reference-aligned experimental data.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:12.318Z[GMT]")
 public class ReferenceSet   {
   @JsonProperty("additionalInfo")
   @Valid
@@ -72,7 +71,7 @@ public class ReferenceSet   {
    * Additional arbitrary info
    * @return additionalInfo
   **/
-  @ApiModelProperty(value = "Additional arbitrary info")
+  @Schema(description = "Additional arbitrary info")
   
     public Map<String, String> getAdditionalInfo() {
     return additionalInfo;
@@ -91,7 +90,7 @@ public class ReferenceSet   {
    * The remaining information is about the source of the sequences Public id of this reference set, such as `GRCh37`.
    * @return assemblyPUI
   **/
-  @ApiModelProperty(value = "The remaining information is about the source of the sequences Public id of this reference set, such as `GRCh37`.")
+  @Schema(description = "The remaining information is about the source of the sequences Public id of this reference set, such as `GRCh37`.")
   
     public String getAssemblyPUI() {
     return assemblyPUI;
@@ -110,7 +109,7 @@ public class ReferenceSet   {
    * Optional free text description of this reference set.
    * @return description
   **/
-  @ApiModelProperty(value = "Optional free text description of this reference set.")
+  @Schema(description = "Optional free text description of this reference set.")
   
     public String getDescription() {
     return description;
@@ -129,7 +128,7 @@ public class ReferenceSet   {
    * A reference set may be derived from a source if it contains additional sequences, or some of the sequences within it are derived (see the definition of `isDerived` in `Reference`).
    * @return isDerived
   **/
-  @ApiModelProperty(value = "A reference set may be derived from a source if it contains additional sequences, or some of the sequences within it are derived (see the definition of `isDerived` in `Reference`).")
+  @Schema(description = "A reference set may be derived from a source if it contains additional sequences, or some of the sequences within it are derived (see the definition of `isDerived` in `Reference`).")
   
     public Boolean isIsDerived() {
     return isDerived;
@@ -148,7 +147,7 @@ public class ReferenceSet   {
    * Order-independent MD5 checksum which identifies this `ReferenceSet`.  To compute this checksum, make a list of `Reference.md5checksum` for all `Reference` s in this set. Then sort that list, and take the MD5 hash of all the strings concatenated together. Express the hash as a lower-case hexadecimal string.
    * @return md5checksum
   **/
-  @ApiModelProperty(value = "Order-independent MD5 checksum which identifies this `ReferenceSet`.  To compute this checksum, make a list of `Reference.md5checksum` for all `Reference` s in this set. Then sort that list, and take the MD5 hash of all the strings concatenated together. Express the hash as a lower-case hexadecimal string.")
+  @Schema(description = "Order-independent MD5 checksum which identifies this `ReferenceSet`.  To compute this checksum, make a list of `Reference.md5checksum` for all `Reference` s in this set. Then sort that list, and take the MD5 hash of all the strings concatenated together. Express the hash as a lower-case hexadecimal string.")
   
     public String getMd5checksum() {
     return md5checksum;
@@ -167,7 +166,7 @@ public class ReferenceSet   {
    * The reference set ID. Unique in the repository.
    * @return referenceSetDbId
   **/
-  @ApiModelProperty(value = "The reference set ID. Unique in the repository.")
+  @Schema(description = "The reference set ID. Unique in the repository.")
   
     public String getReferenceSetDbId() {
     return referenceSetDbId;
@@ -186,7 +185,7 @@ public class ReferenceSet   {
    * The reference set name.
    * @return referenceSetName
   **/
-  @ApiModelProperty(value = "The reference set name.")
+  @Schema(description = "The reference set name.")
   
     public String getReferenceSetName() {
     return referenceSetName;
@@ -213,7 +212,7 @@ public class ReferenceSet   {
    * All known corresponding accession IDs in INSDC (GenBank/ENA/DDBJ) ideally with a version number, e.g. `NC_000001.11`.
    * @return sourceAccessions
   **/
-  @ApiModelProperty(value = "All known corresponding accession IDs in INSDC (GenBank/ENA/DDBJ) ideally with a version number, e.g. `NC_000001.11`.")
+  @Schema(description = "All known corresponding accession IDs in INSDC (GenBank/ENA/DDBJ) ideally with a version number, e.g. `NC_000001.11`.")
   
     public List<String> getSourceAccessions() {
     return sourceAccessions;
@@ -232,7 +231,7 @@ public class ReferenceSet   {
    * Specifies a FASTA format file/string.
    * @return sourceURI
   **/
-  @ApiModelProperty(value = "Specifies a FASTA format file/string.")
+  @Schema(description = "Specifies a FASTA format file/string.")
   
     public String getSourceURI() {
     return sourceURI;
@@ -251,7 +250,7 @@ public class ReferenceSet   {
    * Get species
    * @return species
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public OntologyTerm getSpecies() {

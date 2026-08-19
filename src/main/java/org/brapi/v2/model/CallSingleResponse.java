@@ -3,8 +3,8 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 
 /**
@@ -51,7 +51,7 @@ public class CallSingleResponse   {
    * Get metadata
    * @return metadata
    **/
-  @Schema(required = true, description = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     @Valid
@@ -72,7 +72,7 @@ public class CallSingleResponse   {
    * Get result
    * @return result
    **/
-  @Schema(required = true, description = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
       @NotNull
 
     @Valid

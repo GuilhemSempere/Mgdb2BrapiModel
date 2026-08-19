@@ -3,25 +3,23 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.List;
 import java.util.Map;
-import org.threeten.bp.LocalDate;
 import org.brapi.v2.model.Contact;
 import org.brapi.v2.model.TrialNewRequest;
 import org.brapi.v2.model.TrialNewRequestDatasetAuthorships;
 import org.brapi.v2.model.TrialNewRequestPublications;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * Trial
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T14:22:13.640Z[GMT]")
 public class Trial extends TrialNewRequest  {
   @JsonProperty("trialDbId")
   private String trialDbId = null;
@@ -35,7 +33,7 @@ public class Trial extends TrialNewRequest  {
    * The ID which uniquely identifies a trial
    * @return trialDbId
   **/
-  @ApiModelProperty(example = "1883b402", required = true, value = "The ID which uniquely identifies a trial")
+  @Schema(example = "1883b402", requiredMode = Schema.RequiredMode.REQUIRED, description = "The ID which uniquely identifies a trial")
       @NotNull
 
     public String getTrialDbId() {

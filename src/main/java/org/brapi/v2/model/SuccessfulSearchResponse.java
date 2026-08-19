@@ -3,21 +3,20 @@ package org.brapi.v2.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import org.brapi.v2.model.Context;
 import org.brapi.v2.model.Metadata;
 import org.brapi.v2.model.SuccessfulSearchResponseResult;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 /**
  * SuccessfulSearchResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-11-19T12:30:08.794Z[GMT]")
 public class SuccessfulSearchResponse   {
   @JsonProperty("@context")
   private Context _atContext = null;
@@ -37,7 +36,7 @@ public class SuccessfulSearchResponse   {
    * Get _atContext
    * @return _atContext
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public Context getAtContext() {
@@ -57,7 +56,7 @@ public class SuccessfulSearchResponse   {
    * Get metadata
    * @return metadata
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public Metadata getMetadata() {
@@ -77,7 +76,7 @@ public class SuccessfulSearchResponse   {
    * Get result
    * @return result
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   
     @Valid
     public SuccessfulSearchResponseResult getResult() {

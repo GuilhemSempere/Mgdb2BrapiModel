@@ -1,28 +1,21 @@
 package org.brapi.v2.model;
 
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-
-import javax.validation.Valid;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import org.springframework.validation.annotation.Validated;
-import org.threeten.bp.OffsetDateTime;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.threetenbp.ser.OffsetDateTimeSerializer;
-
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Sample
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-06-10T08:36:40.297Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-06-10T08:36:40.297Z[GMT]")
 
 
 public class Sample   {
@@ -73,8 +66,6 @@ public class Sample   {
   @JsonProperty("samplePUI")
   private String samplePUI = null;
 
-  @JsonDeserialize(using = OffsetDateTimeDeserializer.class)
-  @JsonSerialize(using = OffsetDateTimeSerializer.class)
   @JsonProperty("sampleTimestamp")
   private OffsetDateTime sampleTimestamp = null;
 

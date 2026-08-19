@@ -28,7 +28,7 @@ import java.io.IOException;
  * DataLink
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-16T09:49:32.987Z[GMT]")
 public class DataLink {
   @JsonProperty("dataFormat")
   private String dataFormat = null;

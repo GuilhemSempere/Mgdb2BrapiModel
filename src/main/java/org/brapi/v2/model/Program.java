@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.io.IOException;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Map;
  * Program
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class Program extends ProgramNewRequest {
   @SerializedName("programDbId")
   private String programDbId = null;
@@ -32,7 +32,7 @@ public class Program extends ProgramNewRequest {
    * The ID which uniquely identifies the program
    * @return programDbId
   **/
-  @ApiModelProperty(example = "f60f15b2", required = true, value = "The ID which uniquely identifies the program")
+  @Schema(example = "f60f15b2", requiredMode = Schema.RequiredMode.REQUIRED, description = "The ID which uniquely identifies the program")
   public String getProgramDbId() {
     return programDbId;
   }

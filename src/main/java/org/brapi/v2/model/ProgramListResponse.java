@@ -16,12 +16,12 @@ import java.util.Objects;
 
 import com.google.gson.annotations.SerializedName;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * ProgramListResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-06-24T08:33:25.155Z[GMT]")
 public class ProgramListResponse {
   @SerializedName("@context")
   private Context _atContext = null;
@@ -41,7 +41,7 @@ public class ProgramListResponse {
    * Get _atContext
    * @return _atContext
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Context getAtContext() {
     return _atContext;
   }
@@ -59,7 +59,7 @@ public class ProgramListResponse {
    * Get metadata
    * @return metadata
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public Metadata getMetadata() {
     return metadata;
   }
@@ -77,7 +77,7 @@ public class ProgramListResponse {
    * Get result
    * @return result
   **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "")
   public ProgramListResponseResult getResult() {
     return result;
   }
